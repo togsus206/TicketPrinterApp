@@ -1,0 +1,292 @@
+/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:3: Warning: READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: READ_MEDIA_IMAGES, READ_MEDIA_VIDEO or READ_MEDIA_AUDIO. [ScopedStorage]
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ScopedStorage":
+   Scoped storage is enforced on Android 10+ (or Android 11+ if using
+   requestLegacyExternalStorage). In particular, WRITE_EXTERNAL_STORAGE will
+   no longer provide write access to all files; it will provide the equivalent
+   of READ_EXTERNAL_STORAGE instead.
+
+   As of Android 13, if you need to query or interact with MediaStore or media
+   files on the shared storage, you should be using instead one or more new
+   storage permissions:
+   * android.permission.READ_MEDIA_IMAGES
+   * android.permission.READ_MEDIA_VIDEO
+   * android.permission.READ_MEDIA_AUDIO
+
+   and then add maxSdkVersion="33" to the older permission. See the developer
+   guide for how to do this:
+   https://developer.android.com/about/versions/13/behavior-changes-13#granula
+   r-media-permissions
+
+   The MANAGE_EXTERNAL_STORAGE permission can be used to manage all files, but
+   it is rarely necessary and most apps on Google Play are not allowed to use
+   it. Most apps should instead migrate to use scoped storage. To modify or
+   delete files, apps should request write access from the user as described
+   at https://goo.gle/android-mediastore-createwriterequest.
+
+   To learn more, read these resources: Play policy:
+   https://goo.gle/policy-storage-help Allowable use cases:
+   https://goo.gle/policy-storage-usecases
+
+   https://goo.gle/android-storage-usecases
+
+/home/mati0216/TicketPrinterApp/app/build.gradle.kts:14: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
+        targetSdk = 33
+        ~~~~~~~~~~~~~~
+
+   Explanation for issues of type "OldTargetApi":
+   When your application runs on a version of Android that is more recent than
+   your targetSdkVersion specifies that it has been tested with, various
+   compatibility modes kick in. This ensures that your application continues
+   to work, but it may look out of place. For example, if the targetSdkVersion
+   is less than 14, your app may get an option button in the UI.
+
+   To fix this issue, set the targetSdkVersion to the highest available value.
+   Then test your app to make sure everything works correctly. You may want to
+   consult the compatibility notes to see what changes apply to each version
+   you are adding support for:
+   https://developer.android.com/reference/android/os/Build.VERSION_CODES.html
+   as well as follow this guide:
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.
+   html
+
+   https://developer.android.com/distribute/best-practices/develop/target-sdk.html
+
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/SettingsActivity.kt:23: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialCode from androidx.appcompat]
+    private lateinit var switchDateTime: Switch
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseSwitchCompatOrMaterialCode":
+   Use SwitchCompat from AppCompat or SwitchMaterial from Material library
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.appcompat
+   Feedback: https://issuetracker.google.com/issues/new?component=460343
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:89: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialXml from androidx.appcompat]
+            <Switch
+            ^
+
+   Explanation for issues of type "UseSwitchCompatOrMaterialXml":
+   Use SwitchCompat from AppCompat or SwitchMaterial from Material library
+
+   Vendor: Android Open Source Project
+   Identifier: androidx.appcompat
+   Feedback: https://issuetracker.google.com/issues/new?component=460343
+
+/home/mati0216/TicketPrinterApp/app/build.gradle.kts:38: Warning: A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0 [GradleDependency]
+    implementation("androidx.core:core-ktx:1.10.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/build.gradle.kts:39: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0 [GradleDependency]
+    implementation("androidx.appcompat:appcompat:1.6.1")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/build.gradle.kts:40: Warning: A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0 [GradleDependency]
+    implementation("com.google.android.material:material:1.9.0")
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/values/themes.xml:2: Warning: The resource R.style.Theme_TicketPrinterApp appears to be unused [UnusedResources]
+    <style name="Theme.TicketPrinterApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-hdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-mdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: Launcher icons should not fill every pixel of their square region; see the design guide for details [IconLauncherShape]
+
+   Explanation for issues of type "IconLauncherShape":
+   According to the Android Design Guide
+   (https://material.io/design/iconography/) your launcher icons should "use a
+   distinct silhouette", a "three-dimensional, front view, with a slight
+   perspective as if viewed from above, so that users perceive some depth."
+
+   The unique silhouette implies that your launcher icon should not be a
+   filled square.
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The image ic_launcher.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 643x643 dp (965x965 px), mipmap-mdpi/ic_launcher.png: 965x965 dp (965x965 px), mipmap-xhdpi/ic_launcher.png: 483x483 dp (965x965 px), mipmap-xxhdpi/ic_launcher.png: 322x322 dp (965x965 px), mipmap-xxxhdpi/ic_launcher.png: 241x241 dp (965x965 px) [IconDipSize]
+
+   Explanation for issues of type "IconDipSize":
+   Checks the all icons which are provided in multiple densities, all compute
+   to roughly the same density-independent pixel (dip) size. This catches
+   errors where images are either placed in the wrong folder, or icons are
+   changed to new sizes but some folders are forgotten.
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The ic_launcher.png icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi [IconDuplicatesConfig]
+
+   Explanation for issues of type "IconDuplicatesConfig":
+   If an icon is provided under different configuration parameters such as
+   drawable-hdpi or -v11, they should typically be different. This detector
+   catches cases where the same icon is provided in different configuration
+   folder which is usually not intentional.
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:44: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:52: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:59: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:66: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:109: Warning: Missing autofillHints attribute [Autofill]
+            <EditText
+             ~~~~~~~~
+
+   Explanation for issues of type "Autofill":
+   Specify an autofillHints attribute when targeting SDK version 26 or higher
+   or explicitly specify that the view is not important for autofill. Your app
+   can help an autofill service classify the data correctly by providing the
+   meaning of each view that could be autofillable, such as views representing
+   usernames, passwords, credit card fields, email addresses, etc.
+
+   The hints can have any value, but it is recommended to use predefined
+   values like 'username' for a username or 'creditCardNumber' for a credit
+   card number. For a list of all predefined autofill hint constants, see the
+   AUTOFILL_HINT_ constants in the View reference at
+   https://developer.android.com/reference/android/view/View.html.
+
+   You can mark a view unimportant for autofill by specifying an
+   importantForAutofill attribute on that view or a parent view. See
+   https://developer.android.com/reference/android/view/View.html#setImportant
+   ForAutofill(int).
+
+   https://developer.android.com/guide/topics/text/autofill.html
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:36: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:130: Warning: Missing contentDescription attribute on image [ContentDescription]
+            <ImageView
+             ~~~~~~~~~
+
+   Explanation for issues of type "ContentDescription":
+   Non-textual widgets like ImageViews and ImageButtons should use the
+   contentDescription attribute to specify a textual description of the widget
+   such that screen readers and other accessibility tools can adequately
+   describe the user interface.
+
+   Note that elements in application screens that are purely decorative and do
+   not provide any content or enable a user action should not have
+   accessibility content descriptions. In this case, set their descriptions to
+   @null. If your app's minSdkVersion is 16 or higher, you can instead set
+   these graphical elements' android:importantForAccessibility attributes to
+   no.
+
+   Note that for text fields, you should not set both the hint and the
+   contentDescription attributes since the hint will never be shown. Just set
+   the hint.
+
+   https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:21: Warning: Hardcoded string "Ajustes", should use @string resource [HardcodedText]
+            android:text="Ajustes" />
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:49: Warning: Hardcoded string "Nombre", should use @string resource [HardcodedText]
+                android:hint="Nombre"
+                ~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:56: Warning: Hardcoded string "Cant.", should use @string resource [HardcodedText]
+                android:hint="Cant."
+                ~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:63: Warning: Hardcoded string "Precio", should use @string resource [HardcodedText]
+                android:hint="Precio"
+                ~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:72: Warning: Hardcoded string "Agregar Producto", should use @string resource [HardcodedText]
+            android:text="Agregar Producto"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:89: Warning: Hardcoded string "Total: ", should use @string resource [HardcodedText]
+            android:text="Total: "
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:97: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
+            android:text="$0.00"
+            ~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:104: Warning: Hardcoded string "Imprimir", should use @string resource [HardcodedText]
+            android:text="Imprimir"
+            ~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:18: Warning: Hardcoded string "Configuración de la Impresión", should use @string resource [HardcodedText]
+            android:text="Configuración de la Impresión"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:32: Warning: Hardcoded string "Logo del lugar", should use @string resource [HardcodedText]
+                android:text="Logo del lugar"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:48: Warning: Hardcoded string "Seleccionar Logo", should use @string resource [HardcodedText]
+                android:text="Seleccionar Logo"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:62: Warning: Hardcoded string "Encabezado del ticket", should use @string resource [HardcodedText]
+                android:text="Encabezado del ticket"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:70: Warning: Hardcoded string "Ingrese el encabezado", should use @string resource [HardcodedText]
+                android:hint="Ingrese el encabezado"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:86: Warning: Hardcoded string "Imprimir fecha y hora", should use @string resource [HardcodedText]
+                android:text="Imprimir fecha y hora"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:105: Warning: Hardcoded string "Pie del ticket", should use @string resource [HardcodedText]
+                android:text="Pie del ticket"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:113: Warning: Hardcoded string "Ingrese el pie del ticket", should use @string resource [HardcodedText]
+                android:hint="Ingrese el pie del ticket"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:126: Warning: Hardcoded string "Imagen de código QR", should use @string resource [HardcodedText]
+                android:text="Imagen de código QR"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:143: Warning: Hardcoded string "Seleccionar QR", should use @string resource [HardcodedText]
+                android:text="Seleccionar QR"
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:152: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
+            android:text="Guardar Configuración"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/menu/main_menu.xml:6: Warning: Hardcoded string "Ajustes", should use @string resource [HardcodedText]
+        android:title="Ajustes"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml: Warning: The project references RTL attributes, but does not explicitly enable or disable RTL support with android:supportsRtl in the manifest [RtlEnabled]
+
+   Explanation for issues of type "RtlEnabled":
+   To enable right-to-left support, when running on API 17 and higher, you
+   must set the android:supportsRtl attribute in the manifest <application>
+   element.
+
+   If you have started adding RTL attributes, but have not yet finished the
+   migration, you can set the attribute to false to satisfy this lint check.
+
+0 errors, 43 warnings

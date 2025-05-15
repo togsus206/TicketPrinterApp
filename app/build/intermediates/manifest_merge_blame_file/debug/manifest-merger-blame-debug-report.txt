@@ -1,0 +1,82 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.mval.ticketprinter"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="33" />
+10
+11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+11-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:3:5-80
+11-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:3:22-77
+12
+13    <permission
+13-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+14        android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+14-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+15        android:protectionLevel="signature" />
+15-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+16
+17    <uses-permission android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+17-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+17-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+18
+19    <application
+19-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:5:5-18:19
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+21        android:debuggable="true"
+22        android:extractNativeLibs="true"
+23        android:icon="@mipmap/ic_launcher"
+23-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:7:9-43
+24        android:label="TicketPrinterApp"
+24-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:6:9-41
+25        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+25-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:8:9-65
+26        <activity
+26-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:9:9-16:20
+27            android:name="com.mval.ticketprinter.MainActivity"
+27-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:10:13-41
+28            android:exported="true" >
+28-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:11:13-36
+29            <intent-filter>
+29-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:13-15:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:17-69
+30-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:14:17-77
+32-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:14:27-74
+33            </intent-filter>
+34        </activity>
+35        <activity android:name="com.mval.ticketprinter.SettingsActivity" />
+35-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:17:9-54
+35-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:17:19-51
+36
+37        <provider
+37-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+38            android:name="androidx.startup.InitializationProvider"
+38-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+39            android:authorities="com.mval.ticketprinter.androidx-startup"
+39-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+40            android:exported="false" >
+40-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+41            <meta-data
+41-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+42-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+43                android:value="androidx.startup" />
+43-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+44            <meta-data
+44-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+45-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+46                android:value="androidx.startup" />
+46-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+47        </provider>
+48    </application>
+49
+50</manifest>

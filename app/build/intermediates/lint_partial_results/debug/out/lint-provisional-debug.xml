@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.1" type="conditional_incidents">
+
+    <incident
+        id="ScopedStorage"
+        severity="warning"
+        message="">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"
+            line="3"
+            column="36"
+            startOffset="106"
+            endLine="3"
+            endColumn="76"
+            endOffset="146"/>
+        <map>
+            <entry
+                name="maxSdkVersion"
+                int="2147483647"/>
+            <entry
+                name="read"
+                boolean="true"/>
+        </map>
+    </incident>
+
+    <incident
+        id="RtlEnabled"
+        severity="warning"
+        message="The project references RTL attributes, but does not explicitly enable or disable RTL support with `android:supportsRtl` in the manifest">
+        <location
+            file="${:app*debug*sourceProvider*0*manifest*0}"/>
+        <map>
+            <entry
+                name="applies"
+                int="2"/>
+        </map>
+    </incident>
+
+</incidents>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.1" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.mval.ticketprinter.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.style.Theme_TicketPrinterApp"
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="2"
+            column="12"
+            startOffset="70"
+            endLine="2"
+            endColumn="41"
+            endOffset="99"/>
+        <entry
+            name="model"
+            string="id[editTextProductName(U),editTextPrice(U),textViewTotalLabel(D),textViewProductName(U),buttonAddProduct(U),imageViewQr(U),buttonSelectQr(U),action_settings(U),editTextQuantity(U),buttonSettings(U),textViewTotal(U),buttonPrint(U),imageViewLogo(U),textViewQuantity(U),recyclerViewItems(U),buttonSelectLogo(U),editTextHeader(U),editTextFooter(U),buttonSaveSettings(U),textViewPrice(U),switchDateTime(U)],layout[activity_main(U),activity_settings(U),item_product(U)],menu[main_menu(U)],mipmap[ic_launcher(U)],style[Theme_TicketPrinterApp(D),Theme_AppCompat_Light_NoActionBar(R),Theme_MaterialComponents_DayNight_DarkActionBar(E)];1a^1c;;;"/>
+    </map>
+
+</incidents>

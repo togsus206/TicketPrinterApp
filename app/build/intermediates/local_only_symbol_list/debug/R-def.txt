@@ -1,0 +1,29 @@
+R_DEF: Internal format may change without notice
+local
+id action_settings
+id buttonAddProduct
+id buttonPrint
+id buttonSaveSettings
+id buttonSelectLogo
+id buttonSelectQr
+id buttonSettings
+id editTextFooter
+id editTextHeader
+id editTextPrice
+id editTextProductName
+id editTextQuantity
+id imageViewLogo
+id imageViewQr
+id recyclerViewItems
+id switchDateTime
+id textViewPrice
+id textViewProductName
+id textViewQuantity
+id textViewTotal
+id textViewTotalLabel
+layout activity_main
+layout activity_settings
+layout item_product
+menu main_menu
+mipmap ic_launcher
+style Theme.TicketPrinterApp
