@@ -18,7 +18,7 @@
             endOffset="99"/>
         <entry
             name="model"
-            string="id[editTextProductName(U),editTextPrice(U),textViewTotalLabel(D),textViewProductName(U),buttonAddProduct(U),imageViewQr(U),buttonSelectQr(U),action_settings(U),editTextQuantity(U),buttonSettings(U),textViewTotal(U),buttonPrint(U),imageViewLogo(U),textViewQuantity(U),recyclerViewItems(U),buttonSelectLogo(U),editTextHeader(U),editTextFooter(U),buttonSaveSettings(U),textViewPrice(U),switchDateTime(U)],layout[activity_main(U),activity_settings(U),item_product(U)],menu[main_menu(U)],mipmap[ic_launcher(U)],style[Theme_TicketPrinterApp(D),Theme_AppCompat_Light_NoActionBar(R),Theme_MaterialComponents_DayNight_DarkActionBar(E)];1a^1c;;;"/>
+            string="id[editTextPrice(U),editProductQuantity(U),buttonAddProduct(U),buttonEditProduct(U),imageViewQr(U),buttonSelectQr(U),action_settings(U),editProductPrice(U),editTextQuantity(U),buttonPrint(U),imageViewLogo(U),textViewQuantity(U),editProductName(U),switchDateTime(U),editTextProductName(U),textViewTotalLabel(D),textViewProductName(U),buttonDeleteProduct(U),buttonSettings(U),textViewTotal(U),recyclerViewItems(U),buttonSelectLogo(U),editTextHeader(U),editTextFooter(U),buttonSaveSettings(U),textViewPrice(U)],layout[dialog_edit_product(U),activity_main(U),activity_settings(U),item_product(U)],menu[main_menu(U)],mipmap[ic_launcher(U)],style[Theme_TicketPrinterApp(D),Theme_MaterialComponents_Light_NoActionBar(R),Theme_MaterialComponents_DayNight_DarkActionBar(E)];20^22;;;"/>
     </map>
 
 </incidents>

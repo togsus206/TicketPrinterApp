@@ -1,4 +1,4 @@
-#Thu May 15 14:59:34 ART 2025
+#Tue May 20 11:09:50 ART 2025
 base.0=/home/mati0216/TicketPrinterApp/app/build/intermediates/dex/release/mergeDexRelease/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

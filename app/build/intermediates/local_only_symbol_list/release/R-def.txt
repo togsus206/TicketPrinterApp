@@ -2,11 +2,16 @@ R_DEF: Internal format may change without notice
 local
 id action_settings
 id buttonAddProduct
+id buttonDeleteProduct
+id buttonEditProduct
 id buttonPrint
 id buttonSaveSettings
 id buttonSelectLogo
 id buttonSelectQr
 id buttonSettings
+id editProductName
+id editProductPrice
+id editProductQuantity
 id editTextFooter
 id editTextHeader
 id editTextPrice
@@ -23,6 +28,7 @@ id textViewTotal
 id textViewTotalLabel
 layout activity_main
 layout activity_settings
+layout dialog_edit_product
 layout item_product
 menu main_menu
 mipmap ic_launcher

@@ -22,7 +22,7 @@
         android:extractNativeLibs="true"
         android:icon="@mipmap/ic_launcher"
         android:label="TicketPrinterApp"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
         <activity
             android:name="com.mval.ticketprinter.MainActivity"
             android:exported="true" >

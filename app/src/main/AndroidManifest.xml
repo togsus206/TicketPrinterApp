@@ -5,8 +5,7 @@
     <application
         android:label="TicketPrinterApp"
         android:icon="@mipmap/ic_launcher"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"> <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

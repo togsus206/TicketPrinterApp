@@ -3009,6 +3009,8 @@ id blocking
 id bottom
 id bounce
 id buttonAddProduct
+id buttonDeleteProduct
+id buttonEditProduct
 id buttonPanel
 id buttonPrint
 id buttonSaveSettings
@@ -3074,6 +3076,9 @@ id easeIn
 id easeInOut
 id easeOut
 id edge
+id editProductName
+id editProductPrice
+id editProductQuantity
 id editTextFooter
 id editTextHeader
 id editTextPrice
@@ -3517,6 +3522,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_edit_product
 layout item_product
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

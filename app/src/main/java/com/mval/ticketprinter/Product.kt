@@ -1,3 +1,7 @@
 package com.mval.ticketprinter
 
-data class Product(val name: String, val quantity: Int, val price: Double)
+data class Product( 
+    var name: String, 
+    var quantity: Int, 
+    var price: Double 
+)

@@ -142,6 +142,20 @@
    catches cases where the same icon is provided in different configuration
    folder which is usually not intentional.
 
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:46: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:55: Warning: Buttons in button bars should be borderless; use style="?android:attr/buttonBarButtonStyle" (and ?android:attr/buttonBarStyle on the parent) [ButtonStyle]
+        <Button
+         ~~~~~~
+
+   Explanation for issues of type "ButtonStyle":
+   Button bars typically use a borderless style for the buttons. Set the
+   style="?android:attr/buttonBarButtonStyle" attribute on each of the
+   buttons, and set style="?android:attr/buttonBarStyle" on the parent layout
+
+   https://material.io/components/dialogs/
+
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:44: Warning: Missing autofillHints attribute [Autofill]
             <EditText
              ~~~~~~~~
@@ -157,6 +171,15 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:109: Warning: Missing autofillHints attribute [Autofill]
             <EditText
              ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:8: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:15: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:23: Warning: Missing autofillHints attribute [Autofill]
+    <EditText
+     ~~~~~~~~
 
    Explanation for issues of type "Autofill":
    Specify an autofillHints attribute when targeting SDK version 26 or higher
@@ -203,6 +226,23 @@
    the hint.
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
+
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/ProductAdapter.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+        holder.textViewQuantity.text = "x${currentItem.quantity}" // Formato mejor para cantidad
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
 
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:21: Warning: Hardcoded string "Ajustes", should use @string resource [HardcodedText]
             android:text="Ajustes" />
@@ -261,6 +301,30 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:152: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
             android:text="Guardar Configuración"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:12: Warning: Hardcoded string "Nombre del Producto", should use @string resource [HardcodedText]
+        android:hint="Nombre del Producto"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:19: Warning: Hardcoded string "Cantidad", should use @string resource [HardcodedText]
+        android:hint="Cantidad"
+        ~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:27: Warning: Hardcoded string "Precio", should use @string resource [HardcodedText]
+        android:hint="Precio"
+        ~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:21: Warning: Hardcoded string "Nombre del Producto", should use @string resource [HardcodedText]
+            android:text="Nombre del Producto" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:28: Warning: Hardcoded string "x1", should use @string resource [HardcodedText]
+            android:text="x1" />
+            ~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:35: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
+            android:text="$0.00" />
+            ~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:50: Warning: Hardcoded string "Editar", should use @string resource [HardcodedText]
+            android:text="Editar"
+            ~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/item_product.xml:59: Warning: Hardcoded string "Eliminar", should use @string resource [HardcodedText]
+            android:text="Eliminar"
+            ~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/menu/main_menu.xml:6: Warning: Hardcoded string "Ajustes", should use @string resource [HardcodedText]
         android:title="Ajustes"
         ~~~~~~~~~~~~~~~~~~~~~~~
@@ -289,4 +353,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 43 warnings
+0 errors, 57 warnings

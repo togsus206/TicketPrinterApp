@@ -478,6 +478,290 @@
     </incident>
 
     <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="8"
+            column="6"
+            startOffset="262"
+            endLine="8"
+            endColumn="14"
+            endOffset="270"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre del Producto&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="12"
+            column="9"
+            startOffset="410"
+            endLine="12"
+            endColumn="43"
+            endOffset="444"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="15"
+            column="6"
+            startOffset="487"
+            endLine="15"
+            endColumn="14"
+            endOffset="495"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Cantidad&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="19"
+            column="9"
+            startOffset="639"
+            endLine="19"
+            endColumn="32"
+            endOffset="662"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="23"
+            column="6"
+            startOffset="746"
+            endLine="23"
+            endColumn="14"
+            endOffset="754"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Precio&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/dialog_edit_product.xml"
+            line="27"
+            column="9"
+            startOffset="895"
+            endLine="27"
+            endColumn="30"
+            endOffset="916"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Nombre del Producto&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="21"
+            column="13"
+            startOffset="727"
+            endLine="21"
+            endColumn="47"
+            endOffset="761"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;x1&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="28"
+            column="13"
+            startOffset="985"
+            endLine="28"
+            endColumn="30"
+            endOffset="1002"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="35"
+            column="13"
+            startOffset="1223"
+            endLine="35"
+            endColumn="33"
+            endOffset="1243"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1273"
+                    endOffset="2182"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1496"
+                    endOffset="1799"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1809"
+                    endOffset="2161"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="46"
+            column="10"
+            startOffset="1497"
+            endLine="46"
+            endColumn="16"
+            endOffset="1503"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Editar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="50"
+            column="13"
+            startOffset="1661"
+            endLine="50"
+            endColumn="34"
+            endOffset="1682"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1273"
+                    endOffset="2182"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1496"
+                    endOffset="1799"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+                    startOffset="1809"
+                    endOffset="2161"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="55"
+            column="10"
+            startOffset="1810"
+            endLine="55"
+            endColumn="16"
+            endOffset="1816"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Eliminar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/item_product.xml"
+            line="59"
+            column="13"
+            startOffset="1976"
+            endLine="59"
+            endColumn="36"
+            endOffset="1999"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Ajustes&quot;, should use `@string` resource">
@@ -489,6 +773,20 @@
             endLine="6"
             endColumn="32"
             endOffset="244"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/ProductAdapter.kt"
+            line="57"
+            column="40"
+            startOffset="2364"
+            endLine="57"
+            endColumn="66"
+            endOffset="2390"/>
     </incident>
 
     <incident
