@@ -1,11 +1,14 @@
 R_DEF: Internal format may change without notice
 local
+id action_print_ticket
 id action_settings
+id action_share_ticket
 id buttonAddProduct
 id buttonDeleteProduct
 id buttonEditProduct
 id buttonPrint
 id buttonSaveSettings
+id buttonScan
 id buttonSelectLogo
 id buttonSelectQr
 id buttonSettings
@@ -19,6 +22,13 @@ id editTextProductName
 id editTextQuantity
 id imageViewLogo
 id imageViewQr
+id itemName
+id itemPrice
+id itemQuantity
+id listViewDevices
+id radio58mm
+id radio80mm
+id radioGroupPaperWidth
 id recyclerViewItems
 id switchDateTime
 id textViewPrice
@@ -26,10 +36,22 @@ id textViewProductName
 id textViewQuantity
 id textViewTotal
 id textViewTotalLabel
+id ticketDateTime
+id ticketFooter
+id ticketHeader
+id ticketItemsContainer
+id ticketLogo
+id ticketQrCode
+id ticketRootLayout
+id ticketTotal
+id ticketTotalLabel
 layout activity_main
 layout activity_settings
 layout dialog_edit_product
 layout item_product
+layout ticket_item_layout
+layout ticket_preview
 menu main_menu
+menu print_share_menu
 mipmap ic_launcher
 style Theme.TicketPrinterApp

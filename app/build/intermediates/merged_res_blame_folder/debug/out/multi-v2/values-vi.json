@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mval.ticketprinter.app-mergeDebugResources-26:/values-vi/values-vi.xml",
+            "outputFile": "com.mval.ticketprinter.app-mergeDebugResources-27:/values-vi/values-vi.xml",
             "map": [
                 {
                     "source": "/home/mati0216/.gradle/caches/8.14/transforms/b3abc32705854137b688701ca0bf66dd/transformed/material-1.9.0/res/values-vi/values-vi.xml",

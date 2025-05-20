@@ -4,21 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SettingsActivity">
-
-    <LinearLayout
+    android:fillViewport="true" > <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:context=".SettingsActivity">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Configuración de la Impresión"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp" />
+            android:textSize="24sp" android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,17 +29,15 @@
                 android:layout_height="wrap_content"
                 android:text="Logo del lugar"
                 android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:layout_marginBottom="8dp"/>
 
             <ImageView
                 android:id="@+id/imageViewLogo"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@android:drawable/ic_menu_gallery"
-                android:scaleType="fitCenter" />
-
-            <Button
+                android:background="#E0E0E0" android:scaleType="centerInside" android:layout_marginBottom="8dp"
+                android:src="@android:drawable/ic_menu_gallery"/> <Button
                 android:id="@+id/buttonSelectLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,39 +55,24 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Encabezado del ticket"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:text="Texto de Encabezado:" android:textSize="18sp" android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
             <EditText
                 android:id="@+id/editTextHeader"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese el encabezado"
-                android:inputType="textMultiLine" />
+                android:hint="Ej: Nombre de la empresa, dirección..." android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="5"
+                android:gravity="top"
+                android:layout_marginBottom="8dp"/> </LinearLayout>
 
-        </LinearLayout>
-
-        <LinearLayout
+        <Switch
+            android:id="@+id/switchDateTime"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Imprimir fecha y hora"
-                android:textStyle="bold" />
-
-            <Switch
-                android:id="@+id/switchDateTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-        </LinearLayout>
+            android:text="Incluir Fecha y Hora en el Ticket" android:textSize="18sp" android:layout_marginBottom="16dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,41 +83,36 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Pie del ticket"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:text="Texto de Pie de Página:" android:textSize="18sp" android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
             <EditText
                 android:id="@+id/editTextFooter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ingrese el pie del ticket"
-                android:inputType="textMultiLine" />
-
-        </LinearLayout>
+                android:hint="Ej: Agradecimiento, política de devoluciones..." android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="5"
+                android:gravity="top"
+                android:layout_marginBottom="8dp"/> </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp"> <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Imagen de código QR"
-                android:textStyle="bold"
-                android:layout_marginBottom="8dp" />
+                android:text="Imagen de código QR:" android:textSize="18sp" android:textStyle="bold"
+                android:layout_marginBottom="8dp"/>
 
             <ImageView
                 android:id="@+id/imageViewQr"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@android:drawable/ic_menu_camera"
-                android:scaleType="fitCenter"
-                android:layout_marginBottom="8dp"/>
-
-            <Button
+                android:background="#E0E0E0" android:scaleType="centerInside" android:layout_marginBottom="8dp"
+                android:src="@android:drawable/ic_menu_camera"/> <Button
                 android:id="@+id/buttonSelectQr"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -145,14 +121,42 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonSaveSettings"
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Ancho del Papel del Ticket:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupPaperWidth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/radio58mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="58 mm"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/radio80mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80 mm"
+                android:textSize="16sp"/>
+
+        </RadioGroup>
+        <Button
+            android:id="@+id/buttonSaveSettings"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
             android:text="Guardar Configuración"
             android:layout_gravity="end"
             android:layout_marginTop="24dp" />
 
     </LinearLayout>
-
 </ScrollView>

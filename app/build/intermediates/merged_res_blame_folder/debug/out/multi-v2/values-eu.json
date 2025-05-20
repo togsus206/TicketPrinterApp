@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mval.ticketprinter.app-mergeDebugResources-26:/values-eu/values-eu.xml",
+            "outputFile": "com.mval.ticketprinter.app-mergeDebugResources-27:/values-eu/values-eu.xml",
             "map": [
                 {
                     "source": "/home/mati0216/.gradle/caches/8.14/transforms/7a766fe34afb6a7e9e56519f3a1d1589/transformed/appcompat-1.6.1/res/values-eu/values-eu.xml",
@@ -54,6 +54,23 @@
                         "startOffsets": "3569,3667,3770,3870,3973,4077,4180,8892",
                         "endColumns": "97,102,99,102,103,102,117,100",
                         "endOffsets": "3662,3765,3865,3968,4072,4175,4293,8988"
+                    }
+                },
+                {
+                    "source": "/home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/res/values-eu/values-eu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,119,168,316",
+                        "endColumns": "63,48,147,111",
+                        "endOffsets": "114,163,311,423"
+                    },
+                    "to": {
+                        "startLines": "104,105,106,107",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "8993,9057,9106,9254",
+                        "endColumns": "63,48,147,111",
+                        "endOffsets": "9052,9101,9249,9361"
                     }
                 }
             ]

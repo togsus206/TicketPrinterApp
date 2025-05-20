@@ -46,8 +46,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:hint="Nombre"
-                android:inputType="text" />
+                android:hint="Nombre del Producto" />
 
             <EditText
                 android:id="@+id/editTextQuantity"
@@ -101,8 +100,40 @@
             android:id="@+id/buttonPrint"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Imprimir"
+            android:text="Previsualizar/Compartir"
             android:layout_marginStart="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Conexión Bluetooth"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/buttonScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escanear Dispositivos Bluetooth"
+            android:layout_marginBottom="8dp" />
+
+        <ListView
+            android:id="@+id/listViewDevices"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
 
     </LinearLayout>
 

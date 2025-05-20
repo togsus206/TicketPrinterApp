@@ -1,42 +1,54 @@
 [
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/menu_main_menu.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/menu/main_menu.xml"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-mdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/layout_activity_main.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/layout/activity_main.xml"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_settings.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/activity_settings.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_ticket_item_layout.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/ticket_item_layout.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_item_product.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/item_product.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/layout_dialog_edit_product.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/layout/dialog_edit_product.xml"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_main_menu.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/menu/main_menu.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_print_share_menu.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/menu/print_share_menu.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-hdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/layout_activity_settings.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/layout/activity_settings.xml"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_ticket_preview.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/ticket_preview.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-28:/layout_item_product.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/layout/item_product.xml"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_dialog_edit_product.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/dialog_edit_product.xml"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_main.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/activity_main.xml"
     }
 ]

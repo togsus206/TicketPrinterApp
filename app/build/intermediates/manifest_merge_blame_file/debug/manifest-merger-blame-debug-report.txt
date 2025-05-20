@@ -8,75 +8,165 @@
 8        android:minSdkVersion="21"
 9        android:targetSdkVersion="33" />
 10
-11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-11-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:3:5-80
-11-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:3:22-77
-12
-13    <permission
-13-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
-14        android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-14-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
-15        android:protectionLevel="signature" />
-15-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
-16
-17    <uses-permission android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-17-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
-17-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
-18
-19    <application
-19-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:5:5-17:19
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
-21        android:debuggable="true"
-22        android:extractNativeLibs="true"
-23        android:icon="@mipmap/ic_launcher"
-23-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:7:9-43
-24        android:label="TicketPrinterApp"
-24-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:6:9-41
-25        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" >
-25-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:8:9-74
-26        <activity
-26-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:8:76-15:20
-27            android:name="com.mval.ticketprinter.MainActivity"
-27-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:9:13-41
-28            android:exported="true" >
-28-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:10:13-36
-29            <intent-filter>
-29-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:11:13-14:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:17-69
-30-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:25-66
+11    <uses-permission
+11-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:4:5-95
+12        android:name="android.permission.BLUETOOTH"
+12-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:4:22-65
+13        android:maxSdkVersion="30" />
+13-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:4:66-92
+14    <uses-permission
+14-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:5:5-101
+15        android:name="android.permission.BLUETOOTH_ADMIN"
+15-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:5:22-71
+16        android:maxSdkVersion="30" />
+16-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:5:72-98
+17    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+17-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:6:5-73
+17-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:6:22-70
+18    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+18-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:7:5-76
+18-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:7:22-73
+19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+19-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:9:5-79
+19-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:9:22-76
+20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+20-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:10:5-81
+20-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:10:22-78
+21    <uses-permission
+21-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:5-107
+22        android:name="android.permission.READ_EXTERNAL_STORAGE"
+22-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:22-77
+23        android:maxSdkVersion="32" />
+23-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:12:78-104
+24    <uses-permission
+24-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:5-108
+25        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+25-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:22-78
+26        android:maxSdkVersion="29" />
+26-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:79-105
+27
+28    <permission
+28-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+29        android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+29-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+30        android:protectionLevel="signature" />
+30-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
 31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:17-77
-32-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:27-74
-33            </intent-filter>
-34        </activity>
-35        <activity android:name="com.mval.ticketprinter.SettingsActivity" />
-35-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:16:9-54
-35-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:16:19-51
-36
-37        <provider
-37-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-38            android:name="androidx.startup.InitializationProvider"
-38-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
-39            android:authorities="com.mval.ticketprinter.androidx-startup"
-39-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
-40            android:exported="false" >
-40-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
-41            <meta-data
-41-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-42                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-42-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
-43                android:value="androidx.startup" />
-43-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
-44            <meta-data
-44-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
-45                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-45-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
-46                android:value="androidx.startup" />
-46-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
-47        </provider>
-48    </application>
-49
-50</manifest>
+32    <uses-permission android:name="com.mval.ticketprinter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+32-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+32-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+33    <uses-permission android:name="android.permission.CAMERA" /> <!-- Don't require camera, as this requires a rear camera. This allows it to work on the Nexus 7 -->
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:5-65
+33-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:22:22-62
+34    <uses-feature
+34-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:25:5-27:36
+35        android:name="android.hardware.camera"
+35-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:26:9-47
+36        android:required="false" />
+36-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:27:9-33
+37    <uses-feature
+37-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:28:5-30:36
+38        android:name="android.hardware.camera.front"
+38-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:29:9-53
+39        android:required="false" /> <!-- TODO replace above two with next line after Android 4.2 -->
+39-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:30:9-33
+40    <!-- <uses-feature android:name="android.hardware.camera.any"/> -->
+41    <uses-feature
+41-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:33:5-35:36
+42        android:name="android.hardware.camera.autofocus"
+42-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:34:9-57
+43        android:required="false" />
+43-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:35:9-33
+44    <uses-feature
+44-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:36:5-38:36
+45        android:name="android.hardware.camera.flash"
+45-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:37:9-53
+46        android:required="false" />
+46-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:38:9-33
+47    <uses-feature
+47-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:39:5-41:36
+48        android:name="android.hardware.screen.landscape"
+48-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:40:9-57
+49        android:required="false" />
+49-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:41:9-33
+50    <uses-feature
+50-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:42:5-44:36
+51        android:name="android.hardware.wifi"
+51-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:43:9-45
+52        android:required="false" />
+52-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:44:9-33
+53
+54    <application
+54-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:15:5-28:19
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.10.1] /home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+56        android:debuggable="true"
+57        android:extractNativeLibs="true"
+58        android:icon="@mipmap/ic_launcher"
+58-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:17:9-43
+59        android:label="TicketPrinterApp"
+59-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:16:9-41
+60        android:requestLegacyExternalStorage="true"
+60-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:19:9-52
+61        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+61-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:18:9-65
+62        <activity
+62-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:19:54-26:20
+63            android:name="com.mval.ticketprinter.MainActivity"
+63-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:20:13-41
+64            android:exported="true" >
+64-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:21:13-36
+65            <intent-filter>
+65-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:22:13-25:29
+66                <action android:name="android.intent.action.MAIN" />
+66-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:23:17-69
+66-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:23:25-66
+67
+68                <category android:name="android.intent.category.LAUNCHER" />
+68-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:24:17-77
+68-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:24:27-74
+69            </intent-filter>
+70        </activity>
+71        <activity android:name="com.mval.ticketprinter.SettingsActivity" />
+71-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:27:9-54
+71-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:27:19-51
+72
+73        <provider
+73-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+74            android:name="androidx.startup.InitializationProvider"
+74-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+75            android:authorities="com.mval.ticketprinter.androidx-startup"
+75-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+76            android:exported="false" >
+76-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+77            <meta-data
+77-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+78-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+79                android:value="androidx.startup" />
+79-->[androidx.emoji2:emoji2:1.2.0] /home/mati0216/.gradle/caches/8.14/transforms/f62d01a27387bda631109b22c63e9cff/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+82                android:value="androidx.startup" />
+82-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/mati0216/.gradle/caches/8.14/transforms/29a06cbc2a4cb3e08b8751dce57b4e85/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+83        </provider>
+84
+85        <activity
+85-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:47:9-53:63
+86            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+86-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:48:13-74
+87            android:clearTaskOnLaunch="true"
+87-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:49:13-45
+88            android:screenOrientation="sensorLandscape"
+88-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:50:13-56
+89            android:stateNotNeeded="true"
+89-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:51:13-42
+90            android:theme="@style/zxing_CaptureTheme"
+90-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:52:13-54
+91            android:windowSoftInputMode="stateAlwaysHidden" />
+91-->[com.journeyapps:zxing-android-embedded:4.3.0] /home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/AndroidManifest.xml:53:13-60
+92    </application>
+93
+94</manifest>

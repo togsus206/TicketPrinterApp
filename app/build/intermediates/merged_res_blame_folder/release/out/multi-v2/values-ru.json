@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mval.ticketprinter.app-mergeReleaseResources-26:/values-ru/values-ru.xml",
+            "outputFile": "com.mval.ticketprinter.app-mergeReleaseResources-27:/values-ru/values-ru.xml",
             "map": [
                 {
                     "source": "/home/mati0216/.gradle/caches/8.14/transforms/cb8a65ed0d7d8bc81e262cc07fe0c80d/transformed/core-1.10.1/res/values-ru/values-ru.xml",
@@ -37,6 +37,23 @@
                         "endLines": "7,35,36,37,38,39,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103",
                         "endColumns": "12,77,77,83,97,90,96,136,91,65,98,76,62,117,60,64,56,69,60,53,115,56,61,53,73,127,87,85,136,83,84,90,53,50,65,71,77,95,79,75,76,76,88,72,89,94,73,80,92,54,65,85,84,61,63,62,97,99,94,101,57,54,79",
                         "endOffsets": "426,3221,3299,3383,3481,3572,4396,4533,4625,4691,4790,4867,4930,5048,5109,5174,5231,5301,5362,5416,5532,5589,5651,5705,5779,5907,5995,6081,6218,6302,6387,6478,6532,6583,6649,6721,6799,6895,6975,7051,7128,7205,7294,7367,7457,7552,7626,7707,7800,7855,7921,8007,8092,8154,8218,8281,8379,8479,8574,8676,8734,8789,8869"
+                    }
+                },
+                {
+                    "source": "/home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/res/values-ru/values-ru.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,117,164,306",
+                        "endColumns": "61,46,141,125",
+                        "endOffsets": "112,159,301,427"
+                    },
+                    "to": {
+                        "startLines": "106,107,108,109",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "9057,9119,9166,9308",
+                        "endColumns": "61,46,141,125",
+                        "endOffsets": "9114,9161,9303,9429"
                     }
                 },
                 {

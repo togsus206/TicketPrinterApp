@@ -503,6 +503,23 @@
       jars="/home/mati0216/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-solver/2.0.1/30988fe2d77f3fe3bf7551bb8a8b795fad7e7226/constraintlayout-solver-2.0.1.jar"
       resolved="androidx.constraintlayout:constraintlayout-solver:2.0.1"/>
   <library
+      name="com.journeyapps:zxing-android-embedded:4.3.0@aar"
+      jars="/home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0/jars/classes.jar"
+      resolved="com.journeyapps:zxing-android-embedded:4.3.0"
+      folder="/home/mati0216/.gradle/caches/8.14/transforms/cae6302198e07be6a7dadbf285715d9e/transformed/jetified-zxing-android-embedded-4.3.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
+      name="com.google.zxing:core:3.5.3@jar"
+      jars="/home/mati0216/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.5.3/ca1349214a356cd7958651b2d5a0e1f3811a9c4b/core-3.5.3.jar"
+      resolved="com.google.zxing:core:3.5.3"/>
+  <library
       name="androidx.emoji2:emoji2-views-helper:1.2.0@aar"
       jars="/home/mati0216/.gradle/caches/8.14/transforms/fe88f77fff4e2137fc390827dc804f90/transformed/jetified-emoji2-views-helper-1.2.0/jars/classes.jar"
       resolved="androidx.emoji2:emoji2-views-helper:1.2.0"

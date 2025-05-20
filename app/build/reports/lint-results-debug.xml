@@ -2,24 +2,6 @@
 <issues format="6" by="lint 8.1.1">
 
     <issue
-        id="ScopedStorage"
-        severity="Warning"
-        message="READ_EXTERNAL_STORAGE is deprecated (and is not granted) when targeting Android 13+. If you need to query or interact with MediaStore or media files on the shared storage, you should instead use one or more new storage permissions: `READ_MEDIA_IMAGES`, `READ_MEDIA_VIDEO` or `READ_MEDIA_AUDIO`."
-        category="Correctness"
-        priority="8"
-        summary="Affected by scoped storage"
-        explanation="Scoped storage is enforced on Android 10+ (or Android 11+ if using `requestLegacyExternalStorage`). In particular, `WRITE_EXTERNAL_STORAGE` will no longer provide write access to all files; it will provide the equivalent of `READ_EXTERNAL_STORAGE` instead.&#xA;&#xA;As of Android 13, if you need to query or interact with MediaStore or media files on the shared storage, you should be using instead one or more new storage permissions:&#xA;* `android.permission.READ_MEDIA_IMAGES`&#xA;* `android.permission.READ_MEDIA_VIDEO`&#xA;* `android.permission.READ_MEDIA_AUDIO`&#xA;&#xA;and then add `maxSdkVersion=&quot;33&quot;` to the older permission. See the developer guide for how to do this: https://developer.android.com/about/versions/13/behavior-changes-13#granular-media-permissions&#xA;&#xA;The `MANAGE_EXTERNAL_STORAGE` permission can be used to manage all files, but it is rarely necessary and most apps on Google Play are not allowed to use it. Most apps should instead migrate to use scoped storage. To modify or delete files, apps should request write access from the user as described at https://goo.gle/android-mediastore-createwriterequest.&#xA;&#xA;To learn more, read these resources: Play policy: https://goo.gle/policy-storage-help Allowable use cases: https://goo.gle/policy-storage-usecases"
-        url="https://goo.gle/android-storage-usecases"
-        urls="https://goo.gle/android-storage-usecases"
-        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.READ_EXTERNAL_STORAGE&quot; />"
-        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml"
-            line="3"
-            column="36"/>
-    </issue>
-
-    <issue
         id="OldTargetApi"
         severity="Warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
@@ -38,6 +20,24 @@
     </issue>
 
     <issue
+        id="InflateParams"
+        severity="Warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
+        category="Correctness"
+        priority="5"
+        summary="Layout Inflation without a Parent"
+        explanation="When inflating a layout, avoid passing in null as the parent view, since otherwise any layout parameters on the root of the inflated layout will be ignored."
+        url="https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/"
+        urls="https://www.bignerdranch.com/blog/understanding-androids-layoutinflater-inflate/"
+        errorLine1="        val ticketView = inflater.inflate(R.layout.ticket_preview, null)"
+        errorLine2="                                                                   ~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
+            line="301"
+            column="68"/>
+    </issue>
+
+    <issue
         id="UseSwitchCompatOrMaterialCode"
         severity="Warning"
         message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
@@ -49,7 +49,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/SettingsActivity.kt"
-            line="23"
+            line="27"
             column="5"/>
     </issue>
 
@@ -61,12 +61,12 @@
         priority="5"
         summary="Replace usage of `Switch` widget"
         explanation="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
-        errorLine1="            &lt;Switch"
-        errorLine2="            ^">
+        errorLine1="        &lt;Switch"
+        errorLine2="        ^">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="89"
-            column="13"/>
+            line="71"
+            column="9"/>
     </issue>
 
     <issue
@@ -118,6 +118,22 @@
     </issue>
 
     <issue
+        id="Overdraw"
+        severity="Warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.NoActionBar`)"
+        category="Performance"
+        priority="3"
+        summary="Overdraw: Painting regions more than once"
+        explanation="If you set a background drawable on a root view, then you should use a custom theme where the theme background is null. Otherwise, the theme background will be painted first, only to have your custom background completely cover it; this is called &quot;overdraw&quot;.&#xA;&#xA;NOTE: This detector relies on figuring out which layouts are associated with which activities based on scanning the Java code, and it&apos;s currently doing that using an inexact pattern matching algorithm. Therefore, it can incorrectly conclude which activity the layout is associated with and then wrongly complain that a background-theme is hidden.&#xA;&#xA;If you want your custom background on multiple pages, then you should consider making a custom theme with your custom background and just using that theme instead of a root element background.&#xA;&#xA;Of course it&apos;s possible that your custom drawable is translucent and you want it to be mixed with the background. However, you will get better performance if you pre-mix the background with your drawable and use that resulting image or color as a custom theme background instead."
+        errorLine1="    android:background=&quot;@android:color/white&quot;> &lt;ImageView"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
         id="UnusedResources"
         severity="Warning"
         message="The resource `R.style.Theme_TicketPrinterApp` appears to be unused"
@@ -131,66 +147,6 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/values/themes.xml"
             line="2"
             column="12"/>
-    </issue>
-
-    <issue
-        id="IconLauncherShape"
-        severity="Warning"
-        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
-        category="Usability:Icons"
-        priority="6"
-        summary="The launcher icon shape should use a distinct silhouette"
-        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"/>
-    </issue>
-
-    <issue
-        id="IconLauncherShape"
-        severity="Warning"
-        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
-        category="Usability:Icons"
-        priority="6"
-        summary="The launcher icon shape should use a distinct silhouette"
-        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
-    </issue>
-
-    <issue
-        id="IconLauncherShape"
-        severity="Warning"
-        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
-        category="Usability:Icons"
-        priority="6"
-        summary="The launcher icon shape should use a distinct silhouette"
-        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
-    </issue>
-
-    <issue
-        id="IconLauncherShape"
-        severity="Warning"
-        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
-        category="Usability:Icons"
-        priority="6"
-        summary="The launcher icon shape should use a distinct silhouette"
-        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
-    </issue>
-
-    <issue
-        id="IconLauncherShape"
-        severity="Warning"
-        message="Launcher icons should not fill every pixel of their square region; see the design guide for details"
-        category="Usability:Icons"
-        priority="6"
-        summary="The launcher icon shape should use a distinct silhouette"
-        explanation="According to the Android Design Guide (https://material.io/design/iconography/) your launcher icons should &quot;use a distinct silhouette&quot;, a &quot;three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth.&quot;&#xA;&#xA;The unique silhouette implies that your launcher icon should not be a filled square.">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
     </issue>
 
     <issue
@@ -270,6 +226,102 @@
     </issue>
 
     <issue
+        id="TextFields"
+        severity="Warning"
+        message="This text field does not specify an `inputType`"
+        category="Usability"
+        priority="5"
+        summary="Missing `inputType`"
+        explanation="Providing an `inputType` attribute on a text field improves usability because depending on the data to be input, optimized keyboards can be shown to the user (such as just digits and parentheses for a phone number). &#xA;&#xA;The lint detector also looks at the `id` of the view, and if the id offers a hint of the purpose of the field (for example, the `id` contains the phrase `phone` or `email`), then lint will also ensure that the `inputType` contains the corresponding type attributes.&#xA;&#xA;If you really want to keep the text field generic, you can suppress this warning by setting `inputType=&quot;text&quot;`."
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="44"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SmallSp"
+        severity="Warning"
+        message="Avoid using sizes smaller than `11sp`: `10sp`"
+        category="Usability"
+        priority="4"
+        summary="Text size is too small"
+        explanation="Avoid using sizes smaller than 11sp."
+        errorLine1="        android:textSize=&quot;10sp&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="83"
+            column="9"/>
+    </issue>
+
+    <issue
         id="Autofill"
         severity="Warning"
         message="Missing `autofillHints` attribute"
@@ -301,7 +353,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="52"
+            line="51"
             column="14"/>
     </issue>
 
@@ -319,7 +371,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="59"
+            line="58"
             column="14"/>
     </issue>
 
@@ -337,7 +389,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="66"
+            line="61"
             column="14"/>
     </issue>
 
@@ -355,7 +407,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="109"
+            line="89"
             column="14"/>
     </issue>
 
@@ -427,7 +479,7 @@
         errorLine2="             ~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="36"
+            line="34"
             column="14"/>
     </issue>
 
@@ -445,8 +497,98 @@
         errorLine2="             ~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="130"
+            line="109"
             column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, set their descriptions to `@null`. If your app&apos;s minSdkVersion is 16 or higher, you can instead set these graphical elements&apos; `android:importantForAccessibility` attributes to `no`.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="    android:background=&quot;@android:color/white&quot;> &lt;ImageView"
+        errorLine2="                                                ~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="8"
+            column="49"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        severity="Warning"
+        message="Missing `contentDescription` attribute on image"
+        category="Accessibility"
+        priority="3"
+        summary="Image without `contentDescription`"
+        explanation="Non-textual widgets like ImageViews and ImageButtons should use the `contentDescription` attribute to specify a textual description of the widget such that screen readers and other accessibility tools can adequately describe the user interface.&#xA;&#xA;Note that elements in application screens that are purely decorative and do not provide any content or enable a user action should not have accessibility content descriptions. In this case, set their descriptions to `@null`. If your app&apos;s minSdkVersion is 16 or higher, you can instead set these graphical elements&apos; `android:importantForAccessibility` attributes to `no`.&#xA;&#xA;Note that for text fields, you should not set both the `hint` and the `contentDescription` attributes since the hint will never be shown. Just set the `hint`."
+        url="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        urls="https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases"
+        errorLine1="        android:textColor=&quot;@android:color/black&quot;/> &lt;ImageView"
+        errorLine2="                                                    ~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="86"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="            dateTimeTextView.text = &quot;Fecha: ${sdf.format(Date())}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
+            line="328"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="            dateTimeTextView.text = &quot;Fecha: ${sdf.format(Date())}&quot;"
+        errorLine2="                                     ~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
+            line="328"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`&#xA;* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.&#xA;* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.&#xA;* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="https://developer.android.com/guide/topics/resources/localization.html"
+        urls="https://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="            quantityTextView.text = &quot;x${product.quantity}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
+            line="342"
+            column="37"/>
     </issue>
 
     <issue
@@ -486,13 +628,13 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Nombre&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Nombre del Producto&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:hint=&quot;Nombre&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:hint=&quot;Nombre del Producto&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
             line="49"
@@ -511,7 +653,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="56"
+            line="55"
             column="17"/>
     </issue>
 
@@ -527,7 +669,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="63"
+            line="62"
             column="17"/>
     </issue>
 
@@ -543,7 +685,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="72"
+            line="71"
             column="13"/>
     </issue>
 
@@ -559,7 +701,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="89"
+            line="88"
             column="13"/>
     </issue>
 
@@ -575,23 +717,55 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="97"
+            line="96"
             column="13"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Imprimir&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Previsualizar/Compartir&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:text=&quot;Imprimir&quot;"
-        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:text=&quot;Previsualizar/Compartir&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="104"
+            line="103"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Conexión Bluetooth&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="118"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Escanear Dispositivos Bluetooth&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="127"
             column="13"/>
     </issue>
 
@@ -607,7 +781,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="18"
+            line="17"
             column="13"/>
     </issue>
 
@@ -623,7 +797,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="32"
+            line="30"
             column="17"/>
     </issue>
 
@@ -639,52 +813,68 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="48"
+            line="44"
             column="17"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Encabezado del ticket&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Texto de Encabezado:&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Encabezado del ticket&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:text=&quot;Texto de Encabezado:&quot; android:textSize=&quot;18sp&quot; android:textStyle=&quot;bold&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="62"
+            line="58"
             column="17"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Ingrese el encabezado&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Ej: Nombre de la empresa, dirección...&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:hint=&quot;Ingrese el encabezado&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:hint=&quot;Ej: Nombre de la empresa, dirección...&quot; android:inputType=&quot;textMultiLine&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="70"
+            line="65"
             column="17"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Imprimir fecha y hora&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Incluir Fecha y Hora en el Ticket&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Imprimir fecha y hora&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:text=&quot;Incluir Fecha y Hora en el Ticket&quot; android:textSize=&quot;18sp&quot; android:layout_marginBottom=&quot;16dp&quot;/>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="75"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Texto de Pie de Página:&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;Texto de Pie de Página:&quot; android:textSize=&quot;18sp&quot; android:textStyle=&quot;bold&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
             line="86"
@@ -694,48 +884,32 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Pie del ticket&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Ej: Agradecimiento, política de devoluciones...&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Pie del ticket&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:hint=&quot;Ej: Agradecimiento, política de devoluciones...&quot; android:inputType=&quot;textMultiLine&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="105"
+            line="93"
             column="17"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Ingrese el pie del ticket&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Imagen de código QR:&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:hint=&quot;Ingrese el pie del ticket&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:text=&quot;Imagen de código QR:&quot; android:textSize=&quot;18sp&quot; android:textStyle=&quot;bold&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="113"
-            column="17"/>
-    </issue>
-
-    <issue
-        id="HardcodedText"
-        severity="Warning"
-        message="Hardcoded string &quot;Imagen de código QR&quot;, should use `@string` resource"
-        category="Internationalization"
-        priority="5"
-        summary="Hardcoded text"
-        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:text=&quot;Imagen de código QR&quot;"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="126"
+            line="106"
             column="17"/>
     </issue>
 
@@ -751,7 +925,55 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="119"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Ancho del Papel del Ticket:&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;58 mm&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;58 mm&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
             line="143"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;80 mm&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="                android:text=&quot;80 mm&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="150"
             column="17"/>
     </issue>
 
@@ -767,7 +989,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="152"
+            line="157"
             column="13"/>
     </issue>
 
@@ -912,6 +1134,118 @@
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/menu/main_menu.xml"
             line="6"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Compartir Ticket&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;Compartir Ticket&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/menu/print_share_menu.xml"
+            line="5"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Imprimir Ticket&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:title=&quot;Imprimir Ticket&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/menu/print_share_menu.xml"
+            line="8"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Nombre del Producto Largo&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;Nombre del Producto Largo&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;x1&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;x1&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="21"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;$0.00&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
+            line="29"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;TOTAL&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;TOTAL&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="58"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="        android:text=&quot;$0.00&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="69"
             column="9"/>
     </issue>
 

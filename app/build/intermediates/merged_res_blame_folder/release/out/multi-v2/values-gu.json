@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.mval.ticketprinter.app-mergeReleaseResources-26:/values-gu/values-gu.xml",
+            "outputFile": "com.mval.ticketprinter.app-mergeReleaseResources-27:/values-gu/values-gu.xml",
             "map": [
                 {
                     "source": "/home/mati0216/.gradle/caches/8.14/transforms/7a766fe34afb6a7e9e56519f3a1d1589/transformed/appcompat-1.6.1/res/values-gu/values-gu.xml",
