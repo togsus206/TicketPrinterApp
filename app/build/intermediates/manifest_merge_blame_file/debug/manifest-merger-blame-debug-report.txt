@@ -108,8 +108,8 @@
 59-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:16:9-41
 60        android:requestLegacyExternalStorage="true"
 60-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:19:9-52
-61        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-61-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:18:9-65
+61        android:theme="@style/Theme.TicketPrinterApp" >
+61-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:18:9-54
 62        <activity
 62-->/home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:19:54-26:20
 63            android:name="com.mval.ticketprinter.MainActivity"

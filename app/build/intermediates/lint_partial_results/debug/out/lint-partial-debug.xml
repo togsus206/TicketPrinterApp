@@ -8,17 +8,9 @@
             </map>
     </map>
     <map id="UnusedResources">
-        <location id="R.style.Theme_TicketPrinterApp"
-            file="${:app*debug*sourceProvider*0*resDir*0}/values/themes.xml"
-            line="2"
-            column="12"
-            startOffset="70"
-            endLine="2"
-            endColumn="41"
-            endOffset="99"/>
         <entry
             name="model"
-            string="drawable[dotted_line(U)],id[editTextPrice(U),editProductQuantity(U),buttonAddProduct(U),buttonEditProduct(U),imageViewQr(U),buttonSelectQr(U),action_settings(U),listViewDevices(U),action_print_ticket(U),editProductPrice(U),ticketQrCode(U),editTextQuantity(U),radioGroupPaperWidth(U),radio80mm(U),buttonScan(U),itemName(U),ticketItemsContainer(U),action_share_ticket(U),buttonPrint(U),imageViewLogo(U),textViewQuantity(U),editProductName(U),switchDateTime(U),ticketLogo(U),editTextProductName(U),radio58mm(U),textViewTotalLabel(D),itemQuantity(U),textViewProductName(U),ticketRootLayout(U),ticketTotal(U),ticketHeader(U),buttonDeleteProduct(U),buttonSettings(U),textViewTotal(U),ticketTotalLabel(D),recyclerViewItems(U),itemPrice(U),buttonSelectLogo(U),editTextHeader(U),editTextFooter(U),buttonSaveSettings(U),textViewPrice(U),ticketFooter(U),ticketDateTime(U)],layout[dialog_edit_product(U),ticket_preview(U),activity_main(U),ticket_item_layout(U),activity_settings(U),item_product(U)],menu[main_menu(U),print_share_menu(U)],mipmap[ic_launcher(U)],style[Theme_TicketPrinterApp(D),Theme_AppCompat_Light_NoActionBar(R),Theme_MaterialComponents_DayNight_DarkActionBar(E)];2f^0,37^39;;;"/>
+            string="drawable[dotted_line(U)],id[editTextPrice(U),editProductQuantity(U),buttonAddProduct(U),buttonEditProduct(U),imageViewQr(U),buttonSelectQr(U),action_settings(U),listViewDevices(U),action_print_ticket(U),editProductPrice(U),ticketQrCode(U),editTextQuantity(U),radioGroupPaperWidth(U),radio80mm(U),buttonScan(U),itemName(U),ticketItemsContainer(U),action_share_ticket(U),buttonPrint(U),imageViewLogo(U),textViewQuantity(U),editProductName(U),switchDateTime(U),ticketLogo(U),editTextProductName(U),radio58mm(U),textViewTotalLabel(D),itemQuantity(U),textViewProductName(U),ticketRootLayout(U),ticketTotal(U),ticketHeader(U),buttonDeleteProduct(U),buttonSettings(U),textViewTotal(U),ticketTotalLabel(D),recyclerViewItems(U),itemPrice(U),buttonSelectLogo(U),editTextHeader(U),editTextFooter(U),buttonSaveSettings(U),textViewPrice(U),ticketFooter(U),ticketDateTime(U)],layout[dialog_edit_product(U),ticket_preview(U),activity_main(U),ticket_item_layout(U),activity_settings(U),item_product(U)],menu[main_menu(U),print_share_menu(U)],mipmap[ic_launcher(U)],style[Theme_TicketPrinterApp(U),Theme_MaterialComponents_DayNight_DarkActionBar(R)];2f^0,37^38;;;"/>
     </map>
 
 </incidents>

@@ -252,12 +252,12 @@
         message="Hardcoded string &quot;Configuración de la Impresión&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="17"
+            line="19"
             column="13"
-            startOffset="676"
-            endLine="17"
+            startOffset="681"
+            endLine="19"
             endColumn="57"
-            endOffset="720"/>
+            endOffset="725"/>
     </incident>
 
     <incident
@@ -266,12 +266,12 @@
         message="Hardcoded string &quot;Logo del lugar&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="30"
+            line="33"
             column="17"
-            startOffset="1186"
-            endLine="30"
+            startOffset="1204"
+            endLine="33"
             endColumn="46"
-            endOffset="1215"/>
+            endOffset="1233"/>
     </incident>
 
     <incident
@@ -294,12 +294,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="34"
+            line="37"
             column="14"
-            startOffset="1323"
-            endLine="34"
+            startOffset="1342"
+            endLine="37"
             endColumn="23"
-            endOffset="1332"/>
+            endOffset="1351"/>
     </incident>
 
     <incident
@@ -308,26 +308,12 @@
         message="Hardcoded string &quot;Seleccionar Logo&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="44"
+            line="48"
             column="17"
-            startOffset="1889"
-            endLine="44"
+            startOffset="1810"
+            endLine="48"
             endColumn="48"
-            endOffset="1920"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Texto de Encabezado:&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="58"
-            column="17"
-            startOffset="2363"
-            endLine="58"
-            endColumn="52"
-            endOffset="2398"/>
+            endOffset="1841"/>
     </incident>
 
     <incident
@@ -350,26 +336,26 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="61"
-            column="14"
-            startOffset="2514"
-            endLine="61"
-            endColumn="22"
-            endOffset="2522"/>
+            line="53"
+            column="10"
+            startOffset="1939"
+            endLine="53"
+            endColumn="18"
+            endOffset="1947"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Ej: Nombre de la empresa, dirección...&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Encabezado del Ticket (ej. Nombre del Negocio)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="65"
-            column="17"
-            startOffset="2693"
-            endLine="65"
-            endColumn="70"
-            endOffset="2746"/>
+            line="56"
+            column="13"
+            startOffset="2090"
+            endLine="56"
+            endColumn="74"
+            endOffset="2151"/>
     </incident>
 
     <incident
@@ -378,40 +364,26 @@
         message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="71"
+            line="66"
             column="9"
-            startOffset="2967"
-            endLine="75"
-            endColumn="122"
-            endOffset="3238"/>
+            startOffset="2589"
+            endLine="70"
+            endColumn="49"
+            endOffset="2824"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Incluir Fecha y Hora en el Ticket&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Imprimir Fecha y Hora&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="75"
+            line="69"
             column="13"
-            startOffset="3129"
-            endLine="75"
-            endColumn="61"
-            endOffset="3177"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Texto de Pie de Página:&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="86"
-            column="17"
-            startOffset="3594"
-            endLine="86"
-            endColumn="55"
-            endOffset="3632"/>
+            startOffset="2739"
+            endLine="69"
+            endColumn="49"
+            endOffset="2775"/>
     </incident>
 
     <incident
@@ -434,40 +406,40 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="89"
-            column="14"
-            startOffset="3748"
-            endLine="89"
-            endColumn="22"
-            endOffset="3756"/>
+            line="72"
+            column="10"
+            startOffset="2835"
+            endLine="72"
+            endColumn="18"
+            endOffset="2843"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Ej: Agradecimiento, política de devoluciones...&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Pie de Ticket (ej. Gracias por su compra)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="93"
-            column="17"
-            startOffset="3927"
-            endLine="93"
-            endColumn="79"
-            endOffset="3989"/>
+            line="75"
+            column="13"
+            startOffset="2986"
+            endLine="75"
+            endColumn="69"
+            endOffset="3042"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Imagen de código QR:&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Código QR (opcional)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="106"
+            line="94"
             column="17"
-            startOffset="4543"
-            endLine="106"
+            startOffset="3839"
+            endLine="94"
             endColumn="52"
-            endOffset="4578"/>
+            endOffset="3874"/>
     </incident>
 
     <incident
@@ -490,12 +462,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="109"
+            line="98"
             column="14"
-            startOffset="4694"
-            endLine="109"
+            startOffset="3983"
+            endLine="98"
             endColumn="23"
-            endOffset="4703"/>
+            endOffset="3992"/>
     </incident>
 
     <incident
@@ -504,12 +476,12 @@
         message="Hardcoded string &quot;Seleccionar QR&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="119"
+            line="109"
             column="17"
-            startOffset="5255"
-            endLine="119"
+            startOffset="4446"
+            endLine="109"
             endColumn="46"
-            endOffset="5284"/>
+            endOffset="4475"/>
     </incident>
 
     <incident
@@ -518,12 +490,12 @@
         message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="127"
+            line="117"
             column="13"
-            startOffset="5500"
-            endLine="127"
+            startOffset="4691"
+            endLine="117"
             endColumn="55"
-            endOffset="5542"/>
+            endOffset="4733"/>
     </incident>
 
     <incident
@@ -532,12 +504,12 @@
         message="Hardcoded string &quot;58 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="143"
+            line="133"
             column="17"
-            startOffset="6115"
-            endLine="143"
+            startOffset="5307"
+            endLine="133"
             endColumn="37"
-            endOffset="6135"/>
+            endOffset="5327"/>
     </incident>
 
     <incident
@@ -546,12 +518,12 @@
         message="Hardcoded string &quot;80 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="150"
+            line="140"
             column="17"
-            startOffset="6369"
-            endLine="150"
+            startOffset="5561"
+            endLine="140"
             endColumn="37"
-            endOffset="6389"/>
+            endOffset="5581"/>
     </incident>
 
     <incident
@@ -560,12 +532,12 @@
         message="Hardcoded string &quot;Guardar Configuración&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="157"
+            line="149"
             column="13"
-            startOffset="6617"
-            endLine="157"
+            startOffset="5822"
+            endLine="149"
             endColumn="49"
-            endOffset="6653"/>
+            endOffset="5858"/>
     </incident>
 
     <incident
@@ -1180,17 +1152,17 @@
     </incident>
 
     <incident
-        id="InflateParams"
+        id="Overdraw"
         severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
         <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="301"
-            column="68"
-            startOffset="12631"
-            endLine="301"
-            endColumn="72"
-            endOffset="12635"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
     </incident>
 
     <incident
@@ -1222,17 +1194,17 @@
     </incident>
 
     <incident
-        id="Overdraw"
+        id="InflateParams"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.NoActionBar`)">
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="301"
+            column="68"
+            startOffset="12631"
+            endLine="301"
+            endColumn="72"
+            endOffset="12635"/>
     </incident>
 
 </incidents>

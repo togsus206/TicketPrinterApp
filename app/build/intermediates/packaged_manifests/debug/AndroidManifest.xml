@@ -58,7 +58,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="TicketPrinterApp"
         android:requestLegacyExternalStorage="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+        android:theme="@style/Theme.TicketPrinterApp" >
         <activity
             android:name="com.mval.ticketprinter.MainActivity"
             android:exported="true" >

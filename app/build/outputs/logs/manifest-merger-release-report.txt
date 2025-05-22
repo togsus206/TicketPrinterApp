@@ -123,7 +123,7 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/mati0216/.gradle/cach
 	android:icon
 		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:17:9-43
 	android:theme
-		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:18:9-65
+		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:18:9-54
 activity#com.mval.ticketprinter.MainActivity
 ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:19:54-26:20
 	android:exported
