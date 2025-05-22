@@ -8,6 +8,10 @@
         "source": "com.mval.ticketprinter.app-main-30:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/drawable_dotted_line.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-30:/drawable/dotted_line.xml"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_settings.xml.flat",
         "source": "com.mval.ticketprinter.app-main-30:/layout/activity_settings.xml"
     },
@@ -42,10 +46,6 @@
     {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_dialog_edit_product.xml.flat",
         "source": "com.mval.ticketprinter.app-main-30:/layout/dialog_edit_product.xml"
-    },
-    {
-        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-30:/mipmap-xhdpi/ic_launcher.png"
     },
     {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_main.xml.flat",

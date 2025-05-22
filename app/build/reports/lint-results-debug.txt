@@ -70,6 +70,18 @@
    However, you may simply not be aware that a more recent version is
    available, and that is what this lint check helps find.
 
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:98: Warning: Avoid using "mm" as units (it does not work accurately on all devices); use "dp" instead [InOrMmUsage]
+        android:layout_marginTop="10mm" android:layout_marginBottom="8dp" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "InOrMmUsage":
+   Avoid using mm (millimeters) or in (inches) as the unit for dimensions.
+
+   While it should work in principle, unfortunately many devices do not report
+   the correct true physical density, which means that the dimension
+   calculations won't work correctly. You are better off using dp (and for
+   font sizes, sp).
+
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:8: Warning: Possible overdraw: Root element paints background @android:color/white with a theme that also paints a background (inferred theme is @style/Theme.AppCompat.Light.NoActionBar) [Overdraw]
     android:background="@android:color/white"> <ImageView
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +125,7 @@
    lint.unused-resources.exclude-tests =true.
    ,
 
-/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The image ic_launcher.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 643x643 dp (965x965 px), mipmap-mdpi/ic_launcher.png: 965x965 dp (965x965 px), mipmap-xhdpi/ic_launcher.png: 483x483 dp (965x965 px), mipmap-xxhdpi/ic_launcher.png: 322x322 dp (965x965 px), mipmap-xxxhdpi/ic_launcher.png: 241x241 dp (965x965 px) [IconDipSize]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The image ic_launcher.png varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px) [IconDipSize]
 
    Explanation for issues of type "IconDipSize":
    Checks the all icons which are provided in multiple densities, all compute
@@ -121,7 +133,7 @@
    errors where images are either placed in the wrong folder, or icons are
    changed to new sizes but some folders are forgotten.
 
-/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The ic_launcher.png icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi [IconDuplicatesConfig]
+/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png: Warning: The ic_launcher.png icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi [IconDuplicatesConfig]
 
    Explanation for issues of type "IconDuplicatesConfig":
    If an icon is provided under different configuration parameters such as
@@ -159,25 +171,6 @@
 
    If you really want to keep the text field generic, you can suppress this
    warning by setting inputType="text".
-
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml:15: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml:22: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml:30: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:29: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:83: Warning: Avoid using sizes smaller than 11sp: 10sp [SmallSp]
-        android:textSize="10sp"
-        ~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "SmallSp":
-   Avoid using sizes smaller than 11sp.
 
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:44: Warning: Missing autofillHints attribute [Autofill]
             <EditText
@@ -285,9 +278,9 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:21: Warning: Hardcoded string "Ajustes", should use @string resource [HardcodedText]
             android:text="Ajustes" />
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:49: Warning: Hardcoded string "Nombre del Producto", should use @string resource [HardcodedText]
-                android:hint="Nombre del Producto" />
-                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:49: Warning: Hardcoded string "Producto", should use @string resource [HardcodedText]
+                android:hint="Producto" />
+                ~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:55: Warning: Hardcoded string "Cant.", should use @string resource [HardcodedText]
                 android:hint="Cant."
                 ~~~~~~~~~~~~~~~~~~~~
@@ -427,4 +420,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 76 warnings
+0 errors, 72 warnings

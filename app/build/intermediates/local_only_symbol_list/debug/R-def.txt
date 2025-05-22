@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+drawable dotted_line
 id action_print_ticket
 id action_settings
 id action_share_ticket

@@ -16,27 +16,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="44"
-            column="14"
-            startOffset="1472"
-            endLine="44"
-            endColumn="22"
-            endOffset="1480"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -65,17 +44,38 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="44"
+            column="14"
+            startOffset="1472"
+            endLine="44"
+            endColumn="22"
+            endOffset="1480"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Nombre del Producto&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="49"
             column="17"
             startOffset="1689"
             endLine="49"
-            endColumn="51"
-            endOffset="1723"/>
+            endColumn="40"
+            endOffset="1712"/>
     </incident>
 
     <incident
@@ -100,10 +100,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="51"
             column="14"
-            startOffset="1741"
+            startOffset="1730"
             endLine="51"
             endColumn="22"
-            endOffset="1749"/>
+            endOffset="1738"/>
     </incident>
 
     <incident
@@ -114,10 +114,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="55"
             column="17"
-            startOffset="1914"
+            startOffset="1903"
             endLine="55"
             endColumn="37"
-            endOffset="1934"/>
+            endOffset="1923"/>
     </incident>
 
     <incident
@@ -142,10 +142,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="58"
             column="14"
-            startOffset="1995"
+            startOffset="1984"
             endLine="58"
             endColumn="22"
-            endOffset="2003"/>
+            endOffset="1992"/>
     </incident>
 
     <incident
@@ -156,10 +156,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="62"
             column="17"
-            startOffset="2166"
+            startOffset="2155"
             endLine="62"
             endColumn="38"
-            endOffset="2187"/>
+            endOffset="2176"/>
     </incident>
 
     <incident
@@ -170,10 +170,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="71"
             column="13"
-            startOffset="2439"
+            startOffset="2428"
             endLine="71"
             endColumn="44"
-            endOffset="2470"/>
+            endOffset="2459"/>
     </incident>
 
     <incident
@@ -184,10 +184,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="88"
             column="13"
-            startOffset="2966"
+            startOffset="2955"
             endLine="88"
             endColumn="35"
-            endOffset="2988"/>
+            endOffset="2977"/>
     </incident>
 
     <incident
@@ -198,10 +198,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="96"
             column="13"
-            startOffset="3237"
+            startOffset="3226"
             endLine="96"
             endColumn="33"
-            endOffset="3257"/>
+            endOffset="3246"/>
     </incident>
 
     <incident
@@ -212,10 +212,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="103"
             column="13"
-            startOffset="3465"
+            startOffset="3454"
             endLine="103"
             endColumn="51"
-            endOffset="3503"/>
+            endOffset="3492"/>
     </incident>
 
     <incident
@@ -226,10 +226,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="118"
             column="13"
-            startOffset="3920"
+            startOffset="3909"
             endLine="118"
             endColumn="46"
-            endOffset="3953"/>
+            endOffset="3942"/>
     </incident>
 
     <incident
@@ -240,10 +240,10 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="127"
             column="13"
-            startOffset="4243"
+            startOffset="4232"
             endLine="127"
             endColumn="59"
-            endOffset="4289"/>
+            endOffset="4278"/>
     </incident>
 
     <incident
@@ -867,20 +867,6 @@
     </incident>
 
     <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_item_layout.xml"
-            line="15"
-            column="9"
-            startOffset="525"
-            endLine="15"
-            endColumn="32"
-            endOffset="548"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;x1&quot;, should use `@string` resource">
@@ -895,20 +881,6 @@
     </incident>
 
     <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_item_layout.xml"
-            line="22"
-            column="9"
-            startOffset="797"
-            endLine="22"
-            endColumn="32"
-            endOffset="820"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource">
@@ -920,20 +892,6 @@
             endLine="29"
             endColumn="29"
             endOffset="1090"/>
-    </incident>
-
-    <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_item_layout.xml"
-            line="30"
-            column="9"
-            startOffset="1099"
-            endLine="30"
-            endColumn="32"
-            endOffset="1122"/>
     </incident>
 
     <incident
@@ -965,20 +923,6 @@
     </incident>
 
     <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="29"
-            column="9"
-            startOffset="1102"
-            endLine="29"
-            endColumn="32"
-            endOffset="1125"/>
-    </incident>
-
-    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;TOTAL&quot;, should use `@string` resource">
@@ -1007,20 +951,6 @@
     </incident>
 
     <incident
-        id="SmallSp"
-        severity="warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="83"
-            column="9"
-            startOffset="3020"
-            endLine="83"
-            endColumn="32"
-            endOffset="3043"/>
-    </incident>
-
-    <incident
         id="ContentDescription"
         severity="warning"
         message="Missing `contentDescription` attribute on image">
@@ -1046,6 +976,20 @@
             endLine="86"
             endColumn="62"
             endOffset="3168"/>
+    </incident>
+
+    <incident
+        id="InOrMmUsage"
+        severity="warning"
+        message="Avoid using &quot;`mm`&quot; as units (it does not work accurately on all devices); use &quot;`dp`&quot; instead">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="98"
+            column="9"
+            startOffset="3614"
+            endLine="98"
+            endColumn="40"
+            endOffset="3645"/>
     </incident>
 
     <incident
@@ -1236,52 +1180,6 @@
     </incident>
 
     <incident
-        id="Overdraw"
-        severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.NoActionBar`)">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
-    </incident>
-
-    <incident
-        id="IconDipSize"
-        severity="warning"
-        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 643x643 dp (965x965 px), mipmap-mdpi/ic_launcher.png: 965x965 dp (965x965 px), mipmap-xhdpi/ic_launcher.png: 483x483 dp (965x965 px), mipmap-xxhdpi/ic_launcher.png: 322x322 dp (965x965 px), mipmap-xxxhdpi/ic_launcher.png: 241x241 dp (965x965 px)">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
-    </incident>
-
-    <incident
-        id="IconDuplicatesConfig"
-        severity="warning"
-        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
-    </incident>
-
-    <incident
         id="InflateParams"
         severity="warning"
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
@@ -1293,6 +1191,48 @@
             endLine="301"
             endColumn="72"
             endOffset="12635"/>
+    </incident>
+
+    <incident
+        id="IconDipSize"
+        severity="warning"
+        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconDuplicatesConfig"
+        severity="warning"
+        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.NoActionBar`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
     </incident>
 
 </incidents>

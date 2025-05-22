@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 76 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 72 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Tue May 20 18:17:05 ART 2025 by AGP (8.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu May 22 12:06:59 ART 2025 by AGP (8.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -191,13 +191,13 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialCode"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialXml"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (3)</a>
+      <a class="mdl-navigation__link" href="#InOrMmUsage"><i class="material-icons warning-icon">warning</i>Using <code>mm</code> or <code>in</code> dimensions (1)</a>
       <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (1)</a>
       <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
       <a class="mdl-navigation__link" href="#IconDipSize"><i class="material-icons warning-icon">warning</i>Icon density-independent size validation (1)</a>
       <a class="mdl-navigation__link" href="#IconDuplicatesConfig"><i class="material-icons warning-icon">warning</i>Identical bitmaps across various configurations (1)</a>
       <a class="mdl-navigation__link" href="#ButtonStyle"><i class="material-icons warning-icon">warning</i>Button should be borderless (2)</a>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
-      <a class="mdl-navigation__link" href="#SmallSp"><i class="material-icons warning-icon">warning</i>Text size is too small (5)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (8)</a>
       <a class="mdl-navigation__link" href="#ContentDescription"><i class="material-icons warning-icon">warning</i>Image without <code>contentDescription</code> (4)</a>
       <a class="mdl-navigation__link" href="#SetTextI18n"><i class="material-icons warning-icon">warning</i>TextView Internationalization (4)</a>
@@ -232,6 +232,9 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">3</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#InOrMmUsage">InOrMmUsage</a>: Using <code>mm</code> or <code>in</code> dimensions</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
 <tr>
@@ -256,9 +259,6 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#TextFields">TextFields</a>: Missing <code>inputType</code></td></tr>
-<tr>
-<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#SmallSp">SmallSp</a>: Text size is too small</td></tr>
 <tr>
 <td class="countColumn">8</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#Autofill">Autofill</a>: Use Autofill</td></tr>
@@ -553,6 +553,52 @@ To suppress this error, use the issue id "GradleDependency" as explained in the 
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="GradleDependencyCardLink" onclick="hideid('GradleDependencyCard');">
 Dismiss</button>            </div>
             </div>
+          </section><a name="InOrMmUsage"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InOrMmUsageCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Using mm or in dimensions</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:98</span>: <span class="message">Avoid using "<code>mm</code>" as units (it does not work accurately on all devices); use "<code>dp</code>" instead</span><br /><pre class="errorlines">
+<span class="lineno">  95 </span>    <span class="tag">&lt;View</span><span class="attribute">
+</span><span class="lineno">  96 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  97 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"1dp"</span>  <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@drawable/dotted_line"</span>
+<span class="caretline"><span class="lineno">  98 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"10mm"</span></span> <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"8dp"</span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  99 </span>
+<span class="lineno"> 100 </span><span class="tag">&lt;/LinearLayout></span>
+</pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationInOrMmUsage" style="display: none;">
+Avoid using <code>mm</code> (millimeters) or <code>in</code> (inches) as the unit for dimensions.<br/>
+<br/>
+While it should work in principle, unfortunately many devices do not report the correct true physical density, which means that the dimension calculations won't work correctly. You are better off using <code>dp</code> (and for font sizes, <code>sp</code>).<br/>To suppress this error, use the issue id "InOrMmUsage" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">InOrMmUsage</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 4/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationInOrMmUsageLink" onclick="reveal('explanationInOrMmUsage');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="InOrMmUsageCardLink" onclick="hideid('InOrMmUsageCard');">
+Dismiss</button>            </div>
+            </div>
           </section>
 <a name="Performance"></a>
 <a name="Overdraw"></a>
@@ -565,13 +611,13 @@ Dismiss</button>            </div>
 <div class="issue">
 <div class="warningslist">
 <span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:8</span>: <span class="message">Possible overdraw: Root element paints background <code>@android:color/white</code> with a theme that also paints a background (inferred theme is <code>@style/Theme.AppCompat.Light.NoActionBar</code>)</span><br /><pre class="errorlines">
-<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  6 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
-<span class="lineno">  7 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"8dp"</span>
-<span class="caretline"><span class="lineno">  8 </span>    <span class="warning"><span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@android:color/white"</span></span>> <span class="tag">&lt;ImageView</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketLogo"</span>
-<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="lineno">   5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">   6 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
+<span class="lineno">   7 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"8dp"</span>
+<span class="caretline"><span class="lineno">   8 </span>    <span class="warning"><span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@android:color/white"</span></span>> <span class="tag">&lt;ImageView</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">   9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketLogo"</span>
+<span class="lineno">  10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationOverdraw" style="display: none;">
@@ -665,12 +711,11 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The image <code>ic_launcher.png</code> varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 643x643 dp (965x965 px), mipmap-mdpi/ic_launcher.png: 965x965 dp (965x965 px), mipmap-xhdpi/ic_launcher.png: 483x483 dp (965x965 px), mipmap-xxhdpi/ic_launcher.png: 322x322 dp (965x965 px), mipmap-xxxhdpi/ic_launcher.png: 241x241 dp (965x965 px)</span><br />
-<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 4 Additional Locations...</button>
+<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The image <code>ic_launcher.png</code> varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)</span><br />
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
 <div id="Location1Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxhdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-xhdpi/ic_launcher.png">../../src/main/res/mipmap-xhdpi/ic_launcher.png</a></span>
 <li> <span class="location"><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png">../../src/main/res/mipmap-hdpi/ic_launcher.png</a></span>
 <li> <span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png">../../src/main/res/mipmap-mdpi/ic_launcher.png</a></span>
 </ul>
@@ -678,10 +723,9 @@ Additional locations: <ul>
 <table>
 <tr><td><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-mdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-hdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xhdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxhdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png" /></a>
-</td></tr><tr><th></th><th></th><th></th><th></th><th></th></tr>
+</td></tr><tr><th></th><th></th><th></th><th></th></tr>
 </table>
 </div>
 <div class="metadata"><div class="explanation" id="explanationIconDipSize" style="display: none;">
@@ -721,12 +765,11 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The <code>ic_launcher.png</code> icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi</span><br />
-<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 4 Additional Locations...</button>
+<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The <code>ic_launcher.png</code> icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi</span><br />
+<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
 <div id="Location1Div" style="display: none">
 Additional locations: <ul>
 <li> <span class="location"><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxhdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-xhdpi/ic_launcher.png">../../src/main/res/mipmap-xhdpi/ic_launcher.png</a></span>
 <li> <span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png">../../src/main/res/mipmap-mdpi/ic_launcher.png</a></span>
 <li> <span class="location"><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png">../../src/main/res/mipmap-hdpi/ic_launcher.png</a></span>
 </ul>
@@ -734,10 +777,9 @@ Additional locations: <ul>
 <table>
 <tr><td><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-mdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-hdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xhdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxhdpi/ic_launcher.png" /></a>
 </td><td><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png" /></a>
-</td></tr><tr><th></th><th></th><th></th><th></th><th></th></tr>
+</td></tr><tr><th></th><th></th><th></th><th></th></tr>
 </table>
 </div>
 <div class="metadata"><div class="explanation" id="explanationIconDuplicatesConfig" style="display: none;">
@@ -874,87 +916,6 @@ To suppress this error, use the issue id "TextFields" as explained in the <a hre
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="TextFieldsCardLink" onclick="hideid('TextFieldsCard');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="SmallSp"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SmallSpCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Text size is too small</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/ticket_item_layout.xml">../../src/main/res/layout/ticket_item_layout.xml</a>:15</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"2"</span>
-<span class="lineno"> 14 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Nombre del Producto Largo"</span>
-<span class="caretline"><span class="lineno"> 15 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 17 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/itemQuantity"</span>
-<span class="lineno"> 18 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/ticket_item_layout.xml">../../src/main/res/layout/ticket_item_layout.xml</a>:22</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"x1"</span>
-<span class="caretline"><span class="lineno"> 22 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;TextView</span><span class="attribute">
-</span><span class="lineno"> 25 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/itemPrice"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/ticket_item_layout.xml">../../src/main/res/layout/ticket_item_layout.xml</a>:30</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno"> 29 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"$0.00"</span>
-<span class="caretline"><span class="lineno"> 30 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
-<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/>
-<span class="lineno"> 33 </span>        
-</pre>
-
-<span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:29</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center"</span>
-<span class="caretline"><span class="lineno"> 29 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">""</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;View</span><span class="attribute">
-</span><span class="lineno"> 32 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:83</span>: <span class="message">Avoid using sizes smaller than <code>11sp</code>: <code>10sp</code></span><br /><pre class="errorlines">
-<span class="lineno"> 80 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 81 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 82 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"center"</span>
-<span class="caretline"><span class="lineno"> 83 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 84 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">""</span>
-<span class="lineno"> 85 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
-<span class="lineno"> 86 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;ImageView</span></pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationSmallSp" style="display: none;">
-Avoid using sizes smaller than 11sp.<br/>To suppress this error, use the issue id "SmallSp" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">SmallSp</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Usability</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 4/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSmallSpLink" onclick="reveal('explanationSmallSp');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SmallSpCardLink" onclick="hideid('SmallSpCard');">
-Dismiss</button>            </div>
-            </div>
           </section><a name="Autofill"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="AutofillCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -975,7 +936,7 @@ Dismiss</button>            </div>
 
 <span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:51</span>: <span class="message">Missing <code>autofillHints</code> attribute</span><br /><pre class="errorlines">
 <span class="lineno">  48 </span>                <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="lineno">  49 </span>                <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Nombre del Producto"</span> />
+<span class="lineno">  49 </span>                <span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Producto"</span> />
 <span class="lineno">  50 </span>
 <span class="caretline"><span class="lineno">  51 </span>            <span class="tag">&lt;</span><span class="warning"><span class="tag">EditText</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
 </span><span class="lineno">  52 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/editTextQuantity"</span>
@@ -1098,22 +1059,22 @@ Dismiss</button>            </div>
 <span class="lineno"> 112 </span>      <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"100dp"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:8</span>: <span class="message">Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
-<span class="lineno">  5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno">  6 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
-<span class="lineno">  7 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"8dp"</span>
-<span class="caretline"><span class="lineno">  8 </span>    <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@android:color/white"</span>> <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno">  9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketLogo"</span>
-<span class="lineno"> 10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="lineno">   5 </span>    <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">   6 </span>    <span class="prefix">android:</span><span class="attribute">orientation</span>=<span class="value">"vertical"</span>
+<span class="lineno">   7 </span>    <span class="prefix">android:</span><span class="attribute">padding</span>=<span class="value">"8dp"</span>
+<span class="caretline"><span class="lineno">   8 </span>    <span class="prefix">android:</span><span class="attribute">background</span>=<span class="value">"@android:color/white"</span>> <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">   9 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketLogo"</span>
+<span class="lineno">  10 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  11 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:86</span>: <span class="message">Missing <code>contentDescription</code> attribute on image</span><br /><pre class="errorlines">
-<span class="lineno"> 83 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span>
-<span class="lineno"> 84 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">""</span>
-<span class="lineno"> 85 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
-<span class="caretline"><span class="lineno"> 86 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
-</span><span class="lineno"> 87 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketQrCode"</span>
-<span class="lineno"> 88 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 89 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
+<span class="lineno">  83 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"18sp"</span>
+<span class="lineno">  84 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">""</span>
+<span class="lineno">  85 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"8dp"</span>
+<span class="caretline"><span class="lineno">  86 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;</span><span class="warning"><span class="tag">ImageView</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+</span><span class="lineno">  87 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketQrCode"</span>
+<span class="lineno">  88 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  89 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationContentDescription" style="display: none;">
@@ -1245,11 +1206,11 @@ Dismiss</button>            </div>
 <span class="lineno">  23 </span>    <span class="tag">&lt;/LinearLayout></span>
 </pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:49</span>: <span class="message">Hardcoded string "Nombre del Producto", should use <code>@string</code> resource</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:49</span>: <span class="message">Hardcoded string "Producto", should use <code>@string</code> resource</span><br /><pre class="errorlines">
 <span class="lineno">  46 </span>                <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"0dp"</span>
 <span class="lineno">  47 </span>                <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno">  48 </span>                <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
-<span class="caretline"><span class="lineno">  49 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Nombre del Producto"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="caretline"><span class="lineno">  49 </span>                <span class="warning"><span class="prefix">android:</span><span class="attribute">hint</span>=<span class="value">"Producto"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno">  50 </span>
 <span class="lineno">  51 </span>            <span class="tag">&lt;EditText</span><span class="attribute">
 </span><span class="lineno">  52 </span><span class="attribute">                </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/editTextQuantity"</span></pre>
@@ -1560,7 +1521,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 12 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno"> 13 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"2"</span>
 <span class="caretline"><span class="lineno"> 14 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"Nombre del Producto Largo"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span>
+<span class="lineno"> 15 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
 <span class="lineno"> 16 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;TextView</span><span class="attribute">
 </span><span class="lineno"> 17 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/itemQuantity"</span></pre>
 
@@ -1569,7 +1530,7 @@ Dismiss</button>            </div>
 <span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
 <span class="caretline"><span class="lineno"> 21 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"x1"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span>
+<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
 <span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
 <span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;TextView</span></pre>
 
@@ -1578,28 +1539,28 @@ Dismiss</button>            </div>
 <span class="lineno"> 27 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
 <span class="lineno"> 28 </span>        <span class="prefix">android:</span><span class="attribute">layout_weight</span>=<span class="value">"1"</span>
 <span class="caretline"><span class="lineno"> 29 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"$0.00"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"10sp"</span>
+<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
 <span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
 <span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/>
 </pre>
 
 <span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:58</span>: <span class="message">Hardcoded string "TOTAL", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 55 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketTotalLabel"</span>
-<span class="lineno"> 56 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
-<span class="lineno"> 57 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 58 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"TOTAL"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 59 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"12sp"</span>
-<span class="lineno"> 60 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
-<span class="lineno"> 61 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span></pre>
+<span class="lineno">  55 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/ticketTotalLabel"</span>
+<span class="lineno">  56 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  57 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  58 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"TOTAL"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  59 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"15sp"</span>
+<span class="lineno">  60 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
+<span class="lineno">  61 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span></pre>
 
 <span class="location"><a href="../../src/main/res/layout/ticket_preview.xml">../../src/main/res/layout/ticket_preview.xml</a>:69</span>: <span class="message">Hardcoded string "$0.00", should use <code>@string</code> resource</span><br /><pre class="errorlines">
-<span class="lineno"> 66 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 67 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"14sp"</span>
-<span class="lineno"> 68 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
-<span class="caretline"><span class="lineno"> 69 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"$0.00"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 70 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span>
-<span class="lineno"> 71 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;View</span><span class="attribute">
-</span><span class="lineno"> 72 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span></pre>
+<span class="lineno">  66 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="lineno">  67 </span>        <span class="prefix">android:</span><span class="attribute">textSize</span>=<span class="value">"14sp"</span>
+<span class="lineno">  68 </span>        <span class="prefix">android:</span><span class="attribute">gravity</span>=<span class="value">"end"</span>
+<span class="caretline"><span class="lineno">  69 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"$0.00"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  70 </span>        <span class="prefix">android:</span><span class="attribute">textStyle</span>=<span class="value">"bold"</span>
+<span class="lineno">  71 </span>        <span class="prefix">android:</span><span class="attribute">textColor</span>=<span class="value">"@android:color/black"</span>/> <span class="tag">&lt;View</span><span class="attribute">
+</span><span class="lineno">  72 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span></pre>
 
 </div>
 </div>

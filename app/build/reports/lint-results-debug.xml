@@ -118,6 +118,22 @@
     </issue>
 
     <issue
+        id="InOrMmUsage"
+        severity="Warning"
+        message="Avoid using &quot;`mm`&quot; as units (it does not work accurately on all devices); use &quot;`dp`&quot; instead"
+        category="Correctness"
+        priority="4"
+        summary="Using `mm` or `in` dimensions"
+        explanation="Avoid using `mm` (millimeters) or `in` (inches) as the unit for dimensions.&#xA;&#xA;While it should work in principle, unfortunately many devices do not report the correct true physical density, which means that the dimension calculations won&apos;t work correctly. You are better off using `dp` (and for font sizes, `sp`)."
+        errorLine1="        android:layout_marginTop=&quot;10mm&quot; android:layout_marginBottom=&quot;8dp&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
+            line="98"
+            column="9"/>
+    </issue>
+
+    <issue
         id="Overdraw"
         severity="Warning"
         message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.AppCompat.Light.NoActionBar`)"
@@ -152,7 +168,7 @@
     <issue
         id="IconDipSize"
         severity="Warning"
-        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 643x643 dp (965x965 px), mipmap-mdpi/ic_launcher.png: 965x965 dp (965x965 px), mipmap-xhdpi/ic_launcher.png: 483x483 dp (965x965 px), mipmap-xxhdpi/ic_launcher.png: 322x322 dp (965x965 px), mipmap-xxxhdpi/ic_launcher.png: 241x241 dp (965x965 px)"
+        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)"
         category="Usability:Icons"
         priority="5"
         summary="Icon density-independent size validation"
@@ -162,8 +178,6 @@
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
         <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
-        <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
@@ -172,7 +186,7 @@
     <issue
         id="IconDuplicatesConfig"
         severity="Warning"
-        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi"
+        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi"
         category="Usability:Icons"
         priority="5"
         summary="Identical bitmaps across various configurations"
@@ -181,8 +195,6 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"/>
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-xhdpi/ic_launcher.png"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/mipmap-mdpi/ic_launcher.png"/>
         <location
@@ -239,86 +251,6 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
             line="44"
             column="14"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;10sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
-            line="15"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;10sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
-            line="22"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;10sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_item_layout.xml"
-            line="30"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;10sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
-            line="29"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="SmallSp"
-        severity="Warning"
-        message="Avoid using sizes smaller than `11sp`: `10sp`"
-        category="Usability"
-        priority="4"
-        summary="Text size is too small"
-        explanation="Avoid using sizes smaller than 11sp."
-        errorLine1="        android:textSize=&quot;10sp&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml"
-            line="83"
-            column="9"/>
     </issue>
 
     <issue
@@ -628,13 +560,13 @@
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Nombre del Producto&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Producto&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="                android:hint=&quot;Nombre del Producto&quot; />"
-        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="                android:hint=&quot;Producto&quot; />"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
             line="49"
