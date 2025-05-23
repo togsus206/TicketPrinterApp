@@ -60,7 +60,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private var footerText: String = ""
     private var printDateTime: Boolean = false
     private var enableQrCode: Boolean = true
-    private var qrCodeText: String = ""
+    private var qrCodeText: String = "equicontrol.dev.ar"
+    private var qrImageBitmap: Bitmap? = null
     private var ticketPaperWidth: Int = SettingsActivity.DEFAULT_PAPER_WIDTH
 
     // Variables para Bluetooth
@@ -288,11 +289,24 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         } else {
             null
         }
+        
+        val QRPath = sharedPreferences.getString(SettingsActivity.KEY_QR_PATH, null)
+        qrImageBitmap = if (QRPath != null) {
+            BitmapFactory.decodeFile(QRPath)
+        } else {
+            null
+        }
+        
+        if (QRPath != null) {
+            enableQrCode = false
+        } else {
+            enableQrCode = true
+        }
 
         headerText = sharedPreferences.getString(SettingsActivity.KEY_HEADER, "Encabezado por defecto") ?: "Encabezado por defecto"
         footerText = sharedPreferences.getString(SettingsActivity.KEY_FOOTER, "Pie de página por defecto") ?: "Pie de página por defecto"
         printDateTime = sharedPreferences.getBoolean(SettingsActivity.KEY_PRINT_DATE_TIME, false)
-        enableQrCode = true
+        //enableQrCode = true
         ticketPaperWidth = sharedPreferences.getInt(SettingsActivity.KEY_PAPER_WIDTH, SettingsActivity.DEFAULT_PAPER_WIDTH)
     }
 
@@ -357,7 +371,12 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                 qrCodeImageView.visibility = View.GONE
             }
         } else {
-            qrCodeImageView.visibility = View.GONE
+            if (qrImageBitmap != null) {
+                qrCodeImageView.setImageBitmap(qrImageBitmap)
+                qrCodeImageView.visibility = View.VISIBLE
+            } else {
+                qrCodeImageView.visibility = View.GONE
+            }
         }
 
         return ticketView

@@ -364,12 +364,12 @@
         message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="66"
+            line="65"
             column="9"
-            startOffset="2589"
-            endLine="70"
+            startOffset="2556"
+            endLine="69"
             endColumn="49"
-            endOffset="2824"/>
+            endOffset="2791"/>
     </incident>
 
     <incident
@@ -378,12 +378,12 @@
         message="Hardcoded string &quot;Imprimir Fecha y Hora&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="69"
+            line="68"
             column="13"
-            startOffset="2739"
-            endLine="69"
+            startOffset="2706"
+            endLine="68"
             endColumn="49"
-            endOffset="2775"/>
+            endOffset="2742"/>
     </incident>
 
     <incident
@@ -406,12 +406,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="72"
+            line="71"
             column="10"
-            startOffset="2835"
-            endLine="72"
+            startOffset="2802"
+            endLine="71"
             endColumn="18"
-            endOffset="2843"/>
+            endOffset="2810"/>
     </incident>
 
     <incident
@@ -420,12 +420,12 @@
         message="Hardcoded string &quot;Pie de Ticket (ej. Gracias por su compra)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="75"
+            line="74"
             column="13"
-            startOffset="2986"
-            endLine="75"
+            startOffset="2953"
+            endLine="74"
             endColumn="69"
-            endOffset="3042"/>
+            endOffset="3009"/>
     </incident>
 
     <incident
@@ -434,12 +434,12 @@
         message="Hardcoded string &quot;Código QR (opcional)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="94"
+            line="92"
             column="17"
-            startOffset="3839"
-            endLine="94"
+            startOffset="3772"
+            endLine="92"
             endColumn="52"
-            endOffset="3874"/>
+            endOffset="3807"/>
     </incident>
 
     <incident
@@ -462,12 +462,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="98"
+            line="96"
             column="14"
-            startOffset="3983"
-            endLine="98"
+            startOffset="3916"
+            endLine="96"
             endColumn="23"
-            endOffset="3992"/>
+            endOffset="3925"/>
     </incident>
 
     <incident
@@ -476,12 +476,12 @@
         message="Hardcoded string &quot;Seleccionar QR&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="109"
+            line="107"
             column="17"
-            startOffset="4446"
-            endLine="109"
+            startOffset="4379"
+            endLine="107"
             endColumn="46"
-            endOffset="4475"/>
+            endOffset="4408"/>
     </incident>
 
     <incident
@@ -490,12 +490,12 @@
         message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="117"
+            line="115"
             column="13"
-            startOffset="4691"
-            endLine="117"
+            startOffset="4624"
+            endLine="115"
             endColumn="55"
-            endOffset="4733"/>
+            endOffset="4666"/>
     </incident>
 
     <incident
@@ -504,12 +504,12 @@
         message="Hardcoded string &quot;58 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="133"
+            line="131"
             column="17"
-            startOffset="5307"
-            endLine="133"
+            startOffset="5240"
+            endLine="131"
             endColumn="37"
-            endOffset="5327"/>
+            endOffset="5260"/>
     </incident>
 
     <incident
@@ -518,12 +518,12 @@
         message="Hardcoded string &quot;80 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="140"
+            line="138"
             column="17"
-            startOffset="5561"
-            endLine="140"
+            startOffset="5494"
+            endLine="138"
             endColumn="37"
-            endOffset="5581"/>
+            endOffset="5514"/>
     </incident>
 
     <incident
@@ -532,12 +532,12 @@
         message="Hardcoded string &quot;Guardar Configuración&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="149"
+            line="147"
             column="13"
-            startOffset="5822"
-            endLine="149"
+            startOffset="5755"
+            endLine="147"
             endColumn="49"
-            endOffset="5858"/>
+            endOffset="5791"/>
     </incident>
 
     <incident
@@ -1012,12 +1012,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="328"
+            line="342"
             column="37"
-            startOffset="14032"
-            endLine="328"
+            startOffset="14458"
+            endLine="342"
             endColumn="67"
-            endOffset="14062"/>
+            endOffset="14488"/>
     </incident>
 
     <incident
@@ -1026,12 +1026,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="328"
+            line="342"
             column="38"
-            startOffset="14033"
-            endLine="328"
+            startOffset="14459"
+            endLine="342"
             endColumn="45"
-            endOffset="14040"/>
+            endOffset="14466"/>
     </incident>
 
     <incident
@@ -1040,12 +1040,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="356"
             column="37"
-            startOffset="14724"
-            endLine="342"
+            startOffset="15150"
+            endLine="356"
             endColumn="59"
-            endOffset="14746"/>
+            endOffset="15172"/>
     </incident>
 
     <incident
@@ -1166,6 +1166,20 @@
     </incident>
 
     <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="315"
+            column="68"
+            startOffset="13057"
+            endLine="315"
+            endColumn="72"
+            endOffset="13061"/>
+    </incident>
+
+    <incident
         id="IconDipSize"
         severity="warning"
         message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)">
@@ -1191,20 +1205,6 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="301"
-            column="68"
-            startOffset="12631"
-            endLine="301"
-            endColumn="72"
-            endOffset="12635"/>
     </incident>
 
 </incidents>

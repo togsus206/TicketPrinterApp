@@ -33,7 +33,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="301"
+            line="315"
             column="68"/>
     </issue>
 
@@ -65,7 +65,7 @@
         errorLine2="        ^">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="66"
+            line="65"
             column="9"/>
     </issue>
 
@@ -323,7 +323,7 @@
         errorLine2="         ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="72"
+            line="71"
             column="10"/>
     </issue>
 
@@ -413,7 +413,7 @@
         errorLine2="             ~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="98"
+            line="96"
             column="14"/>
     </issue>
 
@@ -467,7 +467,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="328"
+            line="342"
             column="37"/>
     </issue>
 
@@ -485,7 +485,7 @@
         errorLine2="                                     ~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="328"
+            line="342"
             column="38"/>
     </issue>
 
@@ -503,7 +503,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="356"
             column="37"/>
     </issue>
 
@@ -761,7 +761,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="69"
+            line="68"
             column="13"/>
     </issue>
 
@@ -777,7 +777,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="75"
+            line="74"
             column="13"/>
     </issue>
 
@@ -793,7 +793,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="94"
+            line="92"
             column="17"/>
     </issue>
 
@@ -809,7 +809,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="109"
+            line="107"
             column="17"/>
     </issue>
 
@@ -825,7 +825,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="117"
+            line="115"
             column="13"/>
     </issue>
 
@@ -841,7 +841,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="133"
+            line="131"
             column="17"/>
     </issue>
 
@@ -857,7 +857,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="140"
+            line="138"
             column="17"/>
     </issue>
 
@@ -873,7 +873,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="149"
+            line="147"
             column="13"/>
     </issue>
 
