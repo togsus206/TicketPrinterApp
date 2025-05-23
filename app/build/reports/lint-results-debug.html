@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 69 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 74 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu May 22 23:05:58 ART 2025 by AGP (8.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu May 22 23:42:25 ART 2025 by AGP (8.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -193,8 +193,9 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (3)</a>
       <a class="mdl-navigation__link" href="#InOrMmUsage"><i class="material-icons warning-icon">warning</i>Using <code>mm</code> or <code>in</code> dimensions (1)</a>
       <a class="mdl-navigation__link" href="#Overdraw"><i class="material-icons warning-icon">warning</i>Overdraw: Painting regions more than once (1)</a>
-      <a class="mdl-navigation__link" href="#IconDipSize"><i class="material-icons warning-icon">warning</i>Icon density-independent size validation (1)</a>
-      <a class="mdl-navigation__link" href="#IconDuplicatesConfig"><i class="material-icons warning-icon">warning</i>Identical bitmaps across various configurations (1)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (1)</a>
+      <a class="mdl-navigation__link" href="#IconLauncherShape"><i class="material-icons warning-icon">warning</i>The launcher icon shape should use a distinct silhouette (5)</a>
+      <a class="mdl-navigation__link" href="#MonochromeLauncherIcon"><i class="material-icons warning-icon">warning</i>Monochrome icon is not defined (1)</a>
       <a class="mdl-navigation__link" href="#ButtonStyle"><i class="material-icons warning-icon">warning</i>Button should be borderless (2)</a>
       <a class="mdl-navigation__link" href="#TextFields"><i class="material-icons warning-icon">warning</i>Missing <code>inputType</code> (1)</a>
       <a class="mdl-navigation__link" href="#Autofill"><i class="material-icons warning-icon">warning</i>Use Autofill (8)</a>
@@ -239,14 +240,17 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#Overdraw">Overdraw</a>: Overdraw: Painting regions more than once</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
 </td></tr>
 <tr>
-<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#IconDipSize">IconDipSize</a>: Icon density-independent size validation</td></tr>
+<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#IconLauncherShape">IconLauncherShape</a>: The launcher icon shape should use a distinct silhouette</td></tr>
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#IconDuplicatesConfig">IconDuplicatesConfig</a>: Identical bitmaps across various configurations</td></tr>
+<a href="#MonochromeLauncherIcon">MonochromeLauncherIcon</a>: Monochrome icon is not defined</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability">Usability</a>
 </td></tr>
 <tr>
@@ -647,96 +651,82 @@ Of course it's possible that your custom drawable is translucent and you want it
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="OverdrawCardLink" onclick="hideid('OverdrawCard');">
 Dismiss</button>            </div>
             </div>
-          </section>
-<a name="Usability:Icons"></a>
-<a name="IconDipSize"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="IconDipSizeCard" style="display: block;">
+          </section><a name="UnusedResources"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="UnusedResourcesCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Icon density-independent size validation</h2>
+    <h2 class="mdl-card__title-text">Unused resources</h2>
   </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The image <code>ic_launcher.png</code> varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)</span><br />
-<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
-<div id="Location1Div" style="display: none">
-Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxhdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png">../../src/main/res/mipmap-hdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png">../../src/main/res/mipmap-mdpi/ic_launcher.png</a></span>
-</ul>
-</div><br/><br/>
-<table>
-<tr><td><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-mdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-hdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxhdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png" /></a>
-</td></tr><tr><th></th><th></th><th></th><th></th></tr>
-</table>
+<span class="location"><a href="../../src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml">../../src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml</a>:2</span>: <span class="message">The resource <code>R.mipmap.ic_launcher_round</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
+<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;adaptive-icon</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 3 </span>    <span class="tag">&lt;background</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">drawable</span>=<span class="value">"@color/ic_launcher_background"</span>/>
+<span class="lineno"> 4 </span>    <span class="tag">&lt;foreground</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">drawable</span>=<span class="value">"@mipmap/ic_launcher_foreground"</span>/>
+<span class="lineno"> 5 </span><span class="tag">&lt;/adaptive-icon></span></pre>
+
 </div>
-<div class="metadata"><div class="explanation" id="explanationIconDipSize" style="display: none;">
-Checks the all icons which are provided in multiple densities, all compute to roughly the same density-independent pixel (<code>dip</code>) size. This catches errors where images are either placed in the wrong folder, or icons are changed to new sizes but some folders are forgotten.<br/>To suppress this error, use the issue id "IconDipSize" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<div class="metadata"><div class="explanation" id="explanationUnusedResources" style="display: none;">
+Unused resources make applications larger and slow down builds.<br/>
+<br/>
+<br/>
+The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.<br/>
+<br/>
+You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.<br/>
+,<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+To suppress this error, use the issue id "UnusedResources" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
 <div class="chips">
 <span class="mdl-chip">
-    <span class="mdl-chip__text">IconDipSize</span>
+    <span class="mdl-chip__text">UnusedResources</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Icons</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Usability</span>
+    <span class="mdl-chip__text">Performance</span>
 </span>
 <span class="mdl-chip">
     <span class="mdl-chip__text">Warning</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
+    <span class="mdl-chip__text">Priority 3/10</span>
 </span>
 </div>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationIconDipSizeLink" onclick="reveal('explanationIconDipSize');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="IconDipSizeCardLink" onclick="hideid('IconDipSizeCard');">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationUnusedResourcesLink" onclick="reveal('explanationUnusedResources');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="UnusedResourcesCardLink" onclick="hideid('UnusedResourcesCard');">
 Dismiss</button>            </div>
             </div>
-          </section><a name="IconDuplicatesConfig"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="IconDuplicatesConfigCard" style="display: block;">
+          </section>
+<a name="Usability:Icons"></a>
+<a name="IconLauncherShape"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="IconLauncherShapeCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
   <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Identical bitmaps across various configurations</h2>
+    <h2 class="mdl-card__title-text">The launcher icon shape should use a distinct silhouette</h2>
   </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher.png</a></span>: <span class="message">The <code>ic_launcher.png</code> icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi</span><br />
-<ul></ul><button id="Location1DivLink" onclick="reveal('Location1Div');" />+ 3 Additional Locations...</button>
-<div id="Location1Div" style="display: none">
-Additional locations: <ul>
-<li> <span class="location"><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png">../../src/main/res/mipmap-xxhdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png">../../src/main/res/mipmap-mdpi/ic_launcher.png</a></span>
-<li> <span class="location"><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png">../../src/main/res/mipmap-hdpi/ic_launcher.png</a></span>
-</ul>
-</div><br/><br/>
-<table>
-<tr><td><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-mdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-hdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-hdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxhdpi/ic_launcher.png" /></a>
-</td><td><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png"><img border="0" align="top" src="../../src/main/res/mipmap-xxxhdpi/ic_launcher.png" /></a>
-</td></tr><tr><th></th><th></th><th></th><th></th></tr>
-</table>
+<span class="location"><a href="../../src/main/res/mipmap-ldpi/ic_launcher.png">../../src/main/res/mipmap-ldpi/ic_launcher.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/mipmap-ldpi/ic_launcher.png" /><span class="message">Launcher icons should not fill every pixel of their square region; see the design guide for details</span><br clear="right"/>
+<span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher.png">../../src/main/res/mipmap-mdpi/ic_launcher.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/mipmap-mdpi/ic_launcher.png" /><span class="message">Launcher icons should not fill every pixel of their square region; see the design guide for details</span><br clear="right"/>
+<span class="location"><a href="../../src/main/res/mipmap-xxxhdpi/ic_launcher_round.png">../../src/main/res/mipmap-xxxhdpi/ic_launcher_round.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" /><span class="message">Launcher icon used as round icon did not have a circular shape</span><br clear="right"/>
+<span class="location"><a href="../../src/main/res/mipmap-hdpi/ic_launcher_round.png">../../src/main/res/mipmap-hdpi/ic_launcher_round.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/mipmap-hdpi/ic_launcher_round.png" /><span class="message">Launcher icons should not fill every pixel of their square region; see the design guide for details</span><br clear="right"/>
+<span class="location"><a href="../../src/main/res/mipmap-mdpi/ic_launcher_round.png">../../src/main/res/mipmap-mdpi/ic_launcher_round.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/mipmap-mdpi/ic_launcher_round.png" /><span class="message">Launcher icons should not fill every pixel of their square region; see the design guide for details</span><br clear="right"/>
 </div>
-<div class="metadata"><div class="explanation" id="explanationIconDuplicatesConfig" style="display: none;">
-If an icon is provided under different configuration parameters such as <code>drawable-hdpi</code> or <code>-v11</code>, they should typically be different. This detector catches cases where the same icon is provided in different configuration folder which is usually not intentional.<br/>To suppress this error, use the issue id "IconDuplicatesConfig" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<div class="metadata"><div class="explanation" id="explanationIconLauncherShape" style="display: none;">
+According to the Android Design Guide (<a href="https://material.io/design/iconography/">https://material.io/design/iconography/</a>) your launcher icons should "use a distinct silhouette", a "three-dimensional, front view, with a slight perspective as if viewed from above, so that users perceive some depth."<br/>
+<br/>
+The unique silhouette implies that your launcher icon should not be a filled square.<br/>To suppress this error, use the issue id "IconLauncherShape" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
 </div>
 <div class="chips">
 <span class="mdl-chip">
-    <span class="mdl-chip__text">IconDuplicatesConfig</span>
+    <span class="mdl-chip__text">IconLauncherShape</span>
 </span>
 <span class="mdl-chip">
     <span class="mdl-chip__text">Icons</span>
@@ -748,13 +738,60 @@ If an icon is provided under different configuration parameters such as <code>dr
     <span class="mdl-chip__text">Warning</span>
 </span>
 <span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
+    <span class="mdl-chip__text">Priority 6/10</span>
 </span>
 </div>
               </div>
               <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationIconDuplicatesConfigLink" onclick="reveal('explanationIconDuplicatesConfig');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="IconDuplicatesConfigCardLink" onclick="hideid('IconDuplicatesConfigCard');">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationIconLauncherShapeLink" onclick="reveal('explanationIconLauncherShape');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="IconLauncherShapeCardLink" onclick="hideid('IconLauncherShapeCard');">
+Dismiss</button>            </div>
+            </div>
+          </section><a name="MonochromeLauncherIcon"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="MonochromeLauncherIconCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Monochrome icon is not defined</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/res/mipmap-anydpi-v26/ic_launcher.xml">../../src/main/res/mipmap-anydpi-v26/ic_launcher.xml</a>:2</span>: <span class="message">The application adaptive icon is missing a monochrome tag</span><br /><pre class="errorlines">
+<span class="lineno"> 1 </span><span class="prologue">&lt;?xml version="1.0" encoding="utf-8"?></span>
+<span class="caretline"><span class="lineno"> 2 </span><span class="warning"><span class="tag">&lt;adaptive-icon</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 3 </span>    <span class="tag">&lt;background</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">drawable</span>=<span class="value">"@color/ic_launcher_background"</span>/>
+<span class="lineno"> 4 </span>    <span class="tag">&lt;foreground</span><span class="attribute"> </span><span class="prefix">android:</span><span class="attribute">drawable</span>=<span class="value">"@mipmap/ic_launcher_foreground"</span>/>
+<span class="lineno"> 5 </span><span class="tag">&lt;/adaptive-icon></span></pre>
+
+</div>
+<div class="metadata"><div class="explanation" id="explanationMonochromeLauncherIcon" style="display: none;">
+If <code>android:roundIcon</code> and <code>android:icon</code> are both in your manifest, you must either remove the reference to <code>android:roundIcon</code> if it is not needed; or, supply the monochrome icon in the drawable defined by the <code>android:roundIcon</code> and <code>android:icon</code> attribute.<br/>
+<br/>
+For example, if <code>android:roundIcon</code> and <code>android:icon</code> are both in the manifest, a launcher might choose to use <code>android:roundIcon</code> over <code>android:icon</code> to display the adaptive app icon. Therefore, your themed application iconwill not show if your monochrome attribute is not also specified in <code>android:roundIcon</code>.<br/>To suppress this error, use the issue id "MonochromeLauncherIcon" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">MonochromeLauncherIcon</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Icons</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Usability</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationMonochromeLauncherIconLink" onclick="reveal('explanationMonochromeLauncherIcon');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="MonochromeLauncherIconCardLink" onclick="hideid('MonochromeLauncherIconCard');">
 Dismiss</button>            </div>
             </div>
           </section>

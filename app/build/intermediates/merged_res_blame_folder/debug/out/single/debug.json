@@ -1,11 +1,67 @@
 [
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-mdpi_ic_launcher.png.flat",
         "source": "com.mval.ticketprinter.app-main-31:/mipmap-mdpi/ic_launcher.png"
     },
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_main_menu.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/menu/main_menu.xml"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_dialog_edit_product.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/dialog_edit_product.xml"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_main.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-ldpi_ic_launcher.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-ldpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/drawable_dotted_line.xml.flat",
@@ -16,6 +72,14 @@
         "source": "com.mval.ticketprinter.app-main-31:/layout/activity_settings.xml"
     },
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_ticket_item_layout.xml.flat",
         "source": "com.mval.ticketprinter.app-main-31:/layout/ticket_item_layout.xml"
     },
@@ -24,16 +88,16 @@
         "source": "com.mval.ticketprinter.app-main-31:/layout/item_product.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_main_menu.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-31:/menu/main_menu.xml"
-    },
-    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_print_share_menu.xml.flat",
         "source": "com.mval.ticketprinter.app-main-31:/menu/print_share_menu.xml"
     },
     {
-        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_ticket_preview.xml.flat",
@@ -42,13 +106,5 @@
     {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.mval.ticketprinter.app-main-31:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_dialog_edit_product.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-31:/layout/dialog_edit_product.xml"
-    },
-    {
-        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_activity_main.xml.flat",
-        "source": "com.mval.ticketprinter.app-main-31:/layout/activity_main.xml"
     }
 ]

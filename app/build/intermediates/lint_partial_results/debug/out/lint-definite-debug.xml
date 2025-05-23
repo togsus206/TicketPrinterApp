@@ -16,6 +16,27 @@
     </incident>
 
     <incident
+        id="TextFields"
+        severity="warning"
+        message="This text field does not specify an `inputType`">
+        <fix-attribute
+            description="Set inputType"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="inputType"
+            value="TODO"
+            dot="4"
+            mark="0"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="44"
+            column="14"
+            startOffset="1472"
+            endLine="44"
+            endColumn="22"
+            endOffset="1480"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -33,27 +54,6 @@
                 attribute="importantForAutofill"
                 value="no"/>
         </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="44"
-            column="14"
-            startOffset="1472"
-            endLine="44"
-            endColumn="22"
-            endOffset="1480"/>
-    </incident>
-
-    <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="44"
@@ -1007,6 +1007,20 @@
     </incident>
 
     <incident
+        id="MonochromeLauncherIcon"
+        severity="warning"
+        message="The application adaptive icon is missing a monochrome tag">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-anydpi-v26/ic_launcher.xml"
+            line="2"
+            column="1"
+            startOffset="39"
+            endLine="5"
+            endColumn="17"
+            endOffset="265"/>
+    </incident>
+
+    <incident
         id="SetTextI18n"
         severity="warning"
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
@@ -1180,31 +1194,43 @@
     </incident>
 
     <incident
-        id="IconDipSize"
+        id="IconLauncherShape"
         severity="warning"
-        message="The image `ic_launcher.png` varies significantly in its density-independent (dip) size across the various density versions: mipmap-hdpi/ic_launcher.png: 462x497 dp (693x745 px), mipmap-mdpi/ic_launcher.png: 693x745 dp (693x745 px), mipmap-xxhdpi/ic_launcher.png: 231x248 dp (693x745 px), mipmap-xxxhdpi/ic_launcher.png: 173x186 dp (693x745 px)">
+        message="Launcher icon used as round icon did not have a circular shape">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
     </incident>
 
     <incident
-        id="IconDuplicatesConfig"
+        id="IconLauncherShape"
         severity="warning"
-        message="The `ic_launcher.png` icon has identical contents in the following configuration folders: mipmap-hdpi, mipmap-mdpi, mipmap-xxhdpi, mipmap-xxxhdpi">
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxxhdpi/ic_launcher.png"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-ldpi/ic_launcher.png"/>
+    </incident>
+
+    <incident
+        id="IconLauncherShape"
+        severity="warning"
+        message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-xxhdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-mdpi/ic_launcher.png"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher.png"/>
+            file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
     </incident>
 
 </incidents>
