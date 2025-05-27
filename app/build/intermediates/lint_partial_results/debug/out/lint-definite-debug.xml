@@ -16,27 +16,6 @@
     </incident>
 
     <incident
-        id="TextFields"
-        severity="warning"
-        message="This text field does not specify an `inputType`">
-        <fix-attribute
-            description="Set inputType"
-            namespace="http://schemas.android.com/apk/res/android"
-            attribute="inputType"
-            value="TODO"
-            dot="4"
-            mark="0"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="44"
-            column="14"
-            startOffset="1472"
-            endLine="44"
-            endColumn="22"
-            endOffset="1480"/>
-    </incident>
-
-    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -98,12 +77,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="51"
+            line="52"
             column="14"
-            startOffset="1730"
-            endLine="51"
+            startOffset="1783"
+            endLine="52"
             endColumn="22"
-            endOffset="1738"/>
+            endOffset="1791"/>
     </incident>
 
     <incident
@@ -112,12 +91,12 @@
         message="Hardcoded string &quot;Cant.&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="55"
+            line="56"
             column="17"
-            startOffset="1903"
-            endLine="55"
+            startOffset="1956"
+            endLine="56"
             endColumn="37"
-            endOffset="1923"/>
+            endOffset="1976"/>
     </incident>
 
     <incident
@@ -140,12 +119,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="58"
+            line="59"
             column="14"
-            startOffset="1984"
-            endLine="58"
+            startOffset="2037"
+            endLine="59"
             endColumn="22"
-            endOffset="1992"/>
+            endOffset="2045"/>
     </incident>
 
     <incident
@@ -154,12 +133,12 @@
         message="Hardcoded string &quot;Precio&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="62"
+            line="63"
             column="17"
-            startOffset="2155"
-            endLine="62"
+            startOffset="2208"
+            endLine="63"
             endColumn="38"
-            endOffset="2176"/>
+            endOffset="2229"/>
     </incident>
 
     <incident
@@ -168,12 +147,12 @@
         message="Hardcoded string &quot;Agregar Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="71"
+            line="72"
             column="13"
-            startOffset="2428"
-            endLine="71"
+            startOffset="2481"
+            endLine="72"
             endColumn="44"
-            endOffset="2459"/>
+            endOffset="2512"/>
     </incident>
 
     <incident
@@ -182,12 +161,12 @@
         message="Hardcoded string &quot;Total: &quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="88"
+            line="89"
             column="13"
-            startOffset="2955"
-            endLine="88"
+            startOffset="3008"
+            endLine="89"
             endColumn="35"
-            endOffset="2977"/>
+            endOffset="3030"/>
     </incident>
 
     <incident
@@ -196,12 +175,12 @@
         message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="96"
+            line="97"
             column="13"
-            startOffset="3226"
-            endLine="96"
+            startOffset="3279"
+            endLine="97"
             endColumn="33"
-            endOffset="3246"/>
+            endOffset="3299"/>
     </incident>
 
     <incident
@@ -210,12 +189,12 @@
         message="Hardcoded string &quot;Previsualizar/Compartir&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="103"
+            line="104"
             column="13"
-            startOffset="3454"
-            endLine="103"
+            startOffset="3507"
+            endLine="104"
             endColumn="51"
-            endOffset="3492"/>
+            endOffset="3545"/>
     </incident>
 
     <incident
@@ -224,12 +203,12 @@
         message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="118"
+            line="119"
             column="13"
-            startOffset="3909"
-            endLine="118"
+            startOffset="3962"
+            endLine="119"
             endColumn="46"
-            endOffset="3942"/>
+            endOffset="3995"/>
     </incident>
 
     <incident
@@ -238,12 +217,12 @@
         message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="127"
+            line="128"
             column="13"
-            startOffset="4232"
-            endLine="127"
+            startOffset="4285"
+            endLine="128"
             endColumn="59"
-            endOffset="4278"/>
+            endOffset="4331"/>
     </incident>
 
     <incident
@@ -317,6 +296,20 @@
     </incident>
 
     <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Eliminar Logo&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="55"
+            column="21"
+            startOffset="2130"
+            endLine="55"
+            endColumn="49"
+            endOffset="2158"/>
+    </incident>
+
+    <incident
         id="Autofill"
         severity="warning"
         message="Missing `autofillHints` attribute">
@@ -336,12 +329,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="53"
+            line="61"
             column="10"
-            startOffset="1939"
-            endLine="53"
+            startOffset="2334"
+            endLine="61"
             endColumn="18"
-            endOffset="1947"/>
+            endOffset="2342"/>
     </incident>
 
     <incident
@@ -350,12 +343,12 @@
         message="Hardcoded string &quot;Encabezado del Ticket (ej. Nombre del Negocio)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="56"
+            line="64"
             column="13"
-            startOffset="2090"
-            endLine="56"
+            startOffset="2485"
+            endLine="64"
             endColumn="74"
-            endOffset="2151"/>
+            endOffset="2546"/>
     </incident>
 
     <incident
@@ -364,12 +357,12 @@
         message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="65"
+            line="73"
             column="9"
-            startOffset="2556"
-            endLine="69"
+            startOffset="2951"
+            endLine="77"
             endColumn="49"
-            endOffset="2791"/>
+            endOffset="3186"/>
     </incident>
 
     <incident
@@ -378,12 +371,12 @@
         message="Hardcoded string &quot;Imprimir Fecha y Hora&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="68"
+            line="76"
             column="13"
-            startOffset="2706"
-            endLine="68"
+            startOffset="3101"
+            endLine="76"
             endColumn="49"
-            endOffset="2742"/>
+            endOffset="3137"/>
     </incident>
 
     <incident
@@ -406,12 +399,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="71"
+            line="79"
             column="10"
-            startOffset="2802"
-            endLine="71"
+            startOffset="3197"
+            endLine="79"
             endColumn="18"
-            endOffset="2810"/>
+            endOffset="3205"/>
     </incident>
 
     <incident
@@ -420,12 +413,12 @@
         message="Hardcoded string &quot;Pie de Ticket (ej. Gracias por su compra)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="74"
+            line="82"
             column="13"
-            startOffset="2953"
-            endLine="74"
+            startOffset="3348"
+            endLine="82"
             endColumn="69"
-            endOffset="3009"/>
+            endOffset="3404"/>
     </incident>
 
     <incident
@@ -434,12 +427,12 @@
         message="Hardcoded string &quot;Código QR (opcional)&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="92"
+            line="100"
             column="17"
-            startOffset="3772"
-            endLine="92"
+            startOffset="4167"
+            endLine="100"
             endColumn="52"
-            endOffset="3807"/>
+            endOffset="4202"/>
     </incident>
 
     <incident
@@ -462,12 +455,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="96"
+            line="104"
             column="14"
-            startOffset="3916"
-            endLine="96"
+            startOffset="4311"
+            endLine="104"
             endColumn="23"
-            endOffset="3925"/>
+            endOffset="4320"/>
     </incident>
 
     <incident
@@ -476,12 +469,26 @@
         message="Hardcoded string &quot;Seleccionar QR&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="107"
+            line="115"
             column="17"
-            startOffset="4379"
-            endLine="107"
+            startOffset="4774"
+            endLine="115"
             endColumn="46"
-            endOffset="4408"/>
+            endOffset="4803"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Eliminar QR&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="122"
+            column="21"
+            startOffset="5090"
+            endLine="122"
+            endColumn="47"
+            endOffset="5116"/>
     </incident>
 
     <incident
@@ -490,12 +497,12 @@
         message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="115"
+            line="131"
             column="13"
-            startOffset="4624"
-            endLine="115"
+            startOffset="5410"
+            endLine="131"
             endColumn="55"
-            endOffset="4666"/>
+            endOffset="5452"/>
     </incident>
 
     <incident
@@ -504,12 +511,12 @@
         message="Hardcoded string &quot;58 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="131"
+            line="147"
             column="17"
-            startOffset="5240"
-            endLine="131"
+            startOffset="6026"
+            endLine="147"
             endColumn="37"
-            endOffset="5260"/>
+            endOffset="6046"/>
     </incident>
 
     <incident
@@ -518,12 +525,12 @@
         message="Hardcoded string &quot;80 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="138"
+            line="154"
             column="17"
-            startOffset="5494"
-            endLine="138"
+            startOffset="6280"
+            endLine="154"
             endColumn="37"
-            endOffset="5514"/>
+            endOffset="6300"/>
     </incident>
 
     <incident
@@ -532,12 +539,12 @@
         message="Hardcoded string &quot;Guardar Configuración&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="147"
+            line="163"
             column="13"
-            startOffset="5755"
-            endLine="147"
+            startOffset="6541"
+            endLine="163"
             endColumn="49"
-            endOffset="5791"/>
+            endOffset="6577"/>
     </incident>
 
     <incident
@@ -1109,60 +1116,17 @@
     </incident>
 
     <incident
-        id="GradleDependency"
+        id="InflateParams"
         severity="warning"
-        message="A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0">
-        <fix-replace
-            description="Change to 1.16.0"
-            family="Update versions"
-            oldString="1.10.1"
-            replacement="1.16.0"/>
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
-            file="${:app*projectDir}/build.gradle.kts"
-            line="38"
-            column="21"
-            startOffset="798"
-            endLine="38"
-            endColumn="50"
-            endOffset="827"/>
-    </incident>
-
-    <incident
-        id="GradleDependency"
-        severity="warning"
-        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0">
-        <fix-replace
-            description="Change to 1.7.0"
-            family="Update versions"
-            oldString="1.6.1"
-            replacement="1.7.0"/>
-        <location
-            file="${:app*projectDir}/build.gradle.kts"
-            line="39"
-            column="21"
-            startOffset="850"
-            endLine="39"
-            endColumn="55"
-            endOffset="884"/>
-    </incident>
-
-    <incident
-        id="GradleDependency"
-        severity="warning"
-        message="A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0">
-        <fix-replace
-            description="Change to 1.12.0"
-            family="Update versions"
-            oldString="1.9.0"
-            replacement="1.12.0"/>
-        <location
-            file="${:app*projectDir}/build.gradle.kts"
-            line="40"
-            column="21"
-            startOffset="907"
-            endLine="40"
-            endColumn="63"
-            endOffset="949"/>
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="315"
+            column="68"
+            startOffset="13057"
+            endLine="315"
+            endColumn="72"
+            endOffset="13061"/>
     </incident>
 
     <incident
@@ -1177,20 +1141,6 @@
             endLine="8"
             endColumn="46"
             endOffset="338"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="315"
-            column="68"
-            startOffset="13057"
-            endLine="315"
-            endColumn="72"
-            endOffset="13061"/>
     </incident>
 
     <incident

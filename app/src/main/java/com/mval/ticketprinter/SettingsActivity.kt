@@ -29,6 +29,8 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var imageViewQr: ImageView
     private lateinit var buttonSelectQr: Button
     private lateinit var buttonSaveSettings: Button
+    private lateinit var buttonDeleteLogo: Button
+    private lateinit var buttonDeleteQr: Button
 
     // [MODIFICACIÓN] Nuevos elementos para el ancho del papel
     private lateinit var radioGroupPaperWidth: RadioGroup
@@ -68,6 +70,9 @@ class SettingsActivity : AppCompatActivity() {
         imageViewQr = findViewById(R.id.imageViewQr)
         buttonSelectQr = findViewById(R.id.buttonSelectQr)
         buttonSaveSettings = findViewById(R.id.buttonSaveSettings)
+        buttonDeleteLogo = findViewById(R.id.buttonDeleteLogo)
+        buttonDeleteQr = findViewById(R.id.buttonDeleteQr)
+        
 
         // [MODIFICACIÓN] Referencias para los RadioButtons
         radioGroupPaperWidth = findViewById(R.id.radioGroupPaperWidth)
@@ -131,10 +136,30 @@ class SettingsActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             logoPickerLauncher.launch(intent)
         }
+        
+        // AGREGADO: Listener para el botón de eliminar logo
+        buttonDeleteLogo.setOnClickListener {
+            with(sharedPreferences.edit()) {
+                remove(KEY_LOGO_PATH) // Elimina la ruta del logo de SharedPreferences
+                apply()
+            }
+            imageViewLogo.setImageResource(android.R.drawable.ic_menu_gallery) // Restablece la imagen a la predeterminada
+            Toast.makeText(this, "Logo eliminado", Toast.LENGTH_SHORT).show()
+        }
 
         buttonSelectQr.setOnClickListener {
             val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
             qrPickerLauncher.launch(intent)
+        }
+        
+        // AGREGADO: Listener para el botón de eliminar QR
+        buttonDeleteQr.setOnClickListener {
+            with(sharedPreferences.edit()) {
+                remove(KEY_QR_PATH) // Elimina la ruta del QR de SharedPreferences
+                apply()
+            }
+            imageViewQr.setImageResource(android.R.drawable.ic_menu_camera) // Restablece la imagen a la predeterminada
+            Toast.makeText(this, "QR eliminado", Toast.LENGTH_SHORT).show()
         }
 
         // Listener para el botón "Guardar Configuración"

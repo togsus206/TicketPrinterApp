@@ -3033,7 +3033,9 @@ id blocking
 id bottom
 id bounce
 id buttonAddProduct
+id buttonDeleteLogo
 id buttonDeleteProduct
+id buttonDeleteQr
 id buttonEditProduct
 id buttonPanel
 id buttonPrint

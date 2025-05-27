@@ -414,8 +414,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
         // **Asegurarnos de que el fondo del Canvas no sea transparente si la vista no lo dibuja**
         // Si el ticket_preview.xml no tiene un background, el bitmap por defecto es transparente (negro en algunas representaciones)
-        // Puedes añadir un background blanco al ticketRootLayout en ticket_preview.xml
-        // O dibujar un fondo blanco en el canvas aquí:
+       	// dibujar un fondo blanco en el canvas aquí:
         canvas.drawColor(android.graphics.Color.WHITE) // Dibuja un fondo blanco
 
         view.draw(canvas) // Dibuja la vista en el canvas

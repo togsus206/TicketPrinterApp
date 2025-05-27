@@ -42,7 +42,7 @@
    Identifier: androidx.appcompat
    Feedback: https://issuetracker.google.com/issues/new?component=460343
 
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:65: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialXml from androidx.appcompat]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:73: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialXml from androidx.appcompat]
         <Switch android:id="@+id/switchDateTime"
         ^
 
@@ -52,23 +52,6 @@
    Vendor: Android Open Source Project
    Identifier: androidx.appcompat
    Feedback: https://issuetracker.google.com/issues/new?component=460343
-
-/home/mati0216/TicketPrinterApp/app/build.gradle.kts:38: Warning: A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0 [GradleDependency]
-    implementation("androidx.core:core-ktx:1.10.1")
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/build.gradle.kts:39: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0 [GradleDependency]
-    implementation("androidx.appcompat:appcompat:1.6.1")
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/build.gradle.kts:40: Warning: A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0 [GradleDependency]
-    implementation("com.google.android.material:material:1.9.0")
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-   Explanation for issues of type "GradleDependency":
-   This detector looks for usages of libraries where the version you are using
-   is not the current stable release. Using older versions is fine, and there
-   are cases where you deliberately want to stick with an older version.
-   However, you may simply not be aware that a more recent version is
-   available, and that is what this lint check helps find.
 
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:98: Warning: Avoid using "mm" as units (it does not work accurately on all devices); use "dp" instead [InOrMmUsage]
         android:layout_marginTop="10mm" android:layout_marginBottom="8dp" />
@@ -170,36 +153,19 @@
 
    https://material.io/components/dialogs/
 
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:44: Warning: This text field does not specify an inputType [TextFields]
-            <EditText
-             ~~~~~~~~
-
-   Explanation for issues of type "TextFields":
-   Providing an inputType attribute on a text field improves usability because
-   depending on the data to be input, optimized keyboards can be shown to the
-   user (such as just digits and parentheses for a phone number). 
-
-   The lint detector also looks at the id of the view, and if the id offers a
-   hint of the purpose of the field (for example, the id contains the phrase
-   phone or email), then lint will also ensure that the inputType contains the
-   corresponding type attributes.
-
-   If you really want to keep the text field generic, you can suppress this
-   warning by setting inputType="text".
-
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:44: Warning: Missing autofillHints attribute [Autofill]
             <EditText
              ~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:51: Warning: Missing autofillHints attribute [Autofill]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:52: Warning: Missing autofillHints attribute [Autofill]
             <EditText
              ~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:58: Warning: Missing autofillHints attribute [Autofill]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:59: Warning: Missing autofillHints attribute [Autofill]
             <EditText
              ~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:53: Warning: Missing autofillHints attribute [Autofill]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:61: Warning: Missing autofillHints attribute [Autofill]
         <EditText android:id="@+id/editTextHeader"
          ~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:71: Warning: Missing autofillHints attribute [Autofill]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:79: Warning: Missing autofillHints attribute [Autofill]
         <EditText android:id="@+id/editTextFooter"
          ~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:8: Warning: Missing autofillHints attribute [Autofill]
@@ -235,7 +201,7 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:37: Warning: Missing contentDescription attribute on image [ContentDescription]
             <ImageView
              ~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:96: Warning: Missing contentDescription attribute on image [ContentDescription]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:104: Warning: Missing contentDescription attribute on image [ContentDescription]
             <ImageView
              ~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/ticket_preview.xml:8: Warning: Missing contentDescription attribute on image [ContentDescription]
@@ -294,30 +260,30 @@
             android:text="Ajustes" />
             ~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:49: Warning: Hardcoded string "Producto", should use @string resource [HardcodedText]
-                android:hint="Producto" />
+                android:hint="Producto"
                 ~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:55: Warning: Hardcoded string "Cant.", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:56: Warning: Hardcoded string "Cant.", should use @string resource [HardcodedText]
                 android:hint="Cant."
                 ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:62: Warning: Hardcoded string "Precio", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:63: Warning: Hardcoded string "Precio", should use @string resource [HardcodedText]
                 android:hint="Precio"
                 ~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:71: Warning: Hardcoded string "Agregar Producto", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:72: Warning: Hardcoded string "Agregar Producto", should use @string resource [HardcodedText]
             android:text="Agregar Producto"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:88: Warning: Hardcoded string "Total: ", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:89: Warning: Hardcoded string "Total: ", should use @string resource [HardcodedText]
             android:text="Total: "
             ~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:96: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:97: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
             android:text="$0.00"
             ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:103: Warning: Hardcoded string "Previsualizar/Compartir", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:104: Warning: Hardcoded string "Previsualizar/Compartir", should use @string resource [HardcodedText]
             android:text="Previsualizar/Compartir"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:118: Warning: Hardcoded string "Conexión Bluetooth", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:119: Warning: Hardcoded string "Conexión Bluetooth", should use @string resource [HardcodedText]
             android:text="Conexión Bluetooth"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:127: Warning: Hardcoded string "Escanear Dispositivos Bluetooth", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:128: Warning: Hardcoded string "Escanear Dispositivos Bluetooth", should use @string resource [HardcodedText]
             android:text="Escanear Dispositivos Bluetooth"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:19: Warning: Hardcoded string "Configuración de la Impresión", should use @string resource [HardcodedText]
@@ -329,31 +295,37 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:48: Warning: Hardcoded string "Seleccionar Logo", should use @string resource [HardcodedText]
                 android:text="Seleccionar Logo"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:56: Warning: Hardcoded string "Encabezado del Ticket (ej. Nombre del Negocio)", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:55: Warning: Hardcoded string "Eliminar Logo", should use @string resource [HardcodedText]
+                    android:text="Eliminar Logo"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:64: Warning: Hardcoded string "Encabezado del Ticket (ej. Nombre del Negocio)", should use @string resource [HardcodedText]
             android:hint="Encabezado del Ticket (ej. Nombre del Negocio)"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:68: Warning: Hardcoded string "Imprimir Fecha y Hora", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:76: Warning: Hardcoded string "Imprimir Fecha y Hora", should use @string resource [HardcodedText]
             android:text="Imprimir Fecha y Hora"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:74: Warning: Hardcoded string "Pie de Ticket (ej. Gracias por su compra)", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:82: Warning: Hardcoded string "Pie de Ticket (ej. Gracias por su compra)", should use @string resource [HardcodedText]
             android:hint="Pie de Ticket (ej. Gracias por su compra)"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:92: Warning: Hardcoded string "Código QR (opcional)", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:100: Warning: Hardcoded string "Código QR (opcional)", should use @string resource [HardcodedText]
                 android:text="Código QR (opcional)"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:107: Warning: Hardcoded string "Seleccionar QR", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:115: Warning: Hardcoded string "Seleccionar QR", should use @string resource [HardcodedText]
                 android:text="Seleccionar QR"
                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:115: Warning: Hardcoded string "Ancho del Papel del Ticket:", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:122: Warning: Hardcoded string "Eliminar QR", should use @string resource [HardcodedText]
+                    android:text="Eliminar QR"
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:131: Warning: Hardcoded string "Ancho del Papel del Ticket:", should use @string resource [HardcodedText]
             android:text="Ancho del Papel del Ticket:"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:131: Warning: Hardcoded string "58 mm", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:147: Warning: Hardcoded string "58 mm", should use @string resource [HardcodedText]
                 android:text="58 mm"
                 ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:138: Warning: Hardcoded string "80 mm", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:154: Warning: Hardcoded string "80 mm", should use @string resource [HardcodedText]
                 android:text="80 mm"
                 ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:147: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:163: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
             android:text="Guardar Configuración"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/dialog_edit_product.xml:12: Warning: Hardcoded string "Nombre del Producto", should use @string resource [HardcodedText]
@@ -429,4 +401,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 74 warnings
+0 errors, 72 warnings

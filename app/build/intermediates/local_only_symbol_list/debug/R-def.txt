@@ -6,7 +6,9 @@ id action_print_ticket
 id action_settings
 id action_share_ticket
 id buttonAddProduct
+id buttonDeleteLogo
 id buttonDeleteProduct
+id buttonDeleteQr
 id buttonEditProduct
 id buttonPrint
 id buttonSaveSettings

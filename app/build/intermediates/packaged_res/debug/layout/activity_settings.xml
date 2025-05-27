@@ -47,6 +47,14 @@
                 android:layout_height="wrap_content"
                 android:text="Seleccionar Logo"
                 android:layout_gravity="center_horizontal" />
+                
+             <Button
+                    android:id="@+id/buttonDeleteLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar Logo"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@android:color/holo_red_light"/>
 
         </LinearLayout>
 
@@ -106,6 +114,14 @@
                 android:layout_height="wrap_content"
                 android:text="Seleccionar QR"
                 android:layout_gravity="center_horizontal" />
+                
+             <Button
+                    android:id="@+id/buttonDeleteQr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eliminar QR"
+                    android:layout_gravity="center_horizontal"
+                    android:backgroundTint="@android:color/holo_red_light"/>
 
         </LinearLayout>
 
