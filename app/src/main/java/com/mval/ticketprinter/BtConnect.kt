@@ -46,8 +46,6 @@ class BtConnect : AppCompatActivity() {
     private lateinit var bluetoothReceiver: BroadcastReceiver
     private lateinit var buttonScan: Button
     private lateinit var listViewDevices: ListView
-    private val productList = ArrayList<Product>()
-    private lateinit var adapter: ProductAdapter
 
     // Las constantes van dentro del companion object
     companion object {

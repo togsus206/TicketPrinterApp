@@ -28,7 +28,7 @@
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:323: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:289: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
 
@@ -261,13 +261,13 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:350: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:316: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:350: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:316: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                      ~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:364: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:330: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             quantityTextView.text = "x${product.quantity}"
                                     ~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/ProductAdapter.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -314,12 +314,6 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:114: Warning: Hardcoded string "Previsualizar/Compartir", should use @string resource [HardcodedText]
             android:text="Previsualizar/Compartir"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:129: Warning: Hardcoded string "Conexión Bluetooth", should use @string resource [HardcodedText]
-            android:text="Conexión Bluetooth"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:138: Warning: Hardcoded string "Escanear Dispositivos Bluetooth", should use @string resource [HardcodedText]
-            android:text="Escanear Dispositivos Bluetooth"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:19: Warning: Hardcoded string "Configuración de la plantilla", should use @string resource [HardcodedText]
             android:text="Configuración de la plantilla"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -444,4 +438,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 82 warnings
+0 errors, 80 warnings

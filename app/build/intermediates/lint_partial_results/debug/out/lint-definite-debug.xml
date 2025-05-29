@@ -302,34 +302,6 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="129"
-            column="13"
-            startOffset="4239"
-            endLine="129"
-            endColumn="46"
-            endOffset="4272"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="138"
-            column="13"
-            startOffset="4562"
-            endLine="138"
-            endColumn="59"
-            endOffset="4608"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
         message="Hardcoded string &quot;Configuración de la plantilla&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
@@ -1191,12 +1163,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="350"
+            line="316"
             column="37"
-            startOffset="14779"
-            endLine="350"
+            startOffset="13192"
+            endLine="316"
             endColumn="67"
-            endOffset="14809"/>
+            endOffset="13222"/>
     </incident>
 
     <incident
@@ -1205,12 +1177,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="350"
+            line="316"
             column="38"
-            startOffset="14780"
-            endLine="350"
+            startOffset="13193"
+            endLine="316"
             endColumn="45"
-            endOffset="14787"/>
+            endOffset="13200"/>
     </incident>
 
     <incident
@@ -1219,12 +1191,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="364"
+            line="330"
             column="37"
-            startOffset="15471"
-            endLine="364"
+            startOffset="13884"
+            endLine="330"
             endColumn="59"
-            endOffset="15493"/>
+            endOffset="13906"/>
     </incident>
 
     <incident
@@ -1390,12 +1362,12 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="323"
+            line="289"
             column="68"
-            startOffset="13378"
-            endLine="323"
+            startOffset="11791"
+            endLine="289"
             endColumn="72"
-            endOffset="13382"/>
+            endOffset="11795"/>
     </incident>
 
 </incidents>
