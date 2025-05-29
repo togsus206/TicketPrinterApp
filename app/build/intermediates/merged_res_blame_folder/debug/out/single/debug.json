@@ -24,6 +24,10 @@
         "source": "com.mval.ticketprinter.app-main-31:/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-29:/layout_connect_bt.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-31:/layout/connect_bt.xml"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-29:/menu_main_menu.xml.flat",
         "source": "com.mval.ticketprinter.app-main-31:/menu/main_menu.xml"
     },

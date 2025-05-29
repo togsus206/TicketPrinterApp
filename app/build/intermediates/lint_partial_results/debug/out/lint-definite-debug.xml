@@ -2,17 +2,119 @@
 <incidents format="6" by="lint 8.1.1" type="incidents">
 
     <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="375"
+                    endOffset="1074"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="584"
+                    endOffset="821"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="843"
+                    endOffset="1030"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="18"
+            column="4"
+            startOffset="585"
+            endLine="18"
+            endColumn="10"
+            endOffset="591"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Conexion BT&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="22"
+            column="13"
+            startOffset="748"
+            endLine="22"
+            endColumn="39"
+            endOffset="774"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="375"
+                    endOffset="1074"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="584"
+                    endOffset="821"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="843"
+                    endOffset="1030"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="25"
+            column="10"
+            startOffset="844"
+            endLine="25"
+            endColumn="16"
+            endOffset="850"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Ajustes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="21"
+            line="29"
             column="13"
-            startOffset="751"
-            endLine="21"
+            startOffset="1005"
+            endLine="29"
             endColumn="35"
-            endOffset="773"/>
+            endOffset="1027"/>
     </incident>
 
     <incident
@@ -35,12 +137,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="44"
+            line="54"
             column="14"
-            startOffset="1472"
-            endLine="44"
+            startOffset="1749"
+            endLine="54"
             endColumn="22"
-            endOffset="1480"/>
+            endOffset="1757"/>
     </incident>
 
     <incident
@@ -49,12 +151,12 @@
         message="Hardcoded string &quot;Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="49"
+            line="59"
             column="17"
-            startOffset="1689"
-            endLine="49"
+            startOffset="1966"
+            endLine="59"
             endColumn="40"
-            endOffset="1712"/>
+            endOffset="1989"/>
     </incident>
 
     <incident
@@ -77,12 +179,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="52"
+            line="62"
             column="14"
-            startOffset="1783"
-            endLine="52"
+            startOffset="2060"
+            endLine="62"
             endColumn="22"
-            endOffset="1791"/>
+            endOffset="2068"/>
     </incident>
 
     <incident
@@ -91,12 +193,12 @@
         message="Hardcoded string &quot;Cant.&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="56"
+            line="66"
             column="17"
-            startOffset="1956"
-            endLine="56"
+            startOffset="2233"
+            endLine="66"
             endColumn="37"
-            endOffset="1976"/>
+            endOffset="2253"/>
     </incident>
 
     <incident
@@ -119,12 +221,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="59"
+            line="69"
             column="14"
-            startOffset="2037"
-            endLine="59"
+            startOffset="2314"
+            endLine="69"
             endColumn="22"
-            endOffset="2045"/>
+            endOffset="2322"/>
     </incident>
 
     <incident
@@ -133,12 +235,12 @@
         message="Hardcoded string &quot;Precio&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="63"
+            line="73"
             column="17"
-            startOffset="2208"
-            endLine="63"
+            startOffset="2485"
+            endLine="73"
             endColumn="38"
-            endOffset="2229"/>
+            endOffset="2506"/>
     </incident>
 
     <incident
@@ -147,12 +249,12 @@
         message="Hardcoded string &quot;Agregar Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="72"
+            line="82"
             column="13"
-            startOffset="2481"
-            endLine="72"
+            startOffset="2758"
+            endLine="82"
             endColumn="44"
-            endOffset="2512"/>
+            endOffset="2789"/>
     </incident>
 
     <incident
@@ -161,12 +263,12 @@
         message="Hardcoded string &quot;Total: &quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="89"
+            line="99"
             column="13"
-            startOffset="3008"
-            endLine="89"
+            startOffset="3285"
+            endLine="99"
             endColumn="35"
-            endOffset="3030"/>
+            endOffset="3307"/>
     </incident>
 
     <incident
@@ -175,12 +277,12 @@
         message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="97"
+            line="107"
             column="13"
-            startOffset="3279"
-            endLine="97"
+            startOffset="3556"
+            endLine="107"
             endColumn="33"
-            endOffset="3299"/>
+            endOffset="3576"/>
     </incident>
 
     <incident
@@ -189,12 +291,12 @@
         message="Hardcoded string &quot;Previsualizar/Compartir&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="104"
+            line="114"
             column="13"
-            startOffset="3507"
-            endLine="104"
+            startOffset="3784"
+            endLine="114"
             endColumn="51"
-            endOffset="3545"/>
+            endOffset="3822"/>
     </incident>
 
     <incident
@@ -203,12 +305,12 @@
         message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="119"
+            line="129"
             column="13"
-            startOffset="3962"
-            endLine="119"
+            startOffset="4239"
+            endLine="129"
             endColumn="46"
-            endOffset="3995"/>
+            endOffset="4272"/>
     </incident>
 
     <incident
@@ -217,18 +319,18 @@
         message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="128"
+            line="138"
             column="13"
-            startOffset="4285"
-            endLine="128"
+            startOffset="4562"
+            endLine="138"
             endColumn="59"
-            endOffset="4331"/>
+            endOffset="4608"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Configuración de la Impresión&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Configuración de la plantilla&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
             line="19"
@@ -545,6 +647,62 @@
             endLine="163"
             endColumn="49"
             endOffset="6577"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Configuración Bluetooth&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/connect_bt.xml"
+            line="19"
+            column="13"
+            startOffset="680"
+            endLine="19"
+            endColumn="51"
+            endOffset="718"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/connect_bt.xml"
+            line="34"
+            column="14"
+            startOffset="1202"
+            endLine="34"
+            endColumn="47"
+            endOffset="1235"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/connect_bt.xml"
+            line="43"
+            column="14"
+            startOffset="1534"
+            endLine="43"
+            endColumn="60"
+            endOffset="1580"/>
+    </incident>
+
+    <incident
+        id="NestedScrolling"
+        severity="warning"
+        message="The vertically scrolling `ScrollView` should not contain another vertically scrolling widget (`ListView`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/connect_bt.xml"
+            line="46"
+            column="11"
+            startOffset="1642"
+            endLine="46"
+            endColumn="19"
+            endOffset="1650"/>
     </incident>
 
     <incident
@@ -1033,12 +1191,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="350"
             column="37"
-            startOffset="14458"
-            endLine="342"
+            startOffset="14779"
+            endLine="350"
             endColumn="67"
-            endOffset="14488"/>
+            endOffset="14809"/>
     </incident>
 
     <incident
@@ -1047,12 +1205,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="350"
             column="38"
-            startOffset="14459"
-            endLine="342"
+            startOffset="14780"
+            endLine="350"
             endColumn="45"
-            endOffset="14466"/>
+            endOffset="14787"/>
     </incident>
 
     <incident
@@ -1061,12 +1219,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="356"
+            line="364"
             column="37"
-            startOffset="15150"
-            endLine="356"
+            startOffset="15471"
+            endLine="364"
             endColumn="59"
-            endOffset="15172"/>
+            endOffset="15493"/>
     </incident>
 
     <incident
@@ -1116,31 +1274,60 @@
     </incident>
 
     <incident
-        id="InflateParams"
+        id="GradleDependency"
         severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        message="A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0">
+        <fix-replace
+            description="Change to 1.16.0"
+            family="Update versions"
+            oldString="1.10.1"
+            replacement="1.16.0"/>
         <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="315"
-            column="68"
-            startOffset="13057"
-            endLine="315"
-            endColumn="72"
-            endOffset="13061"/>
+            file="${:app*projectDir}/build.gradle.kts"
+            line="38"
+            column="21"
+            startOffset="798"
+            endLine="38"
+            endColumn="50"
+            endOffset="827"/>
     </incident>
 
     <incident
-        id="Overdraw"
+        id="GradleDependency"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0">
+        <fix-replace
+            description="Change to 1.7.0"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.0"/>
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
+            file="${:app*projectDir}/build.gradle.kts"
+            line="39"
+            column="21"
+            startOffset="850"
+            endLine="39"
+            endColumn="55"
+            endOffset="884"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.9.0"
+            replacement="1.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="40"
+            column="21"
+            startOffset="907"
+            endLine="40"
+            endColumn="63"
+            endOffset="949"/>
     </incident>
 
     <incident
@@ -1181,6 +1368,34 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="323"
+            column="68"
+            startOffset="13378"
+            endLine="323"
+            endColumn="72"
+            endOffset="13382"/>
     </incident>
 
 </incidents>

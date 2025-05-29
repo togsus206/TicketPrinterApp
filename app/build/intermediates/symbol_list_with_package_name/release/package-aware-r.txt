@@ -3033,6 +3033,7 @@ id blocking
 id bottom
 id bounce
 id buttonAddProduct
+id buttonConexionBt
 id buttonDeleteLogo
 id buttonDeleteProduct
 id buttonDeleteQr
@@ -3562,6 +3563,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
 layout activity_settings
+layout connect_bt
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

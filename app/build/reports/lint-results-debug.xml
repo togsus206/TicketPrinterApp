@@ -2,6 +2,22 @@
 <issues format="6" by="lint 8.1.1">
 
     <issue
+        id="NestedScrolling"
+        severity="Warning"
+        message="The vertically scrolling `ScrollView` should not contain another vertically scrolling widget (`ListView`)"
+        category="Correctness"
+        priority="7"
+        summary="Nested scrolling widgets"
+        explanation="A scrolling widget such as a `ScrollView` should not contain any nested scrolling widgets since this has various usability issues"
+        errorLine1="         &lt;ListView"
+        errorLine2="          ~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/connect_bt.xml"
+            line="46"
+            column="11"/>
+    </issue>
+
+    <issue
         id="OldTargetApi"
         severity="Warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details."
@@ -33,7 +49,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="315"
+            line="323"
             column="68"/>
     </issue>
 
@@ -67,6 +83,54 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
             line="73"
             column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.core:core-ktx:1.10.1&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
+            line="38"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;androidx.appcompat:appcompat:1.6.1&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
+            line="39"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.google.android.material:material than 1.9.0 is available: 1.12.0"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    implementation(&quot;com.google.android.material:material:1.9.0&quot;)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
+            line="40"
+            column="21"/>
     </issue>
 
     <issue
@@ -203,6 +267,42 @@
         explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
         url="https://material.io/components/dialogs/"
         urls="https://material.io/components/dialogs/"
+        errorLine1="  &lt;Button"
+        errorLine2="   ~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="18"
+            column="4"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Button should be borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="https://material.io/components/dialogs/"
+        urls="https://material.io/components/dialogs/"
+        errorLine1="        &lt;Button"
+        errorLine2="         ~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="25"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ButtonStyle"
+        severity="Warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)"
+        category="Usability"
+        priority="5"
+        summary="Button should be borderless"
+        explanation="Button bars typically use a borderless style for the buttons. Set the `style=&quot;?android:attr/buttonBarButtonStyle&quot;` attribute on each of the buttons, and set `style=&quot;?android:attr/buttonBarStyle&quot;` on the parent layout"
+        url="https://material.io/components/dialogs/"
+        urls="https://material.io/components/dialogs/"
         errorLine1="        &lt;Button"
         errorLine2="         ~~~~~~">
         <location
@@ -243,7 +343,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="44"
+            line="54"
             column="14"/>
     </issue>
 
@@ -261,7 +361,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="52"
+            line="62"
             column="14"/>
     </issue>
 
@@ -279,7 +379,7 @@
         errorLine2="             ~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="59"
+            line="69"
             column="14"/>
     </issue>
 
@@ -459,7 +559,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="350"
             column="37"/>
     </issue>
 
@@ -477,7 +577,7 @@
         errorLine2="                                     ~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="342"
+            line="350"
             column="38"/>
     </issue>
 
@@ -495,7 +595,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="356"
+            line="364"
             column="37"/>
     </issue>
 
@@ -520,6 +620,22 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;Conexion BT&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Conexion BT&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;Ajustes&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -529,7 +645,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="21"
+            line="29"
             column="13"/>
     </issue>
 
@@ -545,7 +661,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="49"
+            line="59"
             column="17"/>
     </issue>
 
@@ -561,7 +677,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="56"
+            line="66"
             column="17"/>
     </issue>
 
@@ -577,7 +693,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="63"
+            line="73"
             column="17"/>
     </issue>
 
@@ -593,7 +709,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="72"
+            line="82"
             column="13"/>
     </issue>
 
@@ -609,7 +725,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="89"
+            line="99"
             column="13"/>
     </issue>
 
@@ -625,7 +741,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="97"
+            line="107"
             column="13"/>
     </issue>
 
@@ -641,7 +757,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="104"
+            line="114"
             column="13"/>
     </issue>
 
@@ -657,7 +773,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="119"
+            line="129"
             column="13"/>
     </issue>
 
@@ -673,19 +789,19 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml"
-            line="128"
+            line="138"
             column="13"/>
     </issue>
 
     <issue
         id="HardcodedText"
         severity="Warning"
-        message="Hardcoded string &quot;Configuración de la Impresión&quot;, should use `@string` resource"
+        message="Hardcoded string &quot;Configuración de la plantilla&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
         summary="Hardcoded text"
         explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
-        errorLine1="            android:text=&quot;Configuración de la Impresión&quot;"
+        errorLine1="            android:text=&quot;Configuración de la plantilla&quot;"
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
@@ -899,6 +1015,54 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
             line="163"
             column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Configuración Bluetooth&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="            android:text=&quot;Configuración Bluetooth&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/connect_bt.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Conexión Bluetooth&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="             android:text=&quot;Conexión Bluetooth&quot;"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/connect_bt.xml"
+            line="34"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
+        message="Hardcoded string &quot;Escanear Dispositivos Bluetooth&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="             android:text=&quot;Escanear Dispositivos Bluetooth&quot;"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/connect_bt.xml"
+            line="43"
+            column="14"/>
     </issue>
 
     <issue

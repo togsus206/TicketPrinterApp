@@ -25,6 +25,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SettingsActivity" />
+        <activity android:name=".BtConnect" />
     </application>
 
 </manifest>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-30:12
-INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-30:12
+ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:2:1-31:12
 MERGED from [com.google.android.material:material:1.9.0] /home/mati0216/.gradle/caches/8.14/transforms/b3abc32705854137b688701ca0bf66dd/transformed/material-1.9.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/mati0216/.gradle/caches/8.14/transforms/b99b0f13123390891290a0c2e07610b2/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mati0216/.gradle/caches/8.14/transforms/2ec3696c02924d0c609670b68f1e5573/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
@@ -94,8 +94,8 @@ ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:5
 	android:name
 		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:13:22-78
 application
-ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:15:5-28:19
-INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:15:5-28:19
+ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:15:5-29:19
+INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:15:5-29:19
 MERGED from [com.google.android.material:material:1.9.0] /home/mati0216/.gradle/caches/8.14/transforms/b3abc32705854137b688701ca0bf66dd/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.9.0] /home/mati0216/.gradle/caches/8.14/transforms/b3abc32705854137b688701ca0bf66dd/transformed/material-1.9.0/AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/mati0216/.gradle/caches/8.14/transforms/2ec3696c02924d0c609670b68f1e5573/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -144,6 +144,10 @@ activity#com.mval.ticketprinter.SettingsActivity
 ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:27:9-54
 	android:name
 		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:27:19-51
+activity#com.mval.ticketprinter.BtConnect
+ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:28:9-47
+	android:name
+		ADDED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml:28:19-44
 uses-sdk
 INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/mati0216/TicketPrinterApp/app/src/main/AndroidManifest.xml

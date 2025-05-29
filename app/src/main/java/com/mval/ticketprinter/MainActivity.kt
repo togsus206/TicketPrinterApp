@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private lateinit var textViewTotal: TextView
     private lateinit var buttonPrint: Button
     private lateinit var buttonSettings: Button
+    private lateinit var buttonConexionBt: Button
 
     private val productList = ArrayList<Product>()
     private lateinit var adapter: ProductAdapter
@@ -91,6 +92,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         textViewTotal = findViewById(R.id.textViewTotal)
         buttonPrint = findViewById(R.id.buttonPrint)
         buttonSettings = findViewById(R.id.buttonSettings)
+        buttonConexionBt = findViewById(R.id.buttonConexionBt)
 
         // Referencias a elementos Bluetooth
         buttonScan = findViewById(R.id.buttonScan)
@@ -129,6 +131,12 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         // Listener para el botón "Ajustes de Impresión"
         buttonSettings.setOnClickListener {
             val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+        
+        // Listener para el botón "Conexion BT"
+        buttonConexionBt.setOnClickListener {
+            val intent = Intent(this, BtConnect::class.java)
             startActivity(intent)
         }
 

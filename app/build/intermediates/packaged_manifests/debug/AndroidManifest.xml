@@ -69,6 +69,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.mval.ticketprinter.SettingsActivity" />
+        <activity android:name="com.mval.ticketprinter.BtConnect" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

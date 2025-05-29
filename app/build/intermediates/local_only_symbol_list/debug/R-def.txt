@@ -6,6 +6,7 @@ id action_print_ticket
 id action_settings
 id action_share_ticket
 id buttonAddProduct
+id buttonConexionBt
 id buttonDeleteLogo
 id buttonDeleteProduct
 id buttonDeleteQr
@@ -51,6 +52,7 @@ id ticketTotal
 id ticketTotalLabel
 layout activity_main
 layout activity_settings
+layout connect_bt
 layout dialog_edit_product
 layout item_product
 layout ticket_item_layout
