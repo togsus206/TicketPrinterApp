@@ -51,6 +51,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private lateinit var buttonPrint: Button
     private lateinit var buttonSettings: Button
     private lateinit var buttonConexionBt: Button
+    
+    private lateinit var buttonShareCard: Button
 
     private val productList = ArrayList<Product>()
     private lateinit var adapter: ProductAdapter
@@ -79,6 +81,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         buttonPrint = findViewById(R.id.buttonPrint)
         buttonSettings = findViewById(R.id.buttonSettings)
         buttonConexionBt = findViewById(R.id.buttonConexionBt)
+        buttonShareCard = findViewById(R.id.buttonShareCard)
 
         // Configurar el RecyclerView
         recyclerViewItems.layoutManager = LinearLayoutManager(this)
@@ -129,6 +132,13 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                 return@setOnClickListener
             }
             showPrintShareMenu()
+        }
+        
+
+
+        //Boton para compartir tarjeta
+        buttonShareCard.setOnClickListener {
+             generateCard()
         }
 
     }
@@ -431,6 +441,73 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             Toast.makeText(this, "Error al generar código QR: ${e.message}", Toast.LENGTH_LONG).show()
             return null
         }
+    }
+    
+    
+    // Crear tarjeta de presentacion
+    private fun generatePresentation(): View {
+        val inflater = LayoutInflater.from(this)
+        val ticketView = inflater.inflate(R.layout.ticket_preview, null)
+
+        val logoImageView = ticketView.findViewById<ImageView>(R.id.ticketLogo)
+        val headerTextView = ticketView.findViewById<TextView>(R.id.ticketHeader)
+        val dateTimeTextView = ticketView.findViewById<TextView>(R.id.ticketDateTime)
+        val itemsContainer = ticketView.findViewById<LinearLayout>(R.id.ticketItemsContainer)
+        val totalTextView = ticketView.findViewById<TextView>(R.id.ticketTotal)
+        val footerTextView = ticketView.findViewById<TextView>(R.id.ticketFooter)
+        val qrCodeImageView = ticketView.findViewById<ImageView>(R.id.ticketQrCode)
+
+        // Get reference to the "TOTAL" label TextView
+        val totalLabelTextView = ticketView.findViewById<TextView>(R.id.ticketTotalLabel) // Correct ID found in ticket_preview.xml
+
+        val ticketRootLayout = ticketView.findViewById<LinearLayout>(R.id.ticketRootLayout)
+
+        val displayMetrics = resources.displayMetrics
+        val ticketWidthPx = (ticketPaperWidth * displayMetrics.densityDpi / 25.4f).toInt()
+
+        val layoutParams = LinearLayout.LayoutParams(ticketWidthPx, LinearLayout.LayoutParams.WRAP_CONTENT)
+        ticketRootLayout.layoutParams = layoutParams
+
+        if (logoBitmap != null) {
+            logoImageView.setImageBitmap(logoBitmap)
+            logoImageView.visibility = View.VISIBLE
+        } else {
+            logoImageView.visibility = View.GONE
+        }
+
+        headerTextView.text = headerText
+        headerTextView.visibility = View.VISIBLE // Ensure header is visible
+
+        // --- Start of modifications to hide unnecessary elements ---
+
+        // Hide date/time
+        dateTimeTextView.visibility = View.GONE
+
+        // Hide items container
+        itemsContainer.visibility = View.GONE
+
+        // Hide total value
+        totalTextView.visibility = View.GONE
+
+        // Hide the "TOTAL" label
+        totalLabelTextView.visibility = View.GONE 
+
+        // Hide footer
+        footerTextView.visibility = View.GONE
+
+        // Hide QR code
+        qrCodeImageView.visibility = View.GONE
+
+        // --- End of modifications ---
+
+        return ticketView
+    }
+    
+    //Generar la tarjeta de presentacion
+    private fun generateCard() {
+        val ticketView = generatePresentation()
+        val ticketBitmap = createBitmapFromView(ticketView)
+        shareTicket(ticketBitmap)
     }
 
 

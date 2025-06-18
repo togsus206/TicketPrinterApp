@@ -14,7 +14,7 @@
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
                     startOffset="375"
-                    endOffset="1074"/>
+                    endOffset="1315"/>
             </fix-attribute>
             <fix-attribute
                 description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
@@ -22,8 +22,8 @@
                 value="?android:attr/buttonBarButtonStyle">
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-                    startOffset="584"
-                    endOffset="821"/>
+                    startOffset="586"
+                    endOffset="818"/>
             </fix-attribute>
             <fix-attribute
                 description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
@@ -31,32 +31,41 @@
                 value="?android:attr/buttonBarButtonStyle">
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-                    startOffset="843"
-                    endOffset="1030"/>
+                    startOffset="834"
+                    endOffset="1062"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="1084"
+                    endOffset="1271"/>
             </fix-attribute>
         </fix-composite>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="18"
             column="4"
-            startOffset="585"
+            startOffset="587"
             endLine="18"
             endColumn="10"
-            endOffset="591"/>
+            endOffset="593"/>
     </incident>
 
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Conexion BT&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Tarjeta&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="22"
             column="13"
-            startOffset="748"
+            startOffset="749"
             endLine="22"
-            endColumn="39"
-            endOffset="774"/>
+            endColumn="35"
+            endOffset="771"/>
     </incident>
 
     <incident
@@ -72,7 +81,7 @@
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
                     startOffset="375"
-                    endOffset="1074"/>
+                    endOffset="1315"/>
             </fix-attribute>
             <fix-attribute
                 description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
@@ -80,8 +89,8 @@
                 value="?android:attr/buttonBarButtonStyle">
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-                    startOffset="584"
-                    endOffset="821"/>
+                    startOffset="586"
+                    endOffset="818"/>
             </fix-attribute>
             <fix-attribute
                 description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
@@ -89,18 +98,94 @@
                 value="?android:attr/buttonBarButtonStyle">
                 <range
                     file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-                    startOffset="843"
-                    endOffset="1030"/>
+                    startOffset="834"
+                    endOffset="1062"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="1084"
+                    endOffset="1271"/>
             </fix-attribute>
         </fix-composite>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="25"
-            column="10"
-            startOffset="844"
+            column="4"
+            startOffset="835"
             endLine="25"
+            endColumn="10"
+            endOffset="841"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;BT&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="29"
+            column="13"
+            startOffset="998"
+            endLine="29"
+            endColumn="30"
+            endOffset="1015"/>
+    </incident>
+
+    <incident
+        id="ButtonStyle"
+        severity="warning"
+        message="Buttons in button bars should be borderless; use `style=&quot;?android:attr/buttonBarButtonStyle&quot;` (and `?android:attr/buttonBarStyle` on the parent)">
+        <fix-composite
+            description="Make borderless">
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="375"
+                    endOffset="1315"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="586"
+                    endOffset="818"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="834"
+                    endOffset="1062"/>
+            </fix-attribute>
+            <fix-attribute
+                description="Set style=&quot;?android:attr/buttonBarButtonStyle&quot;"
+                attribute="style"
+                value="?android:attr/buttonBarButtonStyle">
+                <range
+                    file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+                    startOffset="1084"
+                    endOffset="1271"/>
+            </fix-attribute>
+        </fix-composite>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="32"
+            column="10"
+            startOffset="1085"
+            endLine="32"
             endColumn="16"
-            endOffset="850"/>
+            endOffset="1091"/>
     </incident>
 
     <incident
@@ -109,12 +194,12 @@
         message="Hardcoded string &quot;Ajustes&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="29"
+            line="36"
             column="13"
-            startOffset="1005"
-            endLine="29"
+            startOffset="1246"
+            endLine="36"
             endColumn="35"
-            endOffset="1027"/>
+            endOffset="1268"/>
     </incident>
 
     <incident
@@ -137,12 +222,12 @@
         </fix-alternatives>
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="54"
+            line="61"
             column="14"
-            startOffset="1749"
-            endLine="54"
+            startOffset="1990"
+            endLine="61"
             endColumn="22"
-            endOffset="1757"/>
+            endOffset="1998"/>
     </incident>
 
     <incident
@@ -151,54 +236,12 @@
         message="Hardcoded string &quot;Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="59"
-            column="17"
-            startOffset="1966"
-            endLine="59"
-            endColumn="40"
-            endOffset="1989"/>
-    </incident>
-
-    <incident
-        id="Autofill"
-        severity="warning"
-        message="Missing `autofillHints` attribute">
-        <fix-alternatives>
-            <fix-attribute
-                description="Set autofillHints"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="autofillHints"
-                value=""
-                dot="0"
-                mark="0"/>
-            <fix-attribute
-                description="Set importantForAutofill=&quot;no&quot;"
-                namespace="http://schemas.android.com/apk/res/android"
-                attribute="importantForAutofill"
-                value="no"/>
-        </fix-alternatives>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="62"
-            column="14"
-            startOffset="2060"
-            endLine="62"
-            endColumn="22"
-            endOffset="2068"/>
-    </incident>
-
-    <incident
-        id="HardcodedText"
-        severity="warning"
-        message="Hardcoded string &quot;Cant.&quot;, should use `@string` resource">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="66"
             column="17"
-            startOffset="2233"
+            startOffset="2207"
             endLine="66"
-            endColumn="37"
-            endOffset="2253"/>
+            endColumn="40"
+            endOffset="2230"/>
     </incident>
 
     <incident
@@ -223,10 +266,52 @@
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="69"
             column="14"
-            startOffset="2314"
+            startOffset="2301"
             endLine="69"
             endColumn="22"
-            endOffset="2322"/>
+            endOffset="2309"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Cant.&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="73"
+            column="17"
+            startOffset="2474"
+            endLine="73"
+            endColumn="37"
+            endOffset="2494"/>
+    </incident>
+
+    <incident
+        id="Autofill"
+        severity="warning"
+        message="Missing `autofillHints` attribute">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set autofillHints"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="autofillHints"
+                value=""
+                dot="0"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAutofill=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAutofill"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="76"
+            column="14"
+            startOffset="2555"
+            endLine="76"
+            endColumn="22"
+            endOffset="2563"/>
     </incident>
 
     <incident
@@ -235,12 +320,12 @@
         message="Hardcoded string &quot;Precio&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="73"
+            line="80"
             column="17"
-            startOffset="2485"
-            endLine="73"
+            startOffset="2726"
+            endLine="80"
             endColumn="38"
-            endOffset="2506"/>
+            endOffset="2747"/>
     </incident>
 
     <incident
@@ -249,12 +334,12 @@
         message="Hardcoded string &quot;Agregar Producto&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="82"
+            line="89"
             column="13"
-            startOffset="2758"
-            endLine="82"
+            startOffset="2999"
+            endLine="89"
             endColumn="44"
-            endOffset="2789"/>
+            endOffset="3030"/>
     </incident>
 
     <incident
@@ -263,12 +348,12 @@
         message="Hardcoded string &quot;Total: &quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="99"
+            line="106"
             column="13"
-            startOffset="3285"
-            endLine="99"
+            startOffset="3526"
+            endLine="106"
             endColumn="35"
-            endOffset="3307"/>
+            endOffset="3548"/>
     </incident>
 
     <incident
@@ -277,12 +362,12 @@
         message="Hardcoded string &quot;$0.00&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="107"
+            line="114"
             column="13"
-            startOffset="3556"
-            endLine="107"
+            startOffset="3797"
+            endLine="114"
             endColumn="33"
-            endOffset="3576"/>
+            endOffset="3817"/>
     </incident>
 
     <incident
@@ -291,12 +376,12 @@
         message="Hardcoded string &quot;Previsualizar/Compartir&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="114"
+            line="121"
             column="13"
-            startOffset="3784"
-            endLine="114"
+            startOffset="4025"
+            endLine="121"
             endColumn="51"
-            endOffset="3822"/>
+            endOffset="4063"/>
     </incident>
 
     <incident
@@ -1163,12 +1248,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="316"
+            line="326"
             column="37"
-            startOffset="13192"
-            endLine="316"
+            startOffset="13440"
+            endLine="326"
             endColumn="67"
-            endOffset="13222"/>
+            endOffset="13470"/>
     </incident>
 
     <incident
@@ -1177,12 +1262,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="316"
+            line="326"
             column="38"
-            startOffset="13193"
-            endLine="316"
+            startOffset="13441"
+            endLine="326"
             endColumn="45"
-            endOffset="13200"/>
+            endOffset="13448"/>
     </incident>
 
     <incident
@@ -1191,12 +1276,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="330"
+            line="340"
             column="37"
-            startOffset="13884"
-            endLine="330"
+            startOffset="14132"
+            endLine="340"
             endColumn="59"
-            endOffset="13906"/>
+            endOffset="14154"/>
     </incident>
 
     <incident
@@ -1267,12 +1352,12 @@
     <incident
         id="GradleDependency"
         severity="warning"
-        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.0">
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
         <fix-replace
-            description="Change to 1.7.0"
+            description="Change to 1.7.1"
             family="Update versions"
             oldString="1.6.1"
-            replacement="1.7.0"/>
+            replacement="1.7.1"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
             line="39"
@@ -1300,6 +1385,34 @@
             endLine="40"
             endColumn="63"
             endOffset="949"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="299"
+            column="68"
+            startOffset="12039"
+            endLine="299"
+            endColumn="72"
+            endOffset="12043"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="450"
+            column="68"
+            startOffset="18954"
+            endLine="450"
+            endColumn="72"
+            endOffset="18958"/>
     </incident>
 
     <incident
@@ -1354,20 +1467,6 @@
             endLine="8"
             endColumn="46"
             endOffset="338"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="289"
-            column="68"
-            startOffset="11791"
-            endLine="289"
-            endColumn="72"
-            endOffset="11795"/>
     </incident>
 
 </incidents>

@@ -3045,6 +3045,7 @@ id buttonScan
 id buttonSelectLogo
 id buttonSelectQr
 id buttonSettings
+id buttonShareCard
 id cancel_button
 id center
 id centerCrop
