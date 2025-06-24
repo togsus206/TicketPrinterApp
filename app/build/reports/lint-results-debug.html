@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 83 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 84 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Tue Jun 17 23:49:06 ART 2025 by AGP (8.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Sun Jun 22 19:30:35 ART 2025 by AGP (8.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -188,6 +188,7 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#NestedScrolling"><i class="material-icons warning-icon">warning</i>Nested scrolling widgets (1)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
+      <a class="mdl-navigation__link" href="#SuspiciousIndentation"><i class="material-icons warning-icon">warning</i>Suspicious indentation (1)</a>
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (2)</a>
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialCode"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialXml"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
@@ -223,6 +224,9 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#OldTargetApi">OldTargetApi</a>: Target SDK attribute is not targeting latest version</td></tr>
+<tr>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<a href="#SuspiciousIndentation">SuspiciousIndentation</a>: Suspicious indentation</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#InflateParams">InflateParams</a>: Layout Inflation without a Parent</td></tr>
@@ -386,6 +390,80 @@ To suppress this error, use the issue id "OldTargetApi" as explained in the <a h
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="OldTargetApiCardLink" onclick="hideid('OldTargetApiCard');">
 Dismiss</button>            </div>
             </div>
+          </section><a name="SuspiciousIndentation"></a>
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="SuspiciousIndentationCard" style="display: block;">
+            <div class="mdl-card mdl-cell mdl-cell--12-col">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text">Suspicious indentation</h2>
+  </div>
+              <div class="mdl-card__supporting-text">
+<div class="issue">
+<div class="warningslist">
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/BtConnect.kt">../../src/main/java/com/mval/ticketprinter/BtConnect.kt</a>:211</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
+<span class="lineno"> 208 </span>      Toast.makeText(<span class="keyword">this</span>, <span class="string">"Dispositivo seleccionado: ${</span>selectedDevice.address<span class="string">}"</span>, Toast.LENGTH_SHORT).show()
+<span class="lineno"> 209 </span>                }
+<span class="lineno"> 210 </span><span class="caretline"><span class="lineno"> 211 </span>            <span class="warning">    </span><span class="keyword">val</span> resultIntent = Intent()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 212 </span>  resultIntent.putExtra(<span class="string">"device_address"</span>, selectedDevice.address)
+<span class="lineno"> 213 </span>  setResult(RESULT_OK, resultIntent)
+<span class="lineno"> 214 </span>  finish() <span class="comment">// Cierra BtConnect y vuelve a MainActivity con el resultado</span></pre>
+
+<ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/BtConnect.kt">../../src/main/java/com/mval/ticketprinter/BtConnect.kt</a>:205</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
+<span class="lineno"> 202 </span>  listViewDevices.setOnItemClickListener { _, _, position, _ ->
+<span class="lineno"> 203 </span>      <span class="keyword">if</span> (position &lt; bluetoothDevices.size) {
+<span class="lineno"> 204 </span>          <span class="keyword">val</span> selectedDevice = bluetoothDevices[position]
+<span class="caretline"><span class="lineno"> 205 </span>      <span class="warning"> </span>   <span class="keyword">if</span> (ContextCompat.checkSelfPermission(<span class="keyword">this</span>, android.Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {</span>
+<span class="lineno"> 206 </span>              Toast.makeText(<span class="keyword">this</span>, <span class="string">"Dispositivo seleccionado: ${</span>selectedDevice.name ?: selectedDevice.address<span class="string">}"</span>, Toast.LENGTH_SHORT).show()
+<span class="lineno"> 207 </span>          } <span class="keyword">else</span> {
+<span class="lineno"> 208 </span>              Toast.makeText(<span class="keyword">this</span>, <span class="string">"Dispositivo seleccionado: ${</span>selectedDevice.address<span class="string">}"</span>, Toast.LENGTH_SHORT).show()
+</pre>
+</ul></div>
+<div class="metadata"><div class="explanation" id="explanationSuspiciousIndentation" style="display: none;">
+This check looks for cases where the indentation suggests a grouping that isn't actually there in the code. A common example of this would be something like
+<pre>
+if (column > width)
+    line++
+    column = 0
+</pre>
+Here, the <code>column = 0</code> line will be executed every single time, not just if the condition is true.<br/><br/>
+This check can be configured via the following options:<br/><br/>
+<div class="options">
+<b>always-run</b> (default is false):<br/>
+Whether this check should be included while editing.<br/>
+<br/>
+While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an <code>if</code> statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.<br/>
+<br/>
+To configure this option, use a `lint.xml` file in the project or source folder using an <code>&lt;option&gt;</code> block like the following:
+<pre class="errorlines">
+<span class="lineno"> 1 </span><span class="tag">&lt;lint></span>
+<span class="lineno"> 2 </span>    <span class="tag">&lt;issue</span><span class="attribute"> id</span>=<span class="value">"SuspiciousIndentation"</span>>
+<span class="caretline"><span class="lineno"> 3 </span>        <span class="tag">&lt;option</span><span class="attribute"> name</span>=<span class="warning"><span class="value">"always-run"</span> <span class="attribute">value</span>=<span class="value">"false"</span></span> />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 4 </span>    <span class="tag">&lt;/issue></span>
+<span class="lineno"> 5 </span><span class="tag">&lt;/lint></span>
+</pre>
+</div>To suppress this error, use the issue id "SuspiciousIndentation" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
+<br/></div>
+</div>
+</div>
+<div class="chips">
+<span class="mdl-chip">
+    <span class="mdl-chip__text">SuspiciousIndentation</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Correctness</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Warning</span>
+</span>
+<span class="mdl-chip">
+    <span class="mdl-chip__text">Priority 6/10</span>
+</span>
+</div>
+              </div>
+              <div class="mdl-card__actions mdl-card--border">
+<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationSuspiciousIndentationLink" onclick="reveal('explanationSuspiciousIndentation');">
+Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="SuspiciousIndentationCardLink" onclick="hideid('SuspiciousIndentationCard');">
+Dismiss</button>            </div>
+            </div>
           </section><a name="InflateParams"></a>
 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="InflateParamsCard" style="display: block;">
             <div class="mdl-card mdl-cell mdl-cell--12-col">
@@ -395,24 +473,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:299</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 296 </span>
-<span class="lineno"> 297 </span>    private <span class="keyword">fun</span> generateTicketContent(): View {
-<span class="lineno"> 298 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
-<span class="caretline"><span class="lineno"> 299 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 300 </span>
-<span class="lineno"> 301 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
-<span class="lineno"> 302 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:323</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 320 </span>
+<span class="lineno"> 321 </span>    private <span class="keyword">fun</span> generateTicketContent(): View {
+<span class="lineno"> 322 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
+<span class="caretline"><span class="lineno"> 323 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 324 </span>
+<span class="lineno"> 325 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
+<span class="lineno"> 326 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:450</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 447 </span>    <span class="comment">// Crear tarjeta de presentacion</span>
-<span class="lineno"> 448 </span>    private <span class="keyword">fun</span> generatePresentation(): View {
-<span class="lineno"> 449 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
-<span class="caretline"><span class="lineno"> 450 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 451 </span>
-<span class="lineno"> 452 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
-<span class="lineno"> 453 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:474</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 471 </span>    <span class="comment">// Crear tarjeta de presentacion</span>
+<span class="lineno"> 472 </span>    private <span class="keyword">fun</span> generatePresentation(): View {
+<span class="lineno"> 473 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
+<span class="caretline"><span class="lineno"> 474 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 475 </span>
+<span class="lineno"> 476 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
+<span class="lineno"> 477 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
 </pre>
 
 </div>
@@ -1135,34 +1213,34 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:326</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 323 </span>        headerTextView.text = headerText
-<span class="lineno"> 324 </span>        <span class="keyword">if</span> (printDateTime) {
-<span class="lineno"> 325 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
-<span class="caretline"><span class="lineno"> 326 </span>            dateTimeTextView.text = <span class="warning"><span class="string">"Fecha: ${</span>sdf.format(Date())<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 327 </span>            dateTimeTextView.visibility = View.VISIBLE
-<span class="lineno"> 328 </span>        } <span class="keyword">else</span> {
-<span class="lineno"> 329 </span>            dateTimeTextView.visibility = View.GONE
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:350</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 347 </span>        headerTextView.text = headerText
+<span class="lineno"> 348 </span>        <span class="keyword">if</span> (printDateTime) {
+<span class="lineno"> 349 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
+<span class="caretline"><span class="lineno"> 350 </span>            dateTimeTextView.text = <span class="warning"><span class="string">"Fecha: ${</span>sdf.format(Date())<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 351 </span>            dateTimeTextView.visibility = View.VISIBLE
+<span class="lineno"> 352 </span>        } <span class="keyword">else</span> {
+<span class="lineno"> 353 </span>            dateTimeTextView.visibility = View.GONE
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:326</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 323 </span>        headerTextView.text = headerText
-<span class="lineno"> 324 </span>        <span class="keyword">if</span> (printDateTime) {
-<span class="lineno"> 325 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
-<span class="caretline"><span class="lineno"> 326 </span>            dateTimeTextView.text = <span class="string">"</span><span class="warning"><span class="string">Fecha: </span></span><span class="string">${</span>sdf.format(Date())<span class="string">}"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 327 </span>            dateTimeTextView.visibility = View.VISIBLE
-<span class="lineno"> 328 </span>        } <span class="keyword">else</span> {
-<span class="lineno"> 329 </span>            dateTimeTextView.visibility = View.GONE
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:350</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 347 </span>        headerTextView.text = headerText
+<span class="lineno"> 348 </span>        <span class="keyword">if</span> (printDateTime) {
+<span class="lineno"> 349 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
+<span class="caretline"><span class="lineno"> 350 </span>            dateTimeTextView.text = <span class="string">"</span><span class="warning"><span class="string">Fecha: </span></span><span class="string">${</span>sdf.format(Date())<span class="string">}"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 351 </span>            dateTimeTextView.visibility = View.VISIBLE
+<span class="lineno"> 352 </span>        } <span class="keyword">else</span> {
+<span class="lineno"> 353 </span>            dateTimeTextView.visibility = View.GONE
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:340</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 337 </span>         <span class="keyword">val</span> priceTextView = itemLayout.findViewById&lt;TextView>(R.id.itemPrice)
-<span class="lineno"> 338 </span>
-<span class="lineno"> 339 </span>         nameTextView.text = product.name
-<span class="caretline"><span class="lineno"> 340 </span>         quantityTextView.text = <span class="warning"><span class="string">"x${</span>product.quantity<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 341 </span>         priceTextView.text = String.format(<span class="string">"$%.2f"</span>, product.price * product.quantity)
-<span class="lineno"> 342 </span>
-<span class="lineno"> 343 </span>         itemsContainer.addView(itemLayout)
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:364</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 361 </span>         <span class="keyword">val</span> priceTextView = itemLayout.findViewById&lt;TextView>(R.id.itemPrice)
+<span class="lineno"> 362 </span>
+<span class="lineno"> 363 </span>         nameTextView.text = product.name
+<span class="caretline"><span class="lineno"> 364 </span>         quantityTextView.text = <span class="warning"><span class="string">"x${</span>product.quantity<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 365 </span>         priceTextView.text = String.format(<span class="string">"$%.2f"</span>, product.price * product.quantity)
+<span class="lineno"> 366 </span>
+<span class="lineno"> 367 </span>         itemsContainer.addView(itemLayout)
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/mval/ticketprinter/ProductAdapter.kt">../../src/main/java/com/mval/ticketprinter/ProductAdapter.kt</a>:57</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">

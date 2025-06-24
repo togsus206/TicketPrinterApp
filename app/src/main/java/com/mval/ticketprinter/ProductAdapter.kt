@@ -22,8 +22,8 @@ class ProductAdapter(
         val textViewName: TextView = itemView.findViewById(R.id.textViewProductName)
         val textViewQuantity: TextView = itemView.findViewById(R.id.textViewQuantity)
         val textViewPrice: TextView = itemView.findViewById(R.id.textViewPrice)
-        val buttonEdit: Button = itemView.findViewById(R.id.buttonEditProduct) // Nuevo botón
-        val buttonDelete: Button = itemView.findViewById(R.id.buttonDeleteProduct) // Nuevo botón
+        val buttonEdit: Button = itemView.findViewById(R.id.buttonEditProduct) 
+        val buttonDelete: Button = itemView.findViewById(R.id.buttonDeleteProduct) 
 
         init {
             // Asignar listeners a los botones

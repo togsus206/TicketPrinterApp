@@ -207,6 +207,11 @@ class BtConnect : AppCompatActivity() {
             	} else {
                 	Toast.makeText(this, "Dispositivo seleccionado: ${selectedDevice.address}", Toast.LENGTH_SHORT).show()
             	}
+            	
+            	val resultIntent = Intent()
+                resultIntent.putExtra("device_address", selectedDevice.address)
+                setResult(RESULT_OK, resultIntent)
+                finish() // Cierra BtConnect y vuelve a MainActivity con el resultado
             }
         }
     }

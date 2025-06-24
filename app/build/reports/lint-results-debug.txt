@@ -28,10 +28,42 @@
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:299: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/BtConnect.kt:211: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+             val resultIntent = Intent()
+            ~
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/BtConnect.kt:205: Previous line indentation here
+
+   Explanation for issues of type "SuspiciousIndentation":
+   This check looks for cases where the indentation suggests a grouping that
+   isn't actually there in the code. A common example of this would be
+   something like
+   if (column > width)
+       line++
+       column = 0
+   Here, the column = 0 line will be executed every single time, not just if
+   the condition is true.
+
+   Available options:
+
+   **always-run** (default is false):
+   Whether this check should be included while editing.
+
+   While you're editing, it's common to have a temporary situation where you have suspicious indentation scenarios -- e.g. you start typing an `if` statement on the line above something you want to make conditional, and you haven't indented it yet. It can be distracting and misleading to suddenly have both statements light up as errors. Therefore, lint will avoid including this check when running on the fly in the editor, unless it looks like the file has not been recently edited. With this option, you can turn it on in all cases.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="SuspiciousIndentation">
+           <option name="always-run" value="false" />
+       </issue>
+   </lint>
+   ```
+
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:323: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:450: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:474: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
 
@@ -267,13 +299,13 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:326: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:350: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:326: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:350: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                      ~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:340: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:364: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             quantityTextView.text = "x${product.quantity}"
                                     ~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/ProductAdapter.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
@@ -447,4 +479,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 83 warnings
+0 errors, 84 warnings
