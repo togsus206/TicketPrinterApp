@@ -158,7 +158,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
         //Boton para compartir tarjeta
         buttonShareCard.setOnClickListener {
-             generateCard()
+             //generateCard()
+             showPrintShareCard()
         }
 
     }
@@ -260,6 +261,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             .show()
     }
 
+	//Funcion para compartir o imprimir el ticket
     private fun showPrintShareMenu() {
         val popupMenu = PopupMenu(this, buttonPrint)
         popupMenu.menuInflater.inflate(R.menu.print_share_menu, popupMenu.menu)
@@ -271,8 +273,29 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.action_print_ticket -> {
-                    //Toast.makeText(this, "Funcionalidad de impresión (próximamente)", Toast.LENGTH_SHORT).show()
                     printTicket()
+                    true
+                }
+                else -> false
+            }
+        }
+        popupMenu.show()
+    }
+    
+    
+    //Funcion para compartir o imprimir la Tarjeta de presentacion
+    private fun showPrintShareCard() {
+        val popupMenu = PopupMenu(this, buttonShareCard)
+        popupMenu.menuInflater.inflate(R.menu.print_share_card, popupMenu.menu)
+
+        popupMenu.setOnMenuItemClickListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.action_share_card -> {
+                    generateCard()
+                    true
+                }
+                R.id.action_print_card -> {
+                    printCard()
                     true
                 }
                 else -> false
@@ -552,7 +575,9 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }
     }
-
+	
+	
+	//FUNCION PRINCIPAL PARA IMPRIMIR EL TICKET (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)
     private fun printTicket() {
         if (bluetoothDeviceAddress == null) {
             Toast.makeText(this, "Primero conecta una impresora Bluetooth en 'BT'", Toast.LENGTH_LONG).show()
@@ -616,6 +641,76 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }.start()
     }
+    
+    
+    
+    //FUNCION PRINCIPAL PARA IMPRIMIR LA TARJETA DE PRESENTACION (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)
+    private fun printCard() {
+        if (bluetoothDeviceAddress == null) {
+            Toast.makeText(this, "Primero conecta una impresora Bluetooth en 'BT'", Toast.LENGTH_LONG).show()
+            return
+        }
+
+        // Verificar permisos de Bluetooth antes de intentar conectar
+        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            Toast.makeText(this, "Permiso BLUETOOTH_CONNECT necesario para imprimir", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Generar el ticket como bitmap
+        val ticketView = generatePresentation()
+        val ticketBitmap = createBitmapFromView(ticketView)
+
+        Thread {
+            try {
+                if (bluetoothSocket == null || !bluetoothSocket!!.isConnected) {
+                    val device: BluetoothDevice? = bluetoothAdapter?.getRemoteDevice(bluetoothDeviceAddress)
+                    if (device == null) {
+                        runOnUiThread { Toast.makeText(this, "Dispositivo Bluetooth no encontrado.", Toast.LENGTH_LONG).show() }
+                        return@Thread
+                    }
+                    bluetoothSocket = device.createRfcommSocketToServiceRecord(SPP_UUID)
+                    bluetoothSocket?.connect()
+                    runOnUiThread { Toast.makeText(this, "Conectado a la impresora.", Toast.LENGTH_SHORT).show() }
+                }
+
+                val outputStream: OutputStream? = bluetoothSocket?.outputStream
+                if (outputStream != null) {
+                    // Opcional: Enviar comando de centrado antes de la imagen
+                    outputStream.write(centerAlignCommand()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+
+                    // Convertir el Bitmap a datos ESC/POS
+                    val escPosImageBytes = convertBitmapToEscPos(ticketBitmap)
+                    outputStream.write(escPosImageBytes) // Corrección: Asegurarse de que 'outputStream' es no nulo
+
+                    // Opcional: Volver a alinear a la izquierda (si hay más texto después)
+                    outputStream.write(leftAlignCommand()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+
+                    // Alimentar un poco de papel al final
+                    outputStream.write("\n\n\n".toByteArray()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+                    outputStream.flush()
+                    runOnUiThread { Toast.makeText(this, "Ticket enviado a la impresora.", Toast.LENGTH_SHORT).show() }
+                } else {
+                    runOnUiThread { Toast.makeText(this, "Error al obtener OutputStream de la impresora.", Toast.LENGTH_LONG).show() }
+                }
+            } catch (e: IOException) {
+                runOnUiThread { Toast.makeText(this, "Error de impresión: ${e.message}", Toast.LENGTH_LONG).show() }
+                try {
+                    bluetoothSocket?.close()
+                    bluetoothSocket = null
+                } catch (closeException: IOException) {
+                    closeException.printStackTrace()
+                }
+                e.printStackTrace()
+            } catch (e: SecurityException) {
+                runOnUiThread { Toast.makeText(this, "Permiso de Bluetooth denegado: ${e.message}", Toast.LENGTH_LONG).show() }
+                e.printStackTrace()
+            }
+        }.start()
+    }
+
+    
+    
 
     // Función para convertir un Bitmap a datos de imagen ESC/POS
     private fun convertBitmapToEscPos(bitmap: Bitmap): ByteArray {

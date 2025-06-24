@@ -1203,6 +1203,34 @@
     <incident
         id="HardcodedText"
         severity="warning"
+        message="Hardcoded string &quot;Compartir Tarjeta&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/print_share_card.xml"
+            line="5"
+            column="9"
+            startOffset="167"
+            endLine="5"
+            endColumn="42"
+            endOffset="200"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Imprimir Tarjeta&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/menu/print_share_card.xml"
+            line="8"
+            column="9"
+            startOffset="266"
+            endLine="8"
+            endColumn="41"
+            endOffset="298"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
         message="Hardcoded string &quot;Compartir Ticket&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/menu/print_share_menu.xml"
@@ -1271,12 +1299,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="350"
+            line="373"
             column="37"
-            startOffset="14661"
-            endLine="350"
+            startOffset="15305"
+            endLine="373"
             endColumn="67"
-            endOffset="14691"/>
+            endOffset="15335"/>
     </incident>
 
     <incident
@@ -1285,12 +1313,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="350"
+            line="373"
             column="38"
-            startOffset="14662"
-            endLine="350"
+            startOffset="15306"
+            endLine="373"
             endColumn="45"
-            endOffset="14669"/>
+            endOffset="15313"/>
     </incident>
 
     <incident
@@ -1299,12 +1327,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="364"
+            line="387"
             column="37"
-            startOffset="15353"
-            endLine="364"
+            startOffset="15997"
+            endLine="387"
             endColumn="59"
-            endOffset="15375"/>
+            endOffset="16019"/>
     </incident>
 
     <incident
@@ -1411,34 +1439,6 @@
     </incident>
 
     <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="323"
-            column="68"
-            startOffset="13260"
-            endLine="323"
-            endColumn="72"
-            endOffset="13264"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="474"
-            column="68"
-            startOffset="20175"
-            endLine="474"
-            endColumn="72"
-            endOffset="20179"/>
-    </incident>
-
-    <incident
         id="Overdraw"
         severity="warning"
         message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
@@ -1490,6 +1490,34 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="346"
+            column="68"
+            startOffset="13904"
+            endLine="346"
+            endColumn="72"
+            endOffset="13908"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="497"
+            column="68"
+            startOffset="20819"
+            endLine="497"
+            endColumn="72"
+            endOffset="20823"/>
     </incident>
 
 </incidents>

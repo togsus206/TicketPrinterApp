@@ -2,8 +2,10 @@ R_DEF: Internal format may change without notice
 local
 color ic_launcher_background
 drawable dotted_line
+id action_print_card
 id action_print_ticket
 id action_settings
+id action_share_card
 id action_share_ticket
 id buttonAddProduct
 id buttonConexionBt
@@ -59,6 +61,7 @@ layout item_product
 layout ticket_item_layout
 layout ticket_preview
 menu main_menu
+menu print_share_card
 menu print_share_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground

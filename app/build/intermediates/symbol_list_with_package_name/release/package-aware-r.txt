@@ -3005,8 +3005,10 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_print_card
 id action_print_ticket
 id action_settings
+id action_share_card
 id action_share_ticket
 id action_text
 id actions
@@ -3649,6 +3651,7 @@ layout ticket_preview
 layout zxing_barcode_scanner
 layout zxing_capture
 menu main_menu
+menu print_share_card
 menu print_share_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground

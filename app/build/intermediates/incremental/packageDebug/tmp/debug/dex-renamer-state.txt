@@ -1,4 +1,4 @@
-#Sun Jun 22 19:25:55 ART 2025
+#Mon Jun 23 22:53:36 ART 2025
 base.2=/home/mati0216/TicketPrinterApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
 path.2=7/classes.dex
 base.1=/home/mati0216/TicketPrinterApp/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
