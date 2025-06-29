@@ -373,15 +373,15 @@
     <incident
         id="HardcodedText"
         severity="warning"
-        message="Hardcoded string &quot;Previsualizar/Compartir&quot;, should use `@string` resource">
+        message="Hardcoded string &quot;Compartir/Imprimir&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
             line="121"
             column="13"
             startOffset="4025"
             endLine="121"
-            endColumn="51"
-            endOffset="4063"/>
+            endColumn="46"
+            endOffset="4058"/>
     </incident>
 
     <incident
@@ -1271,29 +1271,6 @@
     </incident>
 
     <incident
-        id="SuspiciousIndentation"
-        severity="warning"
-        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/BtConnect.kt"
-            line="211"
-            column="13"
-            startOffset="9181"
-            endLine="211"
-            endColumn="14"
-            endOffset="9182"/>
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/BtConnect.kt"
-            line="205"
-            column="13"
-            startOffset="8720"
-            endLine="205"
-            endColumn="14"
-            endOffset="8721"
-            message="Previous line indentation here"/>
-    </incident>
-
-    <incident
         id="SetTextI18n"
         severity="warning"
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
@@ -1333,6 +1310,52 @@
             endLine="387"
             endColumn="59"
             endOffset="16019"/>
+    </incident>
+
+    <incident
+        id="SuspiciousIndentation"
+        severity="warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="588"
+            column="5"
+            startOffset="24431"
+            endLine="588"
+            endColumn="6"
+            endOffset="24432"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="582"
+            column="5"
+            startOffset="24165"
+            endLine="582"
+            endColumn="6"
+            endOffset="24166"
+            message="Previous line indentation here"/>
+    </incident>
+
+    <incident
+        id="SuspiciousIndentation"
+        severity="warning"
+        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="657"
+            column="5"
+            startOffset="27955"
+            endLine="657"
+            endColumn="6"
+            endOffset="27956"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="651"
+            column="5"
+            startOffset="27689"
+            endLine="651"
+            endColumn="6"
+            endOffset="27690"
+            message="Previous line indentation here"/>
     </incident>
 
     <incident
@@ -1453,6 +1476,34 @@
     </incident>
 
     <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="346"
+            column="68"
+            startOffset="13904"
+            endLine="346"
+            endColumn="72"
+            endOffset="13908"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="497"
+            column="68"
+            startOffset="20800"
+            endLine="497"
+            endColumn="72"
+            endOffset="20804"/>
+    </incident>
+
+    <incident
         id="IconLauncherShape"
         severity="warning"
         message="Launcher icon used as round icon did not have a circular shape">
@@ -1490,34 +1541,6 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="346"
-            column="68"
-            startOffset="13904"
-            endLine="346"
-            endColumn="72"
-            endOffset="13908"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="497"
-            column="68"
-            startOffset="20819"
-            endLine="497"
-            endColumn="72"
-            endOffset="20823"/>
     </incident>
 
 </incidents>

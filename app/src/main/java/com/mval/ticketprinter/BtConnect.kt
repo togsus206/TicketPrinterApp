@@ -34,6 +34,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.ByteArrayOutputStream
 import java.util.*
+import android.bluetooth.BluetoothClass
 
 
 class BtConnect : AppCompatActivity() {
@@ -86,28 +87,31 @@ class BtConnect : AppCompatActivity() {
     // --- Funciones de Bluetooth ---
 
     private fun checkBluetoothPermissions() {
-        val permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            arrayOf(
-                android.Manifest.permission.BLUETOOTH_SCAN,
-                android.Manifest.permission.BLUETOOTH_CONNECT,
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            )
-        } else {
-            arrayOf(
-                android.Manifest.permission.ACCESS_FINE_LOCATION
-            )
-        }
-
-        val missingPermissions = permissions.filter {
-            ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
-        }
-
-        if (missingPermissions.isNotEmpty()) {
-            ActivityCompat.requestPermissions(this, missingPermissions.toTypedArray(), REQUEST_BLUETOOTH_PERMISSIONS)
-        } else {
-            enableBluetoothAndDiscover()
-        }
+    val permissions = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        arrayOf(
+            android.Manifest.permission.BLUETOOTH_SCAN,
+            android.Manifest.permission.BLUETOOTH_CONNECT,
+            android.Manifest.permission.ACCESS_FINE_LOCATION
+        )
+    } else {
+        arrayOf(
+            android.Manifest.permission.BLUETOOTH,
+            android.Manifest.permission.BLUETOOTH_ADMIN,
+            android.Manifest.permission.ACCESS_FINE_LOCATION
+        )
     }
+
+    val missingPermissions = permissions.filter {
+        ContextCompat.checkSelfPermission(this, it) != PackageManager.PERMISSION_GRANTED
+    }
+
+    if (missingPermissions.isNotEmpty()) {
+        ActivityCompat.requestPermissions(this, missingPermissions.toTypedArray(), REQUEST_BLUETOOTH_PERMISSIONS)
+    } else {
+        enableBluetoothAndDiscover()
+    }
+}
+
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
@@ -143,85 +147,115 @@ class BtConnect : AppCompatActivity() {
     }
 
     private fun startBluetoothDiscovery() {
-        if (bluetoothAdapter == null) return
+    	if (bluetoothAdapter == null) return
+	
+    	val hasPermission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        	ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_GRANTED
+    	} else {
+        	ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+    	}
+	
+    	if (!hasPermission) {
+        	Toast.makeText(this, "Permisos de Bluetooth requeridos.", Toast.LENGTH_SHORT).show()
+        	return
+    	}
+	
+    	bluetoothDevices.clear()
+    	deviceListAdapter.clear()
+    	deviceListAdapter.add("Buscando dispositivos...")
+    	deviceListAdapter.notifyDataSetChanged()
+	
+    	if (bluetoothAdapter.isDiscovering) {
+        	bluetoothAdapter.cancelDiscovery()
+    	}
+    	bluetoothAdapter.startDiscovery()
+    	Toast.makeText(this, "Iniciando búsqueda de dispositivos Bluetooth...", Toast.LENGTH_SHORT).show()
+	}
 
-        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
-            return // Se maneja en checkBluetoothPermissions
-        }
-
-        bluetoothDevices.clear()
-        deviceListAdapter.clear()
-        deviceListAdapter.add("Buscando dispositivos...")
-        deviceListAdapter.notifyDataSetChanged()
-
-        if (bluetoothAdapter.isDiscovering) {
-            bluetoothAdapter.cancelDiscovery()
-        }
-        bluetoothAdapter.startDiscovery()
-        Toast.makeText(this, "Iniciando búsqueda de dispositivos Bluetooth...", Toast.LENGTH_SHORT).show()
-    }
 
     private fun setupBluetoothReceiver() {
-        val filter = IntentFilter()
-        filter.addAction(BluetoothDevice.ACTION_FOUND)
-        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)
-        bluetoothReceiver = object : BroadcastReceiver() {
-            override fun onReceive(context: Context, intent: Intent) {
-                when (intent.action) {
-                    BluetoothDevice.ACTION_FOUND -> {
-                        val device: BluetoothDevice? = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
-                        device?.let {
-                            if (!bluetoothDevices.contains(it)) {
-                                bluetoothDevices.add(it)
-                                deviceListAdapter.clear()
-                                bluetoothDevices.forEach { dev ->
-                                    if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
-                                		deviceListAdapter.add(dev.name ?: dev.address)
-                            		} else {
-                                		deviceListAdapter.add(dev.address) // Si no hay permiso para el nombre, solo la dirección
-                            		}
-                                }
-                                deviceListAdapter.notifyDataSetChanged()
-                            }
-                        }
-                    }
-                    BluetoothAdapter.ACTION_DISCOVERY_FINISHED -> {
-                        Toast.makeText(context, "Búsqueda finalizada", Toast.LENGTH_SHORT).show()
-                        if (bluetoothDevices.isEmpty()) {
-                            Toast.makeText(context, "No se encontraron dispositivos", Toast.LENGTH_SHORT).show()
-                            deviceListAdapter.clear()
-                            deviceListAdapter.add("No se encontraron dispositivos")
-                            deviceListAdapter.notifyDataSetChanged()
-                        }
-                    }
-                }
-            }
-        }
-        registerReceiver(bluetoothReceiver, filter)
-
-        listViewDevices.setOnItemClickListener { _, _, position, _ ->
-            if (position < bluetoothDevices.size) {
-                val selectedDevice = bluetoothDevices[position]
-                if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
-                	Toast.makeText(this, "Dispositivo seleccionado: ${selectedDevice.name ?: selectedDevice.address}", Toast.LENGTH_SHORT).show()
-            	} else {
-                	Toast.makeText(this, "Dispositivo seleccionado: ${selectedDevice.address}", Toast.LENGTH_SHORT).show()
+    	val filter = IntentFilter()
+    	filter.addAction(BluetoothDevice.ACTION_FOUND)
+    	filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)
+	
+    	bluetoothReceiver = object : BroadcastReceiver() {
+        	override fun onReceive(context: Context, intent: Intent) {
+            	when (intent.action) {
+                	BluetoothDevice.ACTION_FOUND -> {
+                    	val device: BluetoothDevice? = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE)
+                    	device?.let {
+                        	val majorClass = it.bluetoothClass?.majorDeviceClass
+	
+                        	// Filtrar: solo mostrar si NO pertenece a clases que sabemos que no son impresoras
+                        	if (majorClass != BluetoothClass.Device.Major.AUDIO_VIDEO &&
+                            	majorClass != BluetoothClass.Device.Major.PHONE &&
+                            	majorClass != BluetoothClass.Device.Major.WEARABLE &&
+                            	majorClass != BluetoothClass.Device.Major.HEALTH &&
+                            	majorClass != BluetoothClass.Device.Major.TOY &&
+                            	majorClass != BluetoothClass.Device.Major.PERIPHERAL) {
+	
+                            	if (!bluetoothDevices.contains(it)) {
+                                	bluetoothDevices.add(it)
+	
+                                	deviceListAdapter.clear()
+                                	bluetoothDevices.forEach { dev ->
+                                    	val canAccessName = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                                        	ContextCompat.checkSelfPermission(context, android.Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED
+                                    	} else {
+                                        	ContextCompat.checkSelfPermission(context, android.Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+                                    	}
+	
+                                    	deviceListAdapter.add(
+                                        	if (canAccessName) dev.name ?: dev.address else dev.address
+                                    	)
+                                	}
+                                	deviceListAdapter.notifyDataSetChanged()
+                            	}
+                        	}
+                    	}
+                	}
+	
+                	BluetoothAdapter.ACTION_DISCOVERY_FINISHED -> {
+                    	Toast.makeText(context, "Búsqueda finalizada", Toast.LENGTH_SHORT).show()
+                    	if (bluetoothDevices.isEmpty()) {
+                        	Toast.makeText(context, "No se encontraron dispositivos compatibles", Toast.LENGTH_SHORT).show()
+                        	deviceListAdapter.clear()
+                        	deviceListAdapter.add("No se encontraron dispositivos")
+                        	deviceListAdapter.notifyDataSetChanged()
+                    	}
+                	}
             	}
-            	
+        	}
+    	}
+	
+    	registerReceiver(bluetoothReceiver, filter)
+	
+    	listViewDevices.setOnItemClickListener { _, _, position, _ ->
+        	if (position < bluetoothDevices.size) {
+            	val selectedDevice = bluetoothDevices[position]
+            	val canAccessName = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                	ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED
+            	} else {
+                	ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH) == PackageManager.PERMISSION_GRANTED
+            	}
+	
+            	Toast.makeText(this, "Dispositivo seleccionado: ${if (canAccessName) selectedDevice.name ?: selectedDevice.address else selectedDevice.address}", Toast.LENGTH_SHORT).show()
+	
             	val resultIntent = Intent()
-                resultIntent.putExtra("device_address", selectedDevice.address)
-                setResult(RESULT_OK, resultIntent)
-                finish() // Cierra BtConnect y vuelve a MainActivity con el resultado
-            }
-        }
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        if (::bluetoothReceiver.isInitialized) {
-            unregisterReceiver(bluetoothReceiver)
-        }
-    }
-
-
-}
+            	resultIntent.putExtra("device_address", selectedDevice.address)
+            	setResult(RESULT_OK, resultIntent)
+            	finish()
+        	}
+    	}
+	}
+	
+	
+    	override fun onDestroy() {
+        	super.onDestroy()
+        	if (::bluetoothReceiver.isInitialized) {
+            	unregisterReceiver(bluetoothReceiver)
+        	}
+    	}
+	
+	
+	}

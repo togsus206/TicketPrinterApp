@@ -28,10 +28,14 @@
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/BtConnect.kt:211: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
-             val resultIntent = Intent()
-            ~
-    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/BtConnect.kt:205: Previous line indentation here
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:588: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    ~
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:582: Previous line indentation here
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:657: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+    ~
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:651: Previous line indentation here
 
    Explanation for issues of type "SuspiciousIndentation":
    This check looks for cases where the indentation suggests a grouping that
@@ -352,9 +356,9 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:114: Warning: Hardcoded string "$0.00", should use @string resource [HardcodedText]
             android:text="$0.00"
             ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:121: Warning: Hardcoded string "Previsualizar/Compartir", should use @string resource [HardcodedText]
-            android:text="Previsualizar/Compartir"
-            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_main.xml:121: Warning: Hardcoded string "Compartir/Imprimir", should use @string resource [HardcodedText]
+            android:text="Compartir/Imprimir"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:19: Warning: Hardcoded string "Configuración de la plantilla", should use @string resource [HardcodedText]
             android:text="Configuración de la plantilla"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -485,4 +489,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 86 warnings
+0 errors, 87 warnings

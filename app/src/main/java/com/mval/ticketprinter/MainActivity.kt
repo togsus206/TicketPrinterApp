@@ -385,7 +385,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
             nameTextView.text = product.name
             quantityTextView.text = "x${product.quantity}"
-            priceTextView.text = String.format("$%.2f", product.price * product.quantity)
+            priceTextView.text = String.format("$%.2f", product.price)
 
             itemsContainer.addView(itemLayout)
         }
@@ -584,11 +584,13 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             return
         }
 
-        // Verificar permisos de Bluetooth antes de intentar conectar
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "Permiso BLUETOOTH_CONNECT necesario para imprimir", Toast.LENGTH_SHORT).show()
-            return
-        }
+        // Solo verificar BLUETOOTH_CONNECT si estamos en Android 12 o superior
+    	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        	if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            	Toast.makeText(this, "Permiso BLUETOOTH_CONNECT necesario para imprimir", Toast.LENGTH_SHORT).show()
+            	return
+        	}
+    	}
 
         // Generar el ticket como bitmap
         val ticketView = generateTicketContent()
@@ -610,11 +612,11 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                 val outputStream: OutputStream? = bluetoothSocket?.outputStream
                 if (outputStream != null) {
                     // Opcional: Enviar comando de centrado antes de la imagen
-                    outputStream.write(centerAlignCommand()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+                    outputStream.write(centerAlignCommand()) 
 
                     // Convertir el Bitmap a datos ESC/POS
                     val escPosImageBytes = convertBitmapToEscPos(ticketBitmap)
-                    outputStream.write(escPosImageBytes) // Corrección: Asegurarse de que 'outputStream' es no nulo
+                    outputStream.write(escPosImageBytes) 
 
                     // Opcional: Volver a alinear a la izquierda (si hay más texto después)
                     outputStream.write(leftAlignCommand()) // Corrección: Asegurarse de que 'outputStream' es no nulo
@@ -651,11 +653,13 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             return
         }
 
-        // Verificar permisos de Bluetooth antes de intentar conectar
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(this, "Permiso BLUETOOTH_CONNECT necesario para imprimir", Toast.LENGTH_SHORT).show()
-            return
-        }
+        // Solo verificar BLUETOOTH_CONNECT si estamos en Android 12 o superior
+    	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        	if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            	Toast.makeText(this, "Permiso BLUETOOTH_CONNECT necesario para imprimir", Toast.LENGTH_SHORT).show()
+            	return
+        	}
+    	}
 
         // Generar el ticket como bitmap
         val ticketView = generatePresentation()
@@ -757,7 +761,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         return byteArrayOf(0x1B, 0x61, 0x01) // ESC a 1 (center alignment)
     }
 
-    // Opcional: Una función para alinear a la izquierda (después de centrar la imagen)
+    // función para alinear a la izquierda (después de centrar la imagen)
     private fun leftAlignCommand(): ByteArray {
         return byteArrayOf(0x1B, 0x61, 0x00) // ESC a 0 (left alignment)
     }
