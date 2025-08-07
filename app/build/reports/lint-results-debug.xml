@@ -31,7 +31,7 @@
         errorLine2="        ~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
-            line="14"
+            line="17"
             column="9"/>
     </issue>
 
@@ -47,11 +47,11 @@
         errorLine2="    ~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="588"
+            line="626"
             column="5"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="582"
+            line="620"
             column="5"
             message="Previous line indentation here"/>
     </issue>
@@ -68,11 +68,11 @@
         errorLine2="    ~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="657"
+            line="731"
             column="5"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="651"
+            line="725"
             column="5"
             message="Previous line indentation here"/>
     </issue>
@@ -91,7 +91,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="346"
+            line="383"
             column="68"/>
     </issue>
 
@@ -109,7 +109,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="497"
+            line="534"
             column="68"/>
     </issue>
 
@@ -157,7 +157,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
-            line="38"
+            line="81"
             column="21"/>
     </issue>
 
@@ -173,7 +173,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
-            line="39"
+            line="82"
             column="21"/>
     </issue>
 
@@ -189,7 +189,7 @@
         errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
-            line="40"
+            line="83"
             column="21"/>
     </issue>
 
@@ -637,7 +637,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="373"
+            line="410"
             column="37"/>
     </issue>
 
@@ -655,7 +655,7 @@
         errorLine2="                                     ~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="373"
+            line="410"
             column="38"/>
     </issue>
 
@@ -673,7 +673,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="387"
+            line="424"
             column="37"/>
     </issue>
 

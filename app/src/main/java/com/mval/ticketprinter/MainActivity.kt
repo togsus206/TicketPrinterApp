@@ -39,6 +39,10 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import android.app.Activity // Para el resultCode
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
+import android.Manifest
 
 import android.bluetooth.BluetoothSocket // For BluetoothSocket
 import java.io.IOException // For IOException
@@ -85,7 +89,14 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private val REQUEST_SELECT_DEVICE = 104
     
     // Fin segmento implementacion BT
-
+    
+    //Chequeo de BT encendido
+    private lateinit var enableBtLauncher: ActivityResultLauncher<Intent> 
+    private lateinit var bluetoothPermissionLauncher: ActivityResultLauncher<String>
+    
+    
+    
+	//Empieza la funcion OnCreate
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -106,6 +117,30 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         recyclerViewItems.layoutManager = LinearLayoutManager(this)
         adapter = ProductAdapter(productList, this)
         recyclerViewItems.adapter = adapter
+        
+        // Inicializa el launcher para la solicitud de permiso de Bluetooth
+        bluetoothPermissionLauncher = registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { isGranted: Boolean ->
+            if (isGranted) {
+                // Permiso concedido, ahora puedes intentar habilitar Bluetooth
+                continueBluetoothFlow()
+            } else {
+                // Permiso denegado, muestra un mensaje al usuario
+                Toast.makeText(this, "Permiso de Bluetooth denegado. No se puede imprimir.", Toast.LENGTH_SHORT).show()
+            }
+        }
+        
+        // Inicializa el launcher aquí, dentro de onCreate()
+        enableBtLauncher = registerForActivityResult(
+            ActivityResultContracts.StartActivityForResult()
+        ) { result ->
+            if (result.resultCode == Activity.RESULT_OK) {
+                printTicket()
+            } else {
+                Toast.makeText(this, "Bluetooth no activado.", Toast.LENGTH_SHORT).show()
+            }
+        }
 
         // Configurar el listener del botón "Agregar Producto"
         buttonAddProduct.setOnClickListener {
@@ -273,7 +308,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.action_print_ticket -> {
-                    printTicket()
+                    //printTicket()
+                    checkBluetoothAndPrint()
                     true
                 }
                 else -> false
@@ -295,7 +331,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.action_print_card -> {
-                    printCard()
+                    //printCard()
+                    checkBluetoothAndPrintCard()
                     true
                 }
                 else -> false
@@ -579,6 +616,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 	
 	//FUNCION PRINCIPAL PARA IMPRIMIR EL TICKET (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)
     private fun printTicket() {
+    	
         if (bluetoothDeviceAddress == null) {
             Toast.makeText(this, "Primero conecta una impresora Bluetooth en 'BT'", Toast.LENGTH_LONG).show()
             return
@@ -643,6 +681,42 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }.start()
     }
+    
+   
+	
+	private fun checkBluetoothAndPrint() {
+    	// Si la versión de Android es 12 (API 31) o superior,
+    	// necesitas el permiso BLUETOOTH_CONNECT
+    	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        	if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
+            	// Permiso ya concedido, continuar con la verificación de Bluetooth
+            	continueBluetoothFlow()
+        	} else {
+            	// Solicitar el permiso al usuario
+            	bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
+        	}
+    	} else {
+        	// En versiones anteriores, no se requiere BLUETOOTH_CONNECT
+        	continueBluetoothFlow()
+    	}
+	}
+	
+	// Nueva función para el flujo de Bluetooth
+	private fun continueBluetoothFlow() {
+    	val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
+	
+    	if (bluetoothAdapter == null) {
+        	Toast.makeText(this, "Este dispositivo no soporta Bluetooth.", Toast.LENGTH_SHORT).show()
+        	return
+    	}
+	
+    	if (!bluetoothAdapter.isEnabled) {
+        	val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+        	enableBtLauncher.launch(enableBtIntent)
+    	} else {
+        	printTicket()
+    	}
+	}
     
     
     
@@ -712,6 +786,41 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }.start()
     }
+    
+
+	private fun checkBluetoothAndPrintCard() {
+    	// Si la versión de Android es 12 (API 31) o superior,
+    	// necesitas el permiso BLUETOOTH_CONNECT
+    	if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+        	if (ContextCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
+            	// Permiso ya concedido, continuar con la verificación de Bluetooth
+            	continueBluetoothFlow()
+        	} else {
+            	// Solicitar el permiso al usuario
+            	bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
+        	}
+    	} else {
+        	// En versiones anteriores, no se requiere BLUETOOTH_CONNECT
+        	continueBluetoothFlowCard()
+    	}
+	}
+	
+	// Nueva función para el flujo de Bluetooth
+	private fun continueBluetoothFlowCard() {
+    	val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
+	
+    	if (bluetoothAdapter == null) {
+        	Toast.makeText(this, "Este dispositivo no soporta Bluetooth.", Toast.LENGTH_SHORT).show()
+        	return
+    	}
+	
+    	if (!bluetoothAdapter.isEnabled) {
+        	val enableBtIntent = Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE)
+        	enableBtLauncher.launch(enableBtIntent)
+    	} else {
+        	printCard()
+    	}
+	}
 
     
     

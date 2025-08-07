@@ -1276,12 +1276,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="373"
+            line="410"
             column="37"
-            startOffset="15305"
-            endLine="373"
+            startOffset="16889"
+            endLine="410"
             endColumn="67"
-            endOffset="15335"/>
+            endOffset="16919"/>
     </incident>
 
     <incident
@@ -1290,12 +1290,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="373"
+            line="410"
             column="38"
-            startOffset="15306"
-            endLine="373"
+            startOffset="16890"
+            endLine="410"
             endColumn="45"
-            endOffset="15313"/>
+            endOffset="16897"/>
     </incident>
 
     <incident
@@ -1304,12 +1304,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="387"
+            line="424"
             column="37"
-            startOffset="15997"
-            endLine="387"
+            startOffset="17581"
+            endLine="424"
             endColumn="59"
-            endOffset="16019"/>
+            endOffset="17603"/>
     </incident>
 
     <incident
@@ -1318,20 +1318,20 @@
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="588"
+            line="626"
             column="5"
-            startOffset="24431"
-            endLine="588"
+            startOffset="26021"
+            endLine="626"
             endColumn="6"
-            endOffset="24432"/>
+            endOffset="26022"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="582"
+            line="620"
             column="5"
-            startOffset="24165"
-            endLine="582"
+            startOffset="25755"
+            endLine="620"
             endColumn="6"
-            endOffset="24166"
+            endOffset="25756"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1341,20 +1341,20 @@
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="657"
+            line="731"
             column="5"
-            startOffset="27955"
-            endLine="657"
+            startOffset="30849"
+            endLine="731"
             endColumn="6"
-            endOffset="27956"/>
+            endOffset="30850"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="651"
+            line="725"
             column="5"
-            startOffset="27689"
-            endLine="651"
+            startOffset="30583"
+            endLine="725"
             endColumn="6"
-            endOffset="27690"
+            endOffset="30584"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1391,17 +1391,17 @@
         severity="warning"
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
         <fix-replace
-            description="Update targetSdkVersion to 34"
+            description="Update targetSdkVersion to 35"
             oldString="33"
-            replacement="34"/>
+            replacement="35"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="14"
+            line="17"
             column="9"
-            startOffset="334"
-            endLine="14"
+            startOffset="323"
+            endLine="17"
             endColumn="23"
-            endOffset="348"/>
+            endOffset="337"/>
     </incident>
 
     <incident
@@ -1415,12 +1415,12 @@
             replacement="1.16.0"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="38"
+            line="81"
             column="21"
-            startOffset="798"
-            endLine="38"
+            startOffset="2667"
+            endLine="81"
             endColumn="50"
-            endOffset="827"/>
+            endOffset="2696"/>
     </incident>
 
     <incident
@@ -1434,12 +1434,12 @@
             replacement="1.7.1"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="39"
+            line="82"
             column="21"
-            startOffset="850"
-            endLine="39"
+            startOffset="2719"
+            endLine="82"
             endColumn="55"
-            endOffset="884"/>
+            endOffset="2753"/>
     </incident>
 
     <incident
@@ -1453,12 +1453,12 @@
             replacement="1.12.0"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
-            line="40"
+            line="83"
             column="21"
-            startOffset="907"
-            endLine="40"
+            startOffset="2776"
+            endLine="83"
             endColumn="63"
-            endOffset="949"/>
+            endOffset="2818"/>
     </incident>
 
     <incident
@@ -1481,12 +1481,12 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="346"
+            line="383"
             column="68"
-            startOffset="13904"
-            endLine="346"
+            startOffset="15488"
+            endLine="383"
             endColumn="72"
-            endOffset="13908"/>
+            endOffset="15492"/>
     </incident>
 
     <incident
@@ -1495,12 +1495,12 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="497"
+            line="534"
             column="68"
-            startOffset="20800"
-            endLine="497"
+            startOffset="22384"
+            endLine="534"
             endColumn="72"
-            endOffset="20804"/>
+            endOffset="22388"/>
     </incident>
 
     <incident

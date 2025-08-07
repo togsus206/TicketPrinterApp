@@ -6,10 +6,9 @@
     maven="TicketPrinterApp:app:"
     agpVersion="8.1.1"
     buildFolder="build"
-    bootClassPath="/home/mati0216/Android/Sdk/platforms/android-33/android.jar:/home/mati0216/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    bootClassPath="/home/mati0216/Android/Sdk/platforms/android-35/android.jar:/home/mati0216/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
     javaSourceLevel="17"
-    compileTarget="android-33"
-    neverShrinking="true">
+    compileTarget="android-35">
   <lintOptions
       abortOnError="true"
       absolutePaths="true"
