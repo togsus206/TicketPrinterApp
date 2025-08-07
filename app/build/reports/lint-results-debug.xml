@@ -27,7 +27,7 @@
         explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.&#xA;&#xA;To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: https://developer.android.com/reference/android/os/Build.VERSION_CODES.html as well as follow this guide:&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
         url="https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
         urls="https://developer.android.com/distribute/best-practices/develop/target-sdk.html,https://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
-        errorLine1="        targetSdk = 33"
+        errorLine1="        targetSdk = 34"
         errorLine2="        ~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/build.gradle.kts"
@@ -47,11 +47,11 @@
         errorLine2="    ~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="626"
+            line="624"
             column="5"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="620"
+            line="618"
             column="5"
             message="Previous line indentation here"/>
     </issue>
@@ -68,11 +68,11 @@
         errorLine2="    ~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="731"
+            line="729"
             column="5"/>
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="725"
+            line="723"
             column="5"
             message="Previous line indentation here"/>
     </issue>
@@ -91,7 +91,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="383"
+            line="381"
             column="68"/>
     </issue>
 
@@ -109,7 +109,7 @@
         errorLine2="                                                                   ~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="534"
+            line="532"
             column="68"/>
     </issue>
 
@@ -637,7 +637,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="410"
+            line="408"
             column="37"/>
     </issue>
 
@@ -655,7 +655,7 @@
         errorLine2="                                     ~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="410"
+            line="408"
             column="38"/>
     </issue>
 
@@ -673,7 +673,7 @@
         errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="424"
+            line="422"
             column="37"/>
     </issue>
 

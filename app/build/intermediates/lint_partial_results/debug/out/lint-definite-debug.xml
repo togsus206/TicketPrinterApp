@@ -1276,12 +1276,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="410"
+            line="408"
             column="37"
-            startOffset="16889"
-            endLine="410"
+            startOffset="16814"
+            endLine="408"
             endColumn="67"
-            endOffset="16919"/>
+            endOffset="16844"/>
     </incident>
 
     <incident
@@ -1290,12 +1290,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="410"
+            line="408"
             column="38"
-            startOffset="16890"
-            endLine="410"
+            startOffset="16815"
+            endLine="408"
             endColumn="45"
-            endOffset="16897"/>
+            endOffset="16822"/>
     </incident>
 
     <incident
@@ -1304,12 +1304,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="424"
+            line="422"
             column="37"
-            startOffset="17581"
-            endLine="424"
+            startOffset="17506"
+            endLine="422"
             endColumn="59"
-            endOffset="17603"/>
+            endOffset="17528"/>
     </incident>
 
     <incident
@@ -1318,20 +1318,20 @@
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="626"
+            line="624"
             column="5"
-            startOffset="26021"
-            endLine="626"
+            startOffset="25946"
+            endLine="624"
             endColumn="6"
-            endOffset="26022"/>
+            endOffset="25947"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="620"
+            line="618"
             column="5"
-            startOffset="25755"
-            endLine="620"
+            startOffset="25680"
+            endLine="618"
             endColumn="6"
-            endOffset="25756"
+            endOffset="25681"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1341,20 +1341,20 @@
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="731"
+            line="729"
             column="5"
-            startOffset="30849"
-            endLine="731"
+            startOffset="30803"
+            endLine="729"
             endColumn="6"
-            endOffset="30850"/>
+            endOffset="30804"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="725"
+            line="723"
             column="5"
-            startOffset="30583"
-            endLine="725"
+            startOffset="30537"
+            endLine="723"
             endColumn="6"
-            endOffset="30584"
+            endOffset="30538"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1392,7 +1392,7 @@
         message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
         <fix-replace
             description="Update targetSdkVersion to 35"
-            oldString="33"
+            oldString="34"
             replacement="35"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
@@ -1462,17 +1462,17 @@
     </incident>
 
     <incident
-        id="Overdraw"
+        id="InflateParams"
         severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="381"
+            column="68"
+            startOffset="15413"
+            endLine="381"
+            endColumn="72"
+            endOffset="15417"/>
     </incident>
 
     <incident
@@ -1481,26 +1481,12 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="383"
+            line="532"
             column="68"
-            startOffset="15488"
-            endLine="383"
+            startOffset="22309"
+            endLine="532"
             endColumn="72"
-            endOffset="15492"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="534"
-            column="68"
-            startOffset="22384"
-            endLine="534"
-            endColumn="72"
-            endOffset="22388"/>
+            endOffset="22313"/>
     </incident>
 
     <incident
@@ -1541,6 +1527,20 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
     </incident>
 
 </incidents>

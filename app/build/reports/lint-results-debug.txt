@@ -7,7 +7,7 @@
    scrolling widgets since this has various usability issues
 
 /home/mati0216/TicketPrinterApp/app/build.gradle.kts:17: Warning: Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details. [OldTargetApi]
-        targetSdk = 33
+        targetSdk = 34
         ~~~~~~~~~~~~~~
 
    Explanation for issues of type "OldTargetApi":
@@ -28,14 +28,14 @@
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:626: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:624: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
     ~
-    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:620: Previous line indentation here
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:731: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:618: Previous line indentation here
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:729: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
     ~
-    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:725: Previous line indentation here
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:723: Previous line indentation here
 
    Explanation for issues of type "SuspiciousIndentation":
    This check looks for cases where the indentation suggests a grouping that
@@ -64,10 +64,10 @@
    </lint>
    ```
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:383: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:381: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:534: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:532: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
 
@@ -303,13 +303,13 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:410: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:408: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:410: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:408: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                      ~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:424: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:422: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             quantityTextView.text = "x${product.quantity}"
                                     ~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/ProductAdapter.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]

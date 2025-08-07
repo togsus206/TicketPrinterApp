@@ -308,8 +308,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.action_print_ticket -> {
-                    //printTicket()
-                    checkBluetoothAndPrint()
+                	checkBluetoothAndPrint()
                     true
                 }
                 else -> false
@@ -331,9 +330,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     true
                 }
                 R.id.action_print_card -> {
-                    //printCard()
-                    checkBluetoothAndPrintCard()
-                    true
+                	checkBluetoothAndPrintCard()
+                    	true
                 }
                 else -> false
             }
@@ -657,17 +655,17 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     outputStream.write(escPosImageBytes) 
 
                     // Opcional: Volver a alinear a la izquierda (si hay más texto después)
-                    outputStream.write(leftAlignCommand()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+                    outputStream.write(leftAlignCommand()) //  Asegurarse de que 'outputStream' es no nulo
 
                     // Alimentar un poco de papel al final
-                    outputStream.write("\n\n\n".toByteArray()) // Corrección: Asegurarse de que 'outputStream' es no nulo
+                    outputStream.write("\n\n\n".toByteArray()) // Asegurarse de que 'outputStream' es no nulo
                     outputStream.flush()
                     runOnUiThread { Toast.makeText(this, "Ticket enviado a la impresora.", Toast.LENGTH_SHORT).show() }
                 } else {
                     runOnUiThread { Toast.makeText(this, "Error al obtener OutputStream de la impresora.", Toast.LENGTH_LONG).show() }
                 }
             } catch (e: IOException) {
-                runOnUiThread { Toast.makeText(this, "Error de impresión: ${e.message}", Toast.LENGTH_LONG).show() }
+                runOnUiThread { Toast.makeText(this, "Error de impresión: Verifica que la impresora este en rango de alcance. ${e.message}", Toast.LENGTH_LONG).show() }
                 try {
                     bluetoothSocket?.close()
                     bluetoothSocket = null

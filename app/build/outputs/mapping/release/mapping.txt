@@ -3,8 +3,8 @@
 # min_api: 21
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: cea369f
-# pg_map_hash: SHA-256 cea369f698746d9adf6abb228fbe99a5889f779548b0c4c29f1c66852bafecfa
+# pg_map_id: 40a4363
+# pg_map_hash: SHA-256 40a4363b14f49a081516ecf97e78f51970e9fabebe1daa210604335910f74a68
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
     1:1:androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel):0:0 -> read
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lz0/a;)Landroidx/core/app/RemoteActionCompat;"}
@@ -54797,12 +54797,12 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda7 -> y2.i:
     1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.<init>(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> <init>
     1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,java.io.IOException,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    20:49:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$17(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
-    20:49:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
+    18:49:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$17(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
+    18:49:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
     50:51:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0:0 -> run
-    52:82:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$24(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
-    52:82:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
+    52:84:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$24(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
+    52:84:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
 com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda8 -> y2.j:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}

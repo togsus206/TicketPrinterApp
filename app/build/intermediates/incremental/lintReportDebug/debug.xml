@@ -2,7 +2,7 @@
     name="debug"
     package="com.mval.ticketprinter"
     minSdkVersion="21"
-    targetSdkVersion="33"
+    targetSdkVersion="34"
     debuggable="true"
     mergedManifest="build/intermediates/merged_manifest/debug/AndroidManifest.xml"
     manifestMergeReport="build/outputs/logs/manifest-merger-debug-report.txt"
