@@ -1276,12 +1276,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="408"
+            line="404"
             column="37"
-            startOffset="16813"
-            endLine="408"
+            startOffset="16670"
+            endLine="404"
             endColumn="67"
-            endOffset="16843"/>
+            endOffset="16700"/>
     </incident>
 
     <incident
@@ -1290,12 +1290,12 @@
         message="String literal in `setText` can not be translated. Use Android resources instead.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="408"
+            line="404"
             column="38"
-            startOffset="16814"
-            endLine="408"
+            startOffset="16671"
+            endLine="404"
             endColumn="45"
-            endOffset="16821"/>
+            endOffset="16678"/>
     </incident>
 
     <incident
@@ -1304,12 +1304,12 @@
         message="Do not concatenate text displayed with `setText`. Use resource string with placeholders.">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="422"
+            line="418"
             column="37"
-            startOffset="17505"
-            endLine="422"
+            startOffset="17362"
+            endLine="418"
             endColumn="59"
-            endOffset="17527"/>
+            endOffset="17384"/>
     </incident>
 
     <incident
@@ -1318,20 +1318,20 @@
         message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="624"
+            line="620"
             column="5"
-            startOffset="25956"
-            endLine="624"
+            startOffset="25813"
+            endLine="620"
             endColumn="6"
-            endOffset="25957"/>
+            endOffset="25814"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="618"
+            line="614"
             column="5"
-            startOffset="25690"
-            endLine="618"
+            startOffset="25547"
+            endLine="614"
             endColumn="6"
-            endOffset="25691"
+            endOffset="25548"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1357,10 +1357,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/SettingsActivity.kt"
             line="27"
             column="5"
-            startOffset="1081"
+            startOffset="915"
             endLine="27"
             endColumn="48"
-            endOffset="1124"/>
+            endOffset="958"/>
     </incident>
 
     <incident
@@ -1384,12 +1384,12 @@
     <incident
         id="GradleDependency"
         severity="warning"
-        message="A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0">
+        message="A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.17.0">
         <fix-replace
-            description="Change to 1.16.0"
+            description="Change to 1.17.0"
             family="Update versions"
             oldString="1.10.1"
-            replacement="1.16.0"/>
+            replacement="1.17.0"/>
         <location
             file="${:app*projectDir}/build.gradle.kts"
             line="81"
@@ -1444,12 +1444,12 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="381"
+            line="377"
             column="68"
-            startOffset="15412"
-            endLine="381"
+            startOffset="15269"
+            endLine="377"
             endColumn="72"
-            endOffset="15416"/>
+            endOffset="15273"/>
     </incident>
 
     <incident
@@ -1458,12 +1458,26 @@
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="532"
+            line="528"
             column="68"
-            startOffset="22308"
-            endLine="532"
+            startOffset="22165"
+            endLine="528"
             endColumn="72"
-            endOffset="22312"/>
+            endOffset="22169"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
     </incident>
 
     <incident
@@ -1504,20 +1518,6 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
-    </incident>
-
-    <incident
-        id="Overdraw"
-        severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
     </incident>
 
 </incidents>

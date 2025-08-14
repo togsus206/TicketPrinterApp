@@ -1,16 +1,16 @@
 package com.mval.ticketprinter
 
-import android.content.Context // Importación necesaria para Context
+import android.content.Context 
 import android.content.Intent
-import android.content.SharedPreferences // Importación necesaria para SharedPreferences
+import android.content.SharedPreferences 
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.RadioButton // Importación necesaria para RadioButton
-import android.widget.RadioGroup // Importación necesaria para RadioGroup
+import android.widget.RadioButton
+import android.widget.RadioGroup 
 import android.widget.Switch
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
@@ -37,14 +37,14 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var radioButton58mm: RadioButton
     private lateinit var radioButton80mm: RadioButton
 
-    private lateinit var sharedPreferences: SharedPreferences // [MODIFICACIÓN] Declaración de SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences 
 
     private lateinit var logoPickerLauncher: ActivityResultLauncher<Intent>
     private lateinit var qrPickerLauncher: ActivityResultLauncher<Intent>
 
     // Constantes para las claves de SharedPreferences (ahora en SettingsActivity)
     companion object {
-        const val PREFS_NAME = "printer_settings" // Usar el nombre que ya tenías para coherencia
+        const val PREFS_NAME = "printer_settings"
         const val KEY_HEADER = "header"
         const val KEY_FOOTER = "footer"
         const val KEY_PRINT_DATE_TIME = "print_date_time"
@@ -93,7 +93,7 @@ class SettingsActivity : AppCompatActivity() {
                             outputStream.use { output ->
                                 input.copyTo(output)
                                 val logoPath = getFileStreamPath(logoFileName).absolutePath
-                                sharedPreferences.edit().putString(KEY_LOGO_PATH, logoPath).apply() // [MODIFICACIÓN] Usar constante
+                                sharedPreferences.edit().putString(KEY_LOGO_PATH, logoPath).apply() 
                                 val bitmap = BitmapFactory.decodeFile(logoPath)
                                 imageViewLogo.setImageBitmap(bitmap)
                             }
@@ -118,7 +118,7 @@ class SettingsActivity : AppCompatActivity() {
                             outputStream.use { output ->
                                 input.copyTo(output)
                                 val qrPath = getFileStreamPath(qrFileName).absolutePath
-                                sharedPreferences.edit().putString(KEY_QR_PATH, qrPath).apply() // [MODIFICACIÓN] Usar constante
+                                sharedPreferences.edit().putString(KEY_QR_PATH, qrPath).apply()
                                 val bitmap = BitmapFactory.decodeFile(qrPath)
                                 imageViewQr.setImageBitmap(bitmap)
                             }
@@ -137,7 +137,7 @@ class SettingsActivity : AppCompatActivity() {
             logoPickerLauncher.launch(intent)
         }
         
-        // AGREGADO: Listener para el botón de eliminar logo
+        // Listener para el botón de eliminar logo
         buttonDeleteLogo.setOnClickListener {
             with(sharedPreferences.edit()) {
                 remove(KEY_LOGO_PATH) // Elimina la ruta del logo de SharedPreferences
@@ -152,7 +152,7 @@ class SettingsActivity : AppCompatActivity() {
             qrPickerLauncher.launch(intent)
         }
         
-        // AGREGADO: Listener para el botón de eliminar QR
+        // Listener para el botón de eliminar QR
         buttonDeleteQr.setOnClickListener {
             with(sharedPreferences.edit()) {
                 remove(KEY_QR_PATH) // Elimina la ruta del QR de SharedPreferences
@@ -170,9 +170,9 @@ class SettingsActivity : AppCompatActivity() {
 
             val editor = sharedPreferences.edit() // Usar la sharedPreferences ya inicializada
 
-            editor.putString(KEY_HEADER, header) // [MODIFICACIÓN] Usar constante
-            editor.putBoolean(KEY_PRINT_DATE_TIME, printDateTime) // [MODIFICACIÓN] Usar constante
-            editor.putString(KEY_FOOTER, footer) // [MODIFICACIÓN] Usar constante
+            editor.putString(KEY_HEADER, header) 
+            editor.putBoolean(KEY_PRINT_DATE_TIME, printDateTime) 
+            editor.putString(KEY_FOOTER, footer) 
 
             // [MODIFICACIÓN] Guardar el ancho del papel seleccionado
             val selectedPaperWidth = when (radioGroupPaperWidth.checkedRadioButtonId) {
@@ -180,7 +180,7 @@ class SettingsActivity : AppCompatActivity() {
                 R.id.radio80mm -> 80
                 else -> DEFAULT_PAPER_WIDTH // Valor por defecto si no se selecciona nada
             }
-            editor.putInt(KEY_PAPER_WIDTH, selectedPaperWidth) // [MODIFICACIÓN] Usar constante
+            editor.putInt(KEY_PAPER_WIDTH, selectedPaperWidth) 
 
             editor.apply()
 
@@ -188,7 +188,7 @@ class SettingsActivity : AppCompatActivity() {
             finish()
         }
 
-        // [MODIFICACIÓN] Listener para los RadioButtons del ancho del papel
+        // Listener para los RadioButtons del ancho del papel
         radioGroupPaperWidth.setOnCheckedChangeListener { _, checkedId ->
             val editor = sharedPreferences.edit()
             when (checkedId) {
@@ -205,7 +205,7 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun loadSettings() {
         // SharedPreferences ya está inicializada en onCreate
-        val logoPath = sharedPreferences.getString(KEY_LOGO_PATH, null) // [MODIFICACIÓN] Usar constante
+        val logoPath = sharedPreferences.getString(KEY_LOGO_PATH, null) 
         logoPath?.let { path ->
             val bitmap = BitmapFactory.decodeFile(path)
             imageViewLogo.setImageBitmap(bitmap)
@@ -213,11 +213,11 @@ class SettingsActivity : AppCompatActivity() {
             imageViewLogo.setImageResource(android.R.drawable.ic_menu_gallery)
         }
 
-        editTextHeader.setText(sharedPreferences.getString(KEY_HEADER, "")) // [MODIFICACIÓN] Usar constante
-        switchDateTime.isChecked = sharedPreferences.getBoolean(KEY_PRINT_DATE_TIME, false) // [MODIFICACIÓN] Usar constante
-        editTextFooter.setText(sharedPreferences.getString(KEY_FOOTER, "")) // [MODIFICACIÓN] Usar constante
+        editTextHeader.setText(sharedPreferences.getString(KEY_HEADER, "")) 
+        switchDateTime.isChecked = sharedPreferences.getBoolean(KEY_PRINT_DATE_TIME, false)
+        editTextFooter.setText(sharedPreferences.getString(KEY_FOOTER, "")) 
 
-        val qrPath = sharedPreferences.getString(KEY_QR_PATH, null) // [MODIFICACIÓN] Usar constante
+        val qrPath = sharedPreferences.getString(KEY_QR_PATH, null)
         qrPath?.let { path ->
             val bitmap = BitmapFactory.decodeFile(path)
             imageViewQr.setImageBitmap(bitmap)
@@ -225,7 +225,7 @@ class SettingsActivity : AppCompatActivity() {
             imageViewQr.setImageResource(android.R.drawable.ic_menu_camera)
         }
 
-        // [MODIFICACIÓN] Cargar la preferencia del ancho del papel
+        // Cargar la preferencia del ancho del papel
         val savedPaperWidth = sharedPreferences.getInt(KEY_PAPER_WIDTH, DEFAULT_PAPER_WIDTH) // [MODIFICACIÓN] Usar constante
         when (savedPaperWidth) {
             58 -> radioButton58mm.isChecked = true

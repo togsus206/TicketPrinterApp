@@ -179,7 +179,7 @@ document.getElementById(id).style.display = 'none';
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Lint Report: 86 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Aug 07 21:27:04 ART 2025 by AGP (8.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Aug 14 18:27:53 ART 2025 by AGP (8.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -399,23 +399,23 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:624</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
-<span class="lineno"> 621 </span>  }
-<span class="lineno"> 622 </span>
-<span class="lineno"> 623 </span>  <span class="comment">// Solo verificar BLUETOOTH_CONNECT si estamos en Android 12 o superior</span>
-<span class="caretline"><span class="lineno"> 624 </span>    <span class="warning">    </span><span class="keyword">if</span> (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 625 </span>      <span class="keyword">if</span> (ContextCompat.checkSelfPermission(<span class="keyword">this</span>, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-<span class="lineno"> 626 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Permiso BLUETOOTH_CONNECT necesario para imprimir"</span>, Toast.LENGTH_SHORT).show()
-<span class="lineno"> 627 </span>          <span class="keyword">return</span></pre>
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:620</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
+<span class="lineno"> 617 </span>  }
+<span class="lineno"> 618 </span>
+<span class="lineno"> 619 </span>  <span class="comment">// Solo verificar BLUETOOTH_CONNECT si estamos en Android 12 o superior</span>
+<span class="caretline"><span class="lineno"> 620 </span>    <span class="warning">    </span><span class="keyword">if</span> (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 621 </span>      <span class="keyword">if</span> (ContextCompat.checkSelfPermission(<span class="keyword">this</span>, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+<span class="lineno"> 622 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Permiso BLUETOOTH_CONNECT necesario para imprimir"</span>, Toast.LENGTH_SHORT).show()
+<span class="lineno"> 623 </span>          <span class="keyword">return</span></pre>
 
-<ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:618</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
-<span class="lineno"> 615 </span>    <span class="comment">//FUNCION PRINCIPAL PARA IMPRIMIR EL TICKET (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)</span>
-<span class="lineno"> 616 </span>  private <span class="keyword">fun</span> printTicket(ticket: Int) {
-<span class="lineno"> 617 </span>      
-<span class="caretline"><span class="lineno"> 618 </span>  <span class="warning"> </span>   <span class="keyword">if</span> (bluetoothDeviceAddress == <span class="keyword">null</span>) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 619 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Primero conecta una impresora Bluetooth en 'BT'"</span>, Toast.LENGTH_LONG).show()
-<span class="lineno"> 620 </span>          <span class="keyword">return</span>
-<span class="lineno"> 621 </span>      }
+<ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:614</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
+<span class="lineno"> 611 </span>    <span class="comment">//FUNCION PRINCIPAL PARA IMPRIMIR EL TICKET (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)</span>
+<span class="lineno"> 612 </span>  private <span class="keyword">fun</span> printTicket(ticket: Int) {
+<span class="lineno"> 613 </span>      
+<span class="caretline"><span class="lineno"> 614 </span>  <span class="warning"> </span>   <span class="keyword">if</span> (bluetoothDeviceAddress == <span class="keyword">null</span>) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 615 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Primero conecta una impresora Bluetooth en 'BT'"</span>, Toast.LENGTH_LONG).show()
+<span class="lineno"> 616 </span>          <span class="keyword">return</span>
+<span class="lineno"> 617 </span>      }
 </pre>
 </ul></div>
 <div class="metadata"><div class="explanation" id="explanationSuspiciousIndentation" style="display: none;">
@@ -474,24 +474,24 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:381</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:377</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 374 </span>
+<span class="lineno"> 375 </span>    private <span class="keyword">fun</span> generateTicketContent(): View {
+<span class="lineno"> 376 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
+<span class="caretline"><span class="lineno"> 377 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 378 </span>
-<span class="lineno"> 379 </span>    private <span class="keyword">fun</span> generateTicketContent(): View {
-<span class="lineno"> 380 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
-<span class="caretline"><span class="lineno"> 381 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 382 </span>
-<span class="lineno"> 383 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
-<span class="lineno"> 384 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
+<span class="lineno"> 379 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
+<span class="lineno"> 380 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:532</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
-<span class="lineno"> 529 </span>    <span class="comment">// Crear tarjeta de presentacion</span>
-<span class="lineno"> 530 </span>    private <span class="keyword">fun</span> generatePresentation(): View {
-<span class="lineno"> 531 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
-<span class="caretline"><span class="lineno"> 532 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 533 </span>
-<span class="lineno"> 534 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
-<span class="lineno"> 535 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:528</span>: <span class="message">Avoid passing <code>null</code> as the view root (needed to resolve layout parameters on the inflated layout's root element)</span><br /><pre class="errorlines">
+<span class="lineno"> 525 </span>    <span class="comment">// Crear tarjeta de presentacion</span>
+<span class="lineno"> 526 </span>    private <span class="keyword">fun</span> generatePresentation(): View {
+<span class="lineno"> 527 </span>        <span class="keyword">val</span> inflater = LayoutInflater.from(<span class="keyword">this</span>)
+<span class="caretline"><span class="lineno"> 528 </span>        <span class="keyword">val</span> ticketView = inflater.inflate(R.layout.ticket_preview, <span class="warning"><span class="keyword">null</span></span>)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 529 </span>
+<span class="lineno"> 530 </span>        <span class="keyword">val</span> logoImageView = ticketView.findViewById&lt;ImageView>(R.id.ticketLogo)
+<span class="lineno"> 531 </span>        <span class="keyword">val</span> headerTextView = ticketView.findViewById&lt;TextView>(R.id.ticketHeader)
 </pre>
 
 </div>
@@ -629,7 +629,7 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:81</span>: <span class="message">A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0</span><br /><pre class="errorlines">
+<span class="location"><a href="../../build.gradle.kts">../../build.gradle.kts</a>:81</span>: <span class="message">A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.17.0</span><br /><pre class="errorlines">
 <span class="lineno"> 78 </span>}
 <span class="lineno"> 79 </span>
 <span class="lineno"> 80 </span>dependencies {
@@ -1214,34 +1214,34 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:408</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 405 </span>        headerTextView.text = headerText
-<span class="lineno"> 406 </span>        <span class="keyword">if</span> (printDateTime) {
-<span class="lineno"> 407 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
-<span class="caretline"><span class="lineno"> 408 </span>            dateTimeTextView.text = <span class="warning"><span class="string">"Fecha: ${</span>sdf.format(Date())<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 409 </span>            dateTimeTextView.visibility = View.VISIBLE
-<span class="lineno"> 410 </span>        } <span class="keyword">else</span> {
-<span class="lineno"> 411 </span>            dateTimeTextView.visibility = View.GONE
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:404</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 401 </span>        headerTextView.text = headerText
+<span class="lineno"> 402 </span>        <span class="keyword">if</span> (printDateTime) {
+<span class="lineno"> 403 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
+<span class="caretline"><span class="lineno"> 404 </span>            dateTimeTextView.text = <span class="warning"><span class="string">"Fecha: ${</span>sdf.format(Date())<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 405 </span>            dateTimeTextView.visibility = View.VISIBLE
+<span class="lineno"> 406 </span>        } <span class="keyword">else</span> {
+<span class="lineno"> 407 </span>            dateTimeTextView.visibility = View.GONE
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:408</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
-<span class="lineno"> 405 </span>        headerTextView.text = headerText
-<span class="lineno"> 406 </span>        <span class="keyword">if</span> (printDateTime) {
-<span class="lineno"> 407 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
-<span class="caretline"><span class="lineno"> 408 </span>            dateTimeTextView.text = <span class="string">"</span><span class="warning"><span class="string">Fecha: </span></span><span class="string">${</span>sdf.format(Date())<span class="string">}"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 409 </span>            dateTimeTextView.visibility = View.VISIBLE
-<span class="lineno"> 410 </span>        } <span class="keyword">else</span> {
-<span class="lineno"> 411 </span>            dateTimeTextView.visibility = View.GONE
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:404</span>: <span class="message">String literal in <code>setText</code> can not be translated. Use Android resources instead.</span><br /><pre class="errorlines">
+<span class="lineno"> 401 </span>        headerTextView.text = headerText
+<span class="lineno"> 402 </span>        <span class="keyword">if</span> (printDateTime) {
+<span class="lineno"> 403 </span>            <span class="keyword">val</span> sdf = SimpleDateFormat(<span class="string">"dd/MM/yyyy HH:mm:ss"</span>, Locale.getDefault())
+<span class="caretline"><span class="lineno"> 404 </span>            dateTimeTextView.text = <span class="string">"</span><span class="warning"><span class="string">Fecha: </span></span><span class="string">${</span>sdf.format(Date())<span class="string">}"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 405 </span>            dateTimeTextView.visibility = View.VISIBLE
+<span class="lineno"> 406 </span>        } <span class="keyword">else</span> {
+<span class="lineno"> 407 </span>            dateTimeTextView.visibility = View.GONE
 </pre>
 
-<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:422</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
-<span class="lineno"> 419 </span>            <span class="keyword">val</span> priceTextView = itemLayout.findViewById&lt;TextView>(R.id.itemPrice)
+<span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:418</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">
+<span class="lineno"> 415 </span>            <span class="keyword">val</span> priceTextView = itemLayout.findViewById&lt;TextView>(R.id.itemPrice)
+<span class="lineno"> 416 </span>
+<span class="lineno"> 417 </span>            nameTextView.text = product.name
+<span class="caretline"><span class="lineno"> 418 </span>            quantityTextView.text = <span class="warning"><span class="string">"x${</span>product.quantity<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 419 </span>            priceTextView.text = String.format(<span class="string">"$%.2f"</span>, product.price)
 <span class="lineno"> 420 </span>
-<span class="lineno"> 421 </span>            nameTextView.text = product.name
-<span class="caretline"><span class="lineno"> 422 </span>            quantityTextView.text = <span class="warning"><span class="string">"x${</span>product.quantity<span class="string">}"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 423 </span>            priceTextView.text = String.format(<span class="string">"$%.2f"</span>, product.price)
-<span class="lineno"> 424 </span>
-<span class="lineno"> 425 </span>            itemsContainer.addView(itemLayout)
+<span class="lineno"> 421 </span>            itemsContainer.addView(itemLayout)
 </pre>
 
 <span class="location"><a href="../../src/main/java/com/mval/ticketprinter/ProductAdapter.kt">../../src/main/java/com/mval/ticketprinter/ProductAdapter.kt</a>:57</span>: <span class="message">Do not concatenate text displayed with <code>setText</code>. Use resource string with placeholders.</span><br /><pre class="errorlines">

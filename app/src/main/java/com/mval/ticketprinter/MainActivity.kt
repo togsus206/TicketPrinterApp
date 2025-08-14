@@ -39,14 +39,13 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel
 import java.io.ByteArrayOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
-import android.app.Activity // Para el resultCode
+import android.app.Activity 
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import android.Manifest
-
-import android.bluetooth.BluetoothSocket // For BluetoothSocket
-import java.io.IOException // For IOException
-import java.io.OutputStream // For OutputStream
+import android.bluetooth.BluetoothSocket 
+import java.io.IOException 
+import java.io.OutputStream 
 
 class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
@@ -88,15 +87,13 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     // Request code para iniciar la actividad BtConnect
     private val REQUEST_SELECT_DEVICE = 104
     
-    // Fin segmento implementacion BT
     
     //Chequeo de BT encendido
     private lateinit var enableBtLauncher: ActivityResultLauncher<Intent> 
     private lateinit var bluetoothPermissionLauncher: ActivityResultLauncher<String>
     
-    
-    
-	//Empieza la funcion OnCreate
+    // Fin segmento implementacion BT
+        
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -193,7 +190,6 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
         //Boton para compartir tarjeta
         buttonShareCard.setOnClickListener {
-             //generateCard()
              showPrintShareCard()
         }
 

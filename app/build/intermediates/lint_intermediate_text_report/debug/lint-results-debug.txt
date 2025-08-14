@@ -28,10 +28,10 @@
 
    https://developer.android.com/distribute/best-practices/develop/target-sdk.html
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:624: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:620: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
     ~
-    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:618: Previous line indentation here
+    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:614: Previous line indentation here
 
    Explanation for issues of type "SuspiciousIndentation":
    This check looks for cases where the indentation suggests a grouping that
@@ -60,10 +60,10 @@
    </lint>
    ```
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:381: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:377: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:532: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:528: Warning: Avoid passing null as the view root (needed to resolve layout parameters on the inflated layout's root element) [InflateParams]
         val ticketView = inflater.inflate(R.layout.ticket_preview, null)
                                                                    ~~~~
 
@@ -96,7 +96,7 @@
    Identifier: androidx.appcompat
    Feedback: https://issuetracker.google.com/issues/new?component=460343
 
-/home/mati0216/TicketPrinterApp/app/build.gradle.kts:81: Warning: A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.16.0 [GradleDependency]
+/home/mati0216/TicketPrinterApp/app/build.gradle.kts:81: Warning: A newer version of androidx.core:core-ktx than 1.10.1 is available: 1.17.0 [GradleDependency]
     implementation("androidx.core:core-ktx:1.10.1")
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/build.gradle.kts:82: Warning: A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1 [GradleDependency]
@@ -299,13 +299,13 @@
 
    https://developer.android.com/guide/topics/ui/accessibility/apps#special-cases
 
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:408: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:404: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:408: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:404: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
             dateTimeTextView.text = "Fecha: ${sdf.format(Date())}"
                                      ~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:422: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:418: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
             quantityTextView.text = "x${product.quantity}"
                                     ~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/ProductAdapter.kt:57: Warning: Do not concatenate text displayed with setText. Use resource string with placeholders. [SetTextI18n]
