@@ -3,8 +3,8 @@
 # min_api: 21
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: f70f241
-# pg_map_hash: SHA-256 f70f241d695179602f61b74bfef3ff802cda3d214c2b05b8cba40484a8998243
+# pg_map_id: 6327a3b
+# pg_map_hash: SHA-256 6327a3bdb4c456df4c9f8dce027ee32ef5c31c4dbfdeca2de4d767e9cf6ab226
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
     1:1:androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel):0:0 -> read
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lz0/a;)Landroidx/core/app/RemoteActionCompat;"}
@@ -54562,9 +54562,9 @@ com.mval.ticketprinter.MainActivity -> com.mval.ticketprinter.MainActivity:
     162:164:void androidx.recyclerview.widget.LinearLayoutManager.<init>(android.content.Context):0:0 -> onCreate
     162:164:void onCreate(android.os.Bundle):0 -> onCreate
     165:318:void onCreate(android.os.Bundle):0:0 -> onCreate
-    7:97:void loadTicketSettings():0:0 -> onResume
-    7:97:void onResume():0 -> onResume
-    98:110:void onResume():0:0 -> onResume
+    7:105:void loadTicketSettings():0:0 -> onResume
+    7:105:void onResume():0 -> onResume
+    106:118:void onResume():0:0 -> onResume
     35:40:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> p
     35:40:void continueBluetoothFlow(int):0 -> p
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
@@ -54912,26 +54912,27 @@ com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$ExternalSyntheticLambda
     244:252:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder._init_$lambda$1(com.mval.ticketprinter.ProductAdapter$ProductViewHolder,com.mval.ticketprinter.ProductAdapter,android.view.View):0 -> onClick
     244:252:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$InternalSyntheticLambda$2$6016fbec9f136332cee8cb8bff405cdd1abaf8381b6a93fde5625e8391fb3e14$0.onClick$bridge(android.view.View):0 -> onClick
 com.mval.ticketprinter.SettingsActivity -> com.mval.ticketprinter.SettingsActivity:
-    android.widget.Button buttonSelectQr -> A
-    android.widget.Button buttonSaveSettings -> B
-    android.widget.Button buttonDeleteLogo -> C
-    android.widget.Button buttonDeleteQr -> D
-    android.widget.RadioGroup radioGroupPaperWidth -> E
-    android.widget.RadioButton radioButton58mm -> F
-    android.widget.RadioButton radioButton80mm -> G
-    android.content.SharedPreferences sharedPreferences -> H
-    androidx.activity.result.ActivityResultLauncher logoPickerLauncher -> I
-    androidx.activity.result.ActivityResultLauncher qrPickerLauncher -> J
-    int $r8$clinit -> K
+    android.widget.ImageView imageViewQr -> A
+    android.widget.Button buttonSelectQr -> B
+    android.widget.Button buttonSaveSettings -> C
+    android.widget.Button buttonDeleteLogo -> D
+    android.widget.Button buttonDeleteQr -> E
+    android.widget.RadioGroup radioGroupPaperWidth -> F
+    android.widget.RadioButton radioButton58mm -> G
+    android.widget.RadioButton radioButton80mm -> H
+    android.content.SharedPreferences sharedPreferences -> I
+    androidx.activity.result.ActivityResultLauncher logoPickerLauncher -> J
+    androidx.activity.result.ActivityResultLauncher qrPickerLauncher -> K
+    int $r8$clinit -> L
     android.widget.ImageView imageViewLogo -> u
     android.widget.Button buttonSelectLogo -> v
     android.widget.EditText editTextHeader -> w
     android.widget.Switch switchDateTime -> x
-    android.widget.EditText editTextFooter -> y
-    android.widget.ImageView imageViewQr -> z
-    317:558:void loadSettings():0:0 -> onCreate
-    317:558:void onCreate(android.os.Bundle):0 -> onCreate
-    559:592:void onCreate(android.os.Bundle):0:0 -> onCreate
+    android.widget.Switch switchQR -> y
+    android.widget.EditText editTextFooter -> z
+    331:599:void loadSettings():0:0 -> onCreate
+    331:599:void onCreate(android.os.Bundle):0 -> onCreate
+    600:633:void onCreate(android.os.Bundle):0:0 -> onCreate
 com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda0 -> y2.n:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -54991,8 +54992,8 @@ com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda1 -> y2.o:
     168:171:void com.mval.ticketprinter.SettingsActivity.onCreate$lambda$8(com.mval.ticketprinter.SettingsActivity,android.view.View):0:0 -> onClick
     168:171:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0 -> onClick
     172:173:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0:0 -> onClick
-    174:304:void com.mval.ticketprinter.SettingsActivity.onCreate$lambda$14(com.mval.ticketprinter.SettingsActivity,android.view.View):0:0 -> onClick
-    174:304:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0 -> onClick
+    174:324:void com.mval.ticketprinter.SettingsActivity.onCreate$lambda$14(com.mval.ticketprinter.SettingsActivity,android.view.View):0:0 -> onClick
+    174:324:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0 -> onClick
 com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda2 -> y2.p:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}

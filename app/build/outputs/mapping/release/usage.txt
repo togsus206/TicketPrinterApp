@@ -18768,6 +18768,7 @@ com.mval.ticketprinter.SettingsActivity:
     public static final java.lang.String KEY_LOGO_PATH
     public static final java.lang.String KEY_PAPER_WIDTH
     public static final java.lang.String KEY_PRINT_DATE_TIME
+    public static final java.lang.String KEY_PRINT_QR
     public static final java.lang.String KEY_QR_PATH
     public static final java.lang.String PREFS_NAME
 kotlin.ArrayIntrinsicsKt

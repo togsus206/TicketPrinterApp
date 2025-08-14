@@ -39,6 +39,7 @@ id radio80mm
 id radioGroupPaperWidth
 id recyclerViewItems
 id switchDateTime
+id switchQR
 id textViewPrice
 id textViewProductName
 id textViewQuantity

@@ -651,17 +651,45 @@
     </incident>
 
     <incident
+        id="UseSwitchCompatOrMaterialXml"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="126"
+            column="14"
+            startOffset="5284"
+            endLine="130"
+            endColumn="50"
+            endOffset="5507"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Imprimir QR&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
+            line="129"
+            column="14"
+            startOffset="5431"
+            endLine="129"
+            endColumn="40"
+            endOffset="5457"/>
+    </incident>
+
+    <incident
         id="HardcodedText"
         severity="warning"
         message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="131"
+            line="137"
             column="13"
-            startOffset="5410"
-            endLine="131"
+            startOffset="5661"
+            endLine="137"
             endColumn="55"
-            endOffset="5452"/>
+            endOffset="5703"/>
     </incident>
 
     <incident
@@ -670,12 +698,12 @@
         message="Hardcoded string &quot;58 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="147"
+            line="153"
             column="17"
-            startOffset="6026"
-            endLine="147"
+            startOffset="6277"
+            endLine="153"
             endColumn="37"
-            endOffset="6046"/>
+            endOffset="6297"/>
     </incident>
 
     <incident
@@ -684,12 +712,12 @@
         message="Hardcoded string &quot;80 mm&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="154"
+            line="160"
             column="17"
-            startOffset="6280"
-            endLine="154"
+            startOffset="6531"
+            endLine="160"
             endColumn="37"
-            endOffset="6300"/>
+            endOffset="6551"/>
     </incident>
 
     <incident
@@ -698,12 +726,12 @@
         message="Hardcoded string &quot;Guardar Configuración&quot;, should use `@string` resource">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_settings.xml"
-            line="163"
+            line="169"
             column="13"
-            startOffset="6541"
-            endLine="163"
+            startOffset="6792"
+            endLine="169"
             endColumn="49"
-            endOffset="6577"/>
+            endOffset="6828"/>
     </incident>
 
     <incident
@@ -1278,10 +1306,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="404"
             column="37"
-            startOffset="16670"
+            startOffset="16730"
             endLine="404"
             endColumn="67"
-            endOffset="16700"/>
+            endOffset="16760"/>
     </incident>
 
     <incident
@@ -1292,10 +1320,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="404"
             column="38"
-            startOffset="16671"
+            startOffset="16731"
             endLine="404"
             endColumn="45"
-            endOffset="16678"/>
+            endOffset="16738"/>
     </incident>
 
     <incident
@@ -1306,10 +1334,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="418"
             column="37"
-            startOffset="17362"
+            startOffset="17422"
             endLine="418"
             endColumn="59"
-            endOffset="17384"/>
+            endOffset="17444"/>
     </incident>
 
     <incident
@@ -1320,18 +1348,18 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="620"
             column="5"
-            startOffset="25813"
+            startOffset="25873"
             endLine="620"
             endColumn="6"
-            endOffset="25814"/>
+            endOffset="25874"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="614"
             column="5"
-            startOffset="25547"
+            startOffset="25607"
             endLine="614"
             endColumn="6"
-            endOffset="25548"
+            endOffset="25608"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1361,6 +1389,20 @@
             endLine="27"
             endColumn="48"
             endOffset="958"/>
+    </incident>
+
+    <incident
+        id="UseSwitchCompatOrMaterialCode"
+        severity="warning"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/SettingsActivity.kt"
+            line="28"
+            column="5"
+            startOffset="963"
+            endLine="28"
+            endColumn="42"
+            endOffset="1000"/>
     </incident>
 
     <incident
@@ -1439,48 +1481,6 @@
     </incident>
 
     <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="377"
-            column="68"
-            startOffset="15269"
-            endLine="377"
-            endColumn="72"
-            endOffset="15273"/>
-    </incident>
-
-    <incident
-        id="InflateParams"
-        severity="warning"
-        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="528"
-            column="68"
-            startOffset="22165"
-            endLine="528"
-            endColumn="72"
-            endOffset="22169"/>
-    </incident>
-
-    <incident
-        id="Overdraw"
-        severity="warning"
-        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
-            line="8"
-            column="5"
-            startOffset="297"
-            endLine="8"
-            endColumn="46"
-            endOffset="338"/>
-    </incident>
-
-    <incident
         id="IconLauncherShape"
         severity="warning"
         message="Launcher icon used as round icon did not have a circular shape">
@@ -1518,6 +1518,48 @@
         message="Launcher icons should not fill every pixel of their square region; see the design guide for details">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/mipmap-hdpi/ic_launcher_round.png"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="377"
+            column="68"
+            startOffset="15329"
+            endLine="377"
+            endColumn="72"
+            endOffset="15333"/>
+    </incident>
+
+    <incident
+        id="InflateParams"
+        severity="warning"
+        message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
+            line="528"
+            column="68"
+            startOffset="22225"
+            endLine="528"
+            endColumn="72"
+            endOffset="22229"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@android:color/white` with a theme that also paints a background (inferred theme is `@style/Theme.TicketPrinterApp`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/ticket_preview.xml"
+            line="8"
+            column="5"
+            startOffset="297"
+            endLine="8"
+            endColumn="46"
+            endOffset="338"/>
     </incident>
 
 </incidents>

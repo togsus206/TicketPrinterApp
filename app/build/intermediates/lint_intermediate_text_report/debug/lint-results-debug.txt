@@ -77,6 +77,9 @@
 /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/SettingsActivity.kt:27: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialCode from androidx.appcompat]
     private lateinit var switchDateTime: Switch
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/SettingsActivity.kt:28: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialCode from androidx.appcompat]
+    private lateinit var switchQR: Switch
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
    Explanation for issues of type "UseSwitchCompatOrMaterialCode":
    Use SwitchCompat from AppCompat or SwitchMaterial from Material library
@@ -88,6 +91,9 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:73: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialXml from androidx.appcompat]
         <Switch android:id="@+id/switchDateTime"
         ^
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:126: Warning: Use SwitchCompat from AppCompat or SwitchMaterial from Material library [UseSwitchCompatOrMaterialXml from androidx.appcompat]
+             <Switch android:id="@+id/switchQR"
+             ^
 
    Explanation for issues of type "UseSwitchCompatOrMaterialXml":
    Use SwitchCompat from AppCompat or SwitchMaterial from Material library
@@ -385,16 +391,19 @@
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:122: Warning: Hardcoded string "Eliminar QR", should use @string resource [HardcodedText]
                     android:text="Eliminar QR"
                     ~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:131: Warning: Hardcoded string "Ancho del Papel del Ticket:", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:129: Warning: Hardcoded string "Imprimir QR", should use @string resource [HardcodedText]
+             android:text="Imprimir QR"
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:137: Warning: Hardcoded string "Ancho del Papel del Ticket:", should use @string resource [HardcodedText]
             android:text="Ancho del Papel del Ticket:"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:147: Warning: Hardcoded string "58 mm", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:153: Warning: Hardcoded string "58 mm", should use @string resource [HardcodedText]
                 android:text="58 mm"
                 ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:154: Warning: Hardcoded string "80 mm", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:160: Warning: Hardcoded string "80 mm", should use @string resource [HardcodedText]
                 android:text="80 mm"
                 ~~~~~~~~~~~~~~~~~~~~
-/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:163: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
+/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml:169: Warning: Hardcoded string "Guardar Configuración", should use @string resource [HardcodedText]
             android:text="Guardar Configuración"
             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /home/mati0216/TicketPrinterApp/app/src/main/res/layout/connect_bt.xml:19: Warning: Hardcoded string "Configuración Bluetooth", should use @string resource [HardcodedText]
@@ -485,4 +494,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 86 warnings
+0 errors, 89 warnings

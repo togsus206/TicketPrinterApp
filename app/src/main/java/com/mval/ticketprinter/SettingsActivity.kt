@@ -25,6 +25,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var buttonSelectLogo: Button
     private lateinit var editTextHeader: EditText
     private lateinit var switchDateTime: Switch
+    private lateinit var switchQR: Switch
     private lateinit var editTextFooter: EditText
     private lateinit var imageViewQr: ImageView
     private lateinit var buttonSelectQr: Button
@@ -50,6 +51,7 @@ class SettingsActivity : AppCompatActivity() {
         const val KEY_PRINT_DATE_TIME = "print_date_time"
         const val KEY_LOGO_PATH = "logo_path"
         const val KEY_QR_PATH = "qr_path"
+        const val KEY_PRINT_QR = "print_qr"
         const val KEY_PAPER_WIDTH = "paper_width" // Clave para el ancho del papel
         const val DEFAULT_PAPER_WIDTH = 58 // Ancho predeterminado en mm
     }
@@ -72,6 +74,7 @@ class SettingsActivity : AppCompatActivity() {
         buttonSaveSettings = findViewById(R.id.buttonSaveSettings)
         buttonDeleteLogo = findViewById(R.id.buttonDeleteLogo)
         buttonDeleteQr = findViewById(R.id.buttonDeleteQr)
+        switchQR = findViewById(R.id.switchQR)
         
 
         // [MODIFICACIÓN] Referencias para los RadioButtons
@@ -167,12 +170,14 @@ class SettingsActivity : AppCompatActivity() {
             val header = editTextHeader.text.toString()
             val printDateTime = switchDateTime.isChecked
             val footer = editTextFooter.text.toString()
+            val printQR = switchQR.isChecked
 
             val editor = sharedPreferences.edit() // Usar la sharedPreferences ya inicializada
 
             editor.putString(KEY_HEADER, header) 
             editor.putBoolean(KEY_PRINT_DATE_TIME, printDateTime) 
             editor.putString(KEY_FOOTER, footer) 
+            editor.putBoolean(KEY_PRINT_QR, printQR)
 
             // [MODIFICACIÓN] Guardar el ancho del papel seleccionado
             val selectedPaperWidth = when (radioGroupPaperWidth.checkedRadioButtonId) {
@@ -215,7 +220,8 @@ class SettingsActivity : AppCompatActivity() {
 
         editTextHeader.setText(sharedPreferences.getString(KEY_HEADER, "")) 
         switchDateTime.isChecked = sharedPreferences.getBoolean(KEY_PRINT_DATE_TIME, false)
-        editTextFooter.setText(sharedPreferences.getString(KEY_FOOTER, "")) 
+        editTextFooter.setText(sharedPreferences.getString(KEY_FOOTER, ""))
+        switchQR.isChecked = sharedPreferences.getBoolean(KEY_PRINT_QR, false)
 
         val qrPath = sharedPreferences.getString(KEY_QR_PATH, null)
         qrPath?.let { path ->

@@ -109,6 +109,22 @@
     </issue>
 
     <issue
+        id="UseSwitchCompatOrMaterialCode"
+        severity="Warning"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
+        category="Correctness"
+        priority="5"
+        summary="Replace usage of `Switch` widget"
+        explanation="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
+        errorLine1="    private lateinit var switchQR: Switch"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/SettingsActivity.kt"
+            line="28"
+            column="5"/>
+    </issue>
+
+    <issue
         id="UseSwitchCompatOrMaterialXml"
         severity="Warning"
         message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
@@ -122,6 +138,22 @@
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
             line="73"
             column="9"/>
+    </issue>
+
+    <issue
+        id="UseSwitchCompatOrMaterialXml"
+        severity="Warning"
+        message="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
+        category="Correctness"
+        priority="5"
+        summary="Replace usage of `Switch` widget"
+        explanation="Use `SwitchCompat` from AppCompat or `SwitchMaterial` from Material library"
+        errorLine1="             &lt;Switch android:id=&quot;@+id/switchQR&quot;"
+        errorLine2="             ^">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="126"
+            column="14"/>
     </issue>
 
     <issue
@@ -997,6 +1029,22 @@
     <issue
         id="HardcodedText"
         severity="Warning"
+        message="Hardcoded string &quot;Imprimir QR&quot;, should use `@string` resource"
+        category="Internationalization"
+        priority="5"
+        summary="Hardcoded text"
+        explanation="Hardcoding text attributes directly in layout files is bad for several reasons:&#xA;&#xA;* When creating configuration variations (for example for landscape or portrait) you have to repeat the actual text (and keep it up to date when making changes)&#xA;&#xA;* The application cannot be translated to other languages by just adding new translations for existing string resources.&#xA;&#xA;There are quickfixes to automatically extract this hardcoded string into a resource lookup."
+        errorLine1="             android:text=&quot;Imprimir QR&quot;"
+        errorLine2="             ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
+            line="129"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        severity="Warning"
         message="Hardcoded string &quot;Ancho del Papel del Ticket:&quot;, should use `@string` resource"
         category="Internationalization"
         priority="5"
@@ -1006,7 +1054,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="131"
+            line="137"
             column="13"/>
     </issue>
 
@@ -1022,7 +1070,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="147"
+            line="153"
             column="17"/>
     </issue>
 
@@ -1038,7 +1086,7 @@
         errorLine2="                ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="154"
+            line="160"
             column="17"/>
     </issue>
 
@@ -1054,7 +1102,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/mati0216/TicketPrinterApp/app/src/main/res/layout/activity_settings.xml"
-            line="163"
+            line="169"
             column="13"/>
     </issue>
 

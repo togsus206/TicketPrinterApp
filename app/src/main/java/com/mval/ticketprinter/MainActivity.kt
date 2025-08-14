@@ -368,7 +368,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         headerText = sharedPreferences.getString(SettingsActivity.KEY_HEADER, "Encabezado por defecto") ?: "Encabezado por defecto"
         footerText = sharedPreferences.getString(SettingsActivity.KEY_FOOTER, "Pie de página por defecto") ?: "Pie de página por defecto"
         printDateTime = sharedPreferences.getBoolean(SettingsActivity.KEY_PRINT_DATE_TIME, false)
-        //enableQrCode = true
+        enableQrCode = sharedPreferences.getBoolean(SettingsActivity.KEY_PRINT_QR, false)
         ticketPaperWidth = sharedPreferences.getInt(SettingsActivity.KEY_PAPER_WIDTH, SettingsActivity.DEFAULT_PAPER_WIDTH)
     }
 

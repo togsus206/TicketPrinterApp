@@ -122,6 +122,12 @@
                     android:text="Eliminar QR"
                     android:layout_gravity="center_horizontal"
                     android:backgroundTint="@android:color/holo_red_light"/>
+             
+             <Switch android:id="@+id/switchQR"
+            	android:layout_width="wrap_content"
+            	android:layout_height="wrap_content"
+            	android:text="Imprimir QR"
+            	android:layout_marginBottom="16dp"/>
 
         </LinearLayout>
 
