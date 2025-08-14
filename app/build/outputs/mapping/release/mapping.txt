@@ -3,8 +3,8 @@
 # min_api: 21
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: 40a4363
-# pg_map_hash: SHA-256 40a4363b14f49a081516ecf97e78f51970e9fabebe1daa210604335910f74a68
+# pg_map_id: f70f241
+# pg_map_hash: SHA-256 f70f241d695179602f61b74bfef3ff802cda3d214c2b05b8cba40484a8998243
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
     1:1:androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel):0:0 -> read
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lz0/a;)Landroidx/core/app/RemoteActionCompat;"}
@@ -4092,166 +4092,185 @@ androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$ExternalSynthetic
     1:10:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.$r8$init$synthetic(java.lang.Object,java.lang.Object,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/lang/Object;ILjava/lang/Object;)V"}
-    15:18:void androidx.core.content.res.ResourcesCompat$FontCallback.lambda$callbackSuccessAsync$0(android.graphics.Typeface):0:0 -> run
-    15:18:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    28:59:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$17(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
+    28:59:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
-    19:25:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
-    26:37:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor.lambda$execute$0(java.lang.Runnable):0:0 -> run
-    26:37:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    38:41:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
-    42:45:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
-    42:45:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    46:47:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
-    46:47:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    46:47:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    60:65:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
+    66:134:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
+    66:134:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    135:137:byte[] com.mval.ticketprinter.MainActivity.centerAlignCommand():0:0 -> run
+    135:137:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
+    135:137:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    138:149:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
+    138:149:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    150:152:byte[] com.mval.ticketprinter.MainActivity.leftAlignCommand():0:0 -> run
+    150:152:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
+    150:152:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    153:230:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
+    153:230:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    231:234:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
+    235:239:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
+    235:239:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    240:241:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
+    240:241:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    240:241:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(2)"]}
-    46:47:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    48:52:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
-    48:52:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    48:52:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    48:52:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    53:54:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    53:54:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    240:241:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    242:245:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
+    242:245:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    242:245:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    242:245:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    246:247:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    246:247:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    53:54:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    246:247:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(2)"]}
-    53:54:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    53:54:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    53:54:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    55:56:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    55:56:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    246:247:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    246:247:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    246:247:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    248:249:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    248:249:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    55:56:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    55:56:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    55:56:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    55:56:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    57:58:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    57:58:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    57:58:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    57:58:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    57:58:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    57:58:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    59:60:int com.journeyapps.barcodescanner.RawImageData.getWidth():0:0 -> run
-    59:60:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
+    248:249:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    248:249:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    248:249:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    248:249:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    250:251:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    250:251:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    250:251:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    250:251:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    250:251:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    250:251:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    252:253:int com.journeyapps.barcodescanner.RawImageData.getWidth():0:0 -> run
+    252:253:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    59:60:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    59:60:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    59:60:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    59:60:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    59:60:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    61:62:int com.journeyapps.barcodescanner.RawImageData.getHeight():0:0 -> run
-    61:62:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
+    252:253:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    252:253:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    252:253:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    252:253:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    252:253:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    254:255:int com.journeyapps.barcodescanner.RawImageData.getHeight():0:0 -> run
+    254:255:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    61:62:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    61:62:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    61:62:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    61:62:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    61:62:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    63:67:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    63:67:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    63:67:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    63:67:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    63:67:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    63:67:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    68:69:byte[] com.journeyapps.barcodescanner.RawImageData.getData():0:0 -> run
-    68:69:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
+    254:255:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    254:255:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    254:255:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    254:255:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    254:255:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    256:260:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    256:260:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    256:260:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    256:260:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    256:260:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    256:260:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    261:262:byte[] com.journeyapps.barcodescanner.RawImageData.getData():0:0 -> run
+    261:262:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    68:69:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    68:69:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    68:69:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    68:69:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    68:69:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    70:71:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    70:71:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    70:71:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    70:71:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    70:71:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    70:71:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    72:73:int com.journeyapps.barcodescanner.RawImageData.getWidth():0:0 -> run
-    72:73:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
+    261:262:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    261:262:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    261:262:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    261:262:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    261:262:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    263:264:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    263:264:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    263:264:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    263:264:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    263:264:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    263:264:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    265:266:int com.journeyapps.barcodescanner.RawImageData.getWidth():0:0 -> run
+    265:266:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    72:73:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    72:73:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    72:73:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    72:73:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    72:73:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    74:77:int com.journeyapps.barcodescanner.RawImageData.getHeight():0:0 -> run
-    74:77:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
+    265:266:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    265:266:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    265:266:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    265:266:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    265:266:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    267:275:int com.journeyapps.barcodescanner.RawImageData.getHeight():0:0 -> run
+    267:275:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    74:77:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    74:77:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    74:77:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    74:77:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    74:77:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    78:139:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
-    78:139:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
-    78:139:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    78:139:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    78:139:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    78:139:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    140:188:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
-    140:188:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    140:188:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    140:188:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    189:200:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
-    189:200:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    189:200:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    189:200:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    201:202:java.lang.String com.google.zxing.Result.getText():0:0 -> run
-    201:202:java.lang.String com.journeyapps.barcodescanner.BarcodeResult.toString():0 -> run
+    267:275:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    267:275:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    267:275:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    267:275:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    267:275:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    276:339:android.graphics.Bitmap com.journeyapps.barcodescanner.SourceData.getBitmap(android.graphics.Rect,int):0:0 -> run
+    276:339:android.graphics.Bitmap com.journeyapps.barcodescanner.BarcodeResult.getBitmap():0 -> run
+    276:339:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    276:339:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    276:339:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    276:339:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    340:387:java.lang.String com.journeyapps.barcodescanner.CaptureManager.getBarcodeImagePath(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
+    340:387:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    340:387:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    340:387:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    388:399:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
+    388:399:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    388:399:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    388:399:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    400:401:java.lang.String com.google.zxing.Result.getText():0:0 -> run
+    400:401:java.lang.String com.journeyapps.barcodescanner.BarcodeResult.toString():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    201:202:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
+    400:401:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(2)"]}
-    201:202:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    201:202:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    201:202:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    203:206:java.lang.String com.google.zxing.Result.getText():0:0 -> run
-    203:206:java.lang.String com.journeyapps.barcodescanner.BarcodeResult.toString():0 -> run
+    400:401:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    400:401:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    400:401:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    402:405:java.lang.String com.google.zxing.Result.getText():0:0 -> run
+    402:405:java.lang.String com.journeyapps.barcodescanner.BarcodeResult.toString():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    203:206:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
-    203:206:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    203:206:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    203:206:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    207:209:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
-    207:209:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    207:209:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    207:209:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    210:213:com.google.zxing.BarcodeFormat com.google.zxing.Result.getBarcodeFormat():0:0 -> run
-    210:213:com.google.zxing.BarcodeFormat com.journeyapps.barcodescanner.BarcodeResult.getBarcodeFormat():0 -> run
+    402:405:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
+    402:405:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    402:405:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    402:405:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    406:408:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
+    406:408:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    406:408:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    406:408:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    409:412:com.google.zxing.BarcodeFormat com.google.zxing.Result.getBarcodeFormat():0:0 -> run
+    409:412:com.google.zxing.BarcodeFormat com.journeyapps.barcodescanner.BarcodeResult.getBarcodeFormat():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    210:213:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
-    210:213:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    210:213:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    210:213:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    214:222:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
-    214:222:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    214:222:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    214:222:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    223:226:byte[] com.google.zxing.Result.getRawBytes():0:0 -> run
-    223:226:byte[] com.journeyapps.barcodescanner.BarcodeResult.getRawBytes():0 -> run
+    409:412:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
+    409:412:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    409:412:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    409:412:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    413:421:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
+    413:421:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    413:421:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    413:421:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    422:425:byte[] com.google.zxing.Result.getRawBytes():0:0 -> run
+    422:425:byte[] com.journeyapps.barcodescanner.BarcodeResult.getRawBytes():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    223:226:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
-    223:226:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    223:226:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    223:226:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    227:234:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
-    227:234:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    227:234:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    227:234:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    235:238:java.util.Map com.google.zxing.Result.getResultMetadata():0:0 -> run
-    235:238:java.util.Map com.journeyapps.barcodescanner.BarcodeResult.getResultMetadata():0 -> run
+    422:425:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
+    422:425:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    422:425:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    422:425:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    426:433:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
+    426:433:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    426:433:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    426:433:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    434:437:java.util.Map com.google.zxing.Result.getResultMetadata():0:0 -> run
+    434:437:java.util.Map com.journeyapps.barcodescanner.BarcodeResult.getResultMetadata():0 -> run
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    235:238:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
-    235:238:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    235:238:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    235:238:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    239:347:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
-    239:347:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    239:347:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    239:347:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
-    348:354:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
-    348:354:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
-    348:354:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    434:437:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0 -> run
+    434:437:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    434:437:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    434:437:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    438:545:android.content.Intent com.journeyapps.barcodescanner.CaptureManager.resultIntent(com.journeyapps.barcodescanner.BarcodeResult,java.lang.String):0:0 -> run
+    438:545:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    438:545:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    438:545:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    546:552:void com.journeyapps.barcodescanner.CaptureManager.returnResult(com.journeyapps.barcodescanner.BarcodeResult):0:0 -> run
+    546:552:void com.journeyapps.barcodescanner.CaptureManager$1.lambda$barcodeResult$0(com.journeyapps.barcodescanner.BarcodeResult):0 -> run
+    546:552:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    553:556:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
+    557:560:void androidx.core.content.res.ResourcesCompat$FontCallback.lambda$callbackSuccessAsync$0(android.graphics.Typeface):0:0 -> run
+    557:560:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    561:567:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
+    568:580:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor.lambda$execute$0(java.lang.Runnable):0:0 -> run
+    568:580:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
+    581:586:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0:0 -> run
+    587:618:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$18(com.mval.ticketprinter.MainActivity,java.lang.SecurityException):0:0 -> run
+    587:618:void androidx.appcompat.app.AppLocalesStorageHelper$SerialExecutor$$InternalSyntheticLambda$1$d83da90378edfef33d93bb4a13a0581c0950b0fd40ae81dacd53befaa7b3780c$0.run$bridge():0 -> run
 androidx.appcompat.app.AppLocalesStorageHelper$ThreadPerTaskExecutor -> d.r0:
     1:9:void androidx.appcompat.app.AppLocalesStorageHelper$ThreadPerTaskExecutor.execute(java.lang.Runnable):0:0 -> execute
     1:9:void execute$bridge(java.lang.Runnable):0 -> execute
@@ -10127,9 +10146,9 @@ androidx.appcompat.widget.AppCompatTextViewAutoSizeHelper$Impl29$$ExternalSynthe
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.text.TextDirectionHeuristic androidx.appcompat.widget.AppCompatTextViewAutoSizeHelper$Impl29$$InternalSyntheticApiModelOutline$1$76011127f8b33c40fb128d8179a05b6d9d5b6f231b8da4ffee0b264fabc202d3$0.m(android.widget.TextView):0:0 -> d
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.view.WindowInsets$Builder androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$10$a11ad5c9cc549f75dd7923508d73cc514cb5aa1277eb5f6155c086e9e4374653$0.m():0:0 -> e
+    1:1:android.view.WindowInsets$Builder androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$7$a204b8eefc41564daf6595e28b0232288c13e496630a36581a3f2c9667b5b6be$0.m():0:0 -> e
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.view.WindowInsets$Builder androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$10$a11ad5c9cc549f75dd7923508d73cc514cb5aa1277eb5f6155c086e9e4374653$1.m(android.view.WindowInsets):0:0 -> f
+    1:1:android.view.WindowInsets$Builder androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$9$a11ad5c9cc549f75dd7923508d73cc514cb5aa1277eb5f6155c086e9e4374653$1.m(android.view.WindowInsets):0:0 -> f
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.view.WindowInsets androidx.core.view.WindowInsetsCompat$BuilderImpl29$$InternalSyntheticApiModelOutline$1$ee8cb0ef857f0d92636e84006869a5dab776eec7bf08e3331dcf284032d49109$0.m(android.view.WindowInsets$Builder):0:0 -> g
       # {"id":"com.android.tools.r8.synthesized"}
@@ -14534,13 +14553,13 @@ androidx.constraintlayout.solver.SolverVariable$Type$EnumUnboxingSharedUtility -
 # {"id":"com.android.tools.r8.synthesized"}
     1:1:void m.SolverVariable$Type$EnumUnboxingSharedUtility.$r8$clinit$synthetic():0:0 -> <clinit>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:2:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$125$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):0:0 -> a
+    1:2:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$124$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):0:0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.outline"}
-    3:5:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$125$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):1:1 -> a
-    6:8:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$125$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):2:2 -> a
-    9:11:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$125$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):3:3 -> a
-    12:16:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$125$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):4:4 -> a
+    3:5:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$124$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):1:1 -> a
+    6:8:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$124$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):2:2 -> a
+    9:11:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$124$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):3:3 -> a
+    12:16:java.lang.String androidx.constraintlayout.solver.ArrayLinkedVariables$$InternalSyntheticOutline$124$84b5bc3b47d81da45809eb9136b1d02a96e98c07e748c07112fea6f5a9d2a021$0.m(java.lang.String,java.lang.String):4:4 -> a
     1:1:int ordinal(int):0:0 -> b
       # {"id":"com.android.tools.r8.synthesized"}
 androidx.constraintlayout.solver.SolverVariableValues -> m.l:
@@ -20209,15 +20228,15 @@ androidx.core.os.BuildCompat$Extensions30Impl$$ExternalSyntheticApiModelOutline0
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.view.WindowInsets androidx.core.view.WindowInsetsCompat$Impl30$$InternalSyntheticApiModelOutline$1$7c95e3cf87277cc9e90a5ee20212fa74552db1fed9bbd019afd18ee3ae455fac$0.m():0:0 -> g
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.view.WindowInsetsAnimation$Bounds androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$10$13da9c297f46fc8d754afee20de21b093c718837b09ea4ad391681e328a07cb3$0.m(android.graphics.Insets,android.graphics.Insets):0:0 -> h
+    1:1:android.view.WindowInsetsAnimation$Bounds androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$9$13da9c297f46fc8d754afee20de21b093c718837b09ea4ad391681e328a07cb3$0.m(android.graphics.Insets,android.graphics.Insets):0:0 -> h
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.view.WindowInsetsAnimation androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$10$422d911a0c39c6778d3efad07840be5d9dc3f95cfa6a0876a0a7937847e76b86$0.m(int,android.view.animation.Interpolator,long):0:0 -> i
+    1:1:android.view.WindowInsetsAnimation androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$9$422d911a0c39c6778d3efad07840be5d9dc3f95cfa6a0876a0a7937847e76b86$0.m(int,android.view.animation.Interpolator,long):0:0 -> i
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.view.WindowInsetsAnimation androidx.core.view.WindowInsetsAnimationCompat$Impl30$ProxyCallback$$InternalSyntheticApiModelOutline$2$963ad2c56bc20647b3351249786fdec455707f2662d1c597946c31b383c0c146$0.m(java.lang.Object):0:0 -> j
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.view.WindowInsetsController androidx.core.view.WindowInsetsControllerCompat$Impl30$$InternalSyntheticApiModelOutline$1$e51a200b697bfb4d6155e4ad6744e47698f53e8b6d3d57e5cc6e876a3b3d93d4$0.m(android.view.Window):0:0 -> k
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$10$13da9c297f46fc8d754afee20de21b093c718837b09ea4ad391681e328a07cb3$1.m():0:0 -> l
+    1:1:void androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$9$13da9c297f46fc8d754afee20de21b093c718837b09ea4ad391681e328a07cb3$1.m():0:0 -> l
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:void androidx.core.view.WindowInsetsAnimationCompat$Impl30$$InternalSyntheticApiModelOutline$1$4a7922602dbb309ace1e8eb029e25cb5704d24ac67d1cba0c249cbdd92d54f4f$0.m(android.view.View,android.view.WindowInsetsAnimation$Callback):0:0 -> m
       # {"id":"com.android.tools.r8.synthesized"}
@@ -20815,7 +20834,7 @@ androidx.core.view.ContentInfoCompat$$ExternalSyntheticApiModelOutline0 -> e0.d:
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.content.ClipData androidx.core.view.ContentInfoCompat$Compat31Impl$$InternalSyntheticApiModelOutline$1$369f13d7419cf036bec9ef6d7236efc35387a21a6d08f82fe727fee658710189$0.m(android.view.ContentInfo):0:0 -> c
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.view.ContentInfo$Builder androidx.core.view.ContentInfoCompat$BuilderCompat31Impl$$InternalSyntheticApiModelOutline$8$4b13573966f84996e6c030ce4d15f96e408aa543c2fb9c2ccffc65198071f2ff$0.m(android.content.ClipData,int):0:0 -> d
+    1:1:android.view.ContentInfo$Builder androidx.core.view.ContentInfoCompat$BuilderCompat31Impl$$InternalSyntheticApiModelOutline$7$4b13573966f84996e6c030ce4d15f96e408aa543c2fb9c2ccffc65198071f2ff$0.m(android.content.ClipData,int):0:0 -> d
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.view.ContentInfo androidx.core.view.ContentInfoCompat$BuilderCompat31Impl$$InternalSyntheticApiModelOutline$1$dafd072194ec4197845d9786223d9dc30bd25efd65a79b57445e409cbd3e7107$0.m(android.view.ContentInfo$Builder):0:0 -> e
       # {"id":"com.android.tools.r8.synthesized"}
@@ -23197,7 +23216,7 @@ androidx.emoji2.text.ConcurrencyHelpers$Handler28Impl$$ExternalSyntheticApiModel
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.text.PrecomputedText$Params$Builder androidx.core.text.PrecomputedTextCompat$Params$$InternalSyntheticApiModelOutline$1$d539f91e740aecc14230a6be59093fa1df0850e96c3d5ef7514b1176d74b662e$2.m(android.text.PrecomputedText$Params$Builder,android.text.TextDirectionHeuristic):0:0 -> h
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:android.text.PrecomputedText$Params$Builder androidx.core.text.PrecomputedTextCompat$Params$$InternalSyntheticApiModelOutline$9$d539f91e740aecc14230a6be59093fa1df0850e96c3d5ef7514b1176d74b662e$0.m(android.text.TextPaint):0:0 -> i
+    1:1:android.text.PrecomputedText$Params$Builder androidx.core.text.PrecomputedTextCompat$Params$$InternalSyntheticApiModelOutline$8$d539f91e740aecc14230a6be59093fa1df0850e96c3d5ef7514b1176d74b662e$0.m(android.text.TextPaint):0:0 -> i
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:android.text.TextDirectionHeuristic androidx.core.text.PrecomputedTextCompat$Params$$InternalSyntheticApiModelOutline$1$ca265a76fe352945436ce274dfb971278d619f9bbe007f51308c97f0abc297d7$1.m(android.text.PrecomputedText$Params):0:0 -> j
       # {"id":"com.android.tools.r8.synthesized"}
@@ -27803,21 +27822,21 @@ androidx.fragment.app.SpecialEffectsController$Operation$LifecycleImpact$EnumUnb
       # {"id":"com.android.tools.r8.residualsignature","signature":"(I)I"}
     1:1:androidx.fragment.app.SpecialEffectsController$Operation$State androidx.fragment.app.SpecialEffectsController$Operation$State.from(android.view.View):0:0 -> c
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/View;)I"}
-    1:1:float androidx.constraintlayout.solver.widgets.analyzer.DependencyGraph$$InternalSyntheticOutline$125$fa4038d96f33bae0c3b765ee8f72c777f7b0b10b4ca95606efd79207aea6071e$0.m(float,float,float,float):0:0 -> d
+    1:1:float androidx.constraintlayout.solver.widgets.analyzer.DependencyGraph$$InternalSyntheticOutline$124$fa4038d96f33bae0c3b765ee8f72c777f7b0b10b4ca95606efd79207aea6071e$0.m(float,float,float,float):0:0 -> d
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:java.util.Iterator kotlinx.coroutines.CoroutineExceptionHandlerImplKt$$InternalSyntheticServiceLoad$15$478c88df453783dfc8506c95dd58658ac1438d4bc8e64b40195125dc6804c27c$0.m():0:0 -> e
+    1:1:java.util.Iterator kotlinx.coroutines.CoroutineExceptionHandlerImplKt$$InternalSyntheticServiceLoad$14$478c88df453783dfc8506c95dd58658ac1438d4bc8e64b40195125dc6804c27c$0.m():0:0 -> e
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void com.google.android.material.datepicker.MaterialCalendar$$InternalSyntheticThrowCCEIfNotNull$35$e95c19be951ade8f9b1e777c8e0b94646facbddb383b5b290bfe1e7003b5f94c$0.m(java.lang.Object):0:0 -> f
+    1:1:void com.google.android.material.datepicker.MaterialCalendar$$InternalSyntheticThrowCCEIfNotNull$34$e95c19be951ade8f9b1e777c8e0b94646facbddb383b5b290bfe1e7003b5f94c$0.m(java.lang.Object):0:0 -> f
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/os/Parcelable;)V"}
-    1:1:void kotlin.ResultKt$$InternalSyntheticThrowCCEIfNotNull$19$e1509ad8bccedd09bfcb59e2c38ae06208fa6f1721d2244f84b204d6a6c95e1a$0.m(java.lang.Object):0:0 -> g
+    1:1:void kotlin.ResultKt$$InternalSyntheticThrowCCEIfNotNull$18$e1509ad8bccedd09bfcb59e2c38ae06208fa6f1721d2244f84b204d6a6c95e1a$0.m(java.lang.Object):0:0 -> g
       # {"id":"com.android.tools.r8.synthesized"}
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Lb3/f;)V"}
-    1:1:void com.google.android.material.appbar.AppBarLayout$BaseBehavior$$InternalSyntheticThrowCCEIfNotNull$10$0927eca278f153d14ad01cc2b6aced1dff8cd5961c80fb69a73205e8cc9b7045$0.m(java.lang.Object):0:0 -> h
+    1:1:void com.google.android.material.appbar.AppBarLayout$BaseBehavior$$InternalSyntheticThrowCCEIfNotNull$17$83518bf85b906d9963bbb1d777c176d234f2cf03b9474ef7724851ea57679ba0$0.m(java.lang.Object):0:0 -> h
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:java.util.Iterator kotlinx.coroutines.internal.MainDispatcherLoader$$InternalSyntheticServiceLoad$25$e491d11ba296b94ecf40a133d871da4d69bdd50e901198d925613b221d857d48$0.m():0:0 -> i
+    1:1:java.util.Iterator kotlinx.coroutines.internal.MainDispatcherLoader$$InternalSyntheticServiceLoad$24$e491d11ba296b94ecf40a133d871da4d69bdd50e901198d925613b221d857d48$0.m():0:0 -> i
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void androidx.appcompat.app.AlertController$2$$InternalSyntheticThrowCCEIfNotNull$8$167d71b29ec34071e1be997dee8438a8ea986a367573288cd997dcba73ad57e5$0.m(java.lang.Object):0:0 -> j
+    1:1:void androidx.appcompat.app.AlertController$2$$InternalSyntheticThrowCCEIfNotNull$7$167d71b29ec34071e1be997dee8438a8ea986a367573288cd997dcba73ad57e5$0.m(java.lang.Object):0:0 -> j
       # {"id":"com.android.tools.r8.synthesized"}
     1:1:java.lang.String stringValueOf(int):0:0 -> k
       # {"id":"com.android.tools.r8.synthesized"}
@@ -54536,40 +54555,44 @@ com.mval.ticketprinter.MainActivity -> com.mval.ticketprinter.MainActivity:
     android.widget.Button buttonAddProduct -> x
     androidx.recyclerview.widget.RecyclerView recyclerViewItems -> y
     android.widget.TextView textViewTotal -> z
-    35:40:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> o
-    35:40:void continueBluetoothFlow():0 -> o
+    20:25:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> o
+    20:25:void checkBluetoothAndPrint(int):0 -> o
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    41:49:void continueBluetoothFlow():0:0 -> o
+    26:34:void checkBluetoothAndPrint(int):0:0 -> o
     162:164:void androidx.recyclerview.widget.LinearLayoutManager.<init>(android.content.Context):0:0 -> onCreate
     162:164:void onCreate(android.os.Bundle):0 -> onCreate
     165:318:void onCreate(android.os.Bundle):0:0 -> onCreate
     7:97:void loadTicketSettings():0:0 -> onResume
     7:97:void onResume():0 -> onResume
     98:110:void onResume():0:0 -> onResume
-    1:1:byte[] convertBitmapToEscPos(android.graphics.Bitmap):0:0 -> p
-    1:1:android.graphics.Bitmap createBitmapFromView(android.view.View):0:0 -> q
-    1:1:android.view.View generatePresentation():0:0 -> r
-    246:247:java.lang.String com.mval.ticketprinter.Product.getName():0:0 -> s
-    246:247:android.view.View generateTicketContent():0 -> s
+    35:40:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> p
+    35:40:void continueBluetoothFlow(int):0 -> p
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    248:250:android.view.View generateTicketContent():0:0 -> s
-    251:252:int com.mval.ticketprinter.Product.getQuantity():0:0 -> s
-    251:252:android.view.View generateTicketContent():0 -> s
-    253:271:android.view.View generateTicketContent():0:0 -> s
-    272:273:double com.mval.ticketprinter.Product.getPrice():0:0 -> s
-    272:273:android.view.View generateTicketContent():0 -> s
-    274:326:android.view.View generateTicketContent():0:0 -> s
-    327:440:android.graphics.Bitmap generateQrCode(java.lang.String):0:0 -> s
-    327:440:android.view.View generateTicketContent():0 -> s
-    441:468:android.view.View generateTicketContent():0:0 -> s
-    1:1:void printTicket():0:0 -> t
-    1:1:void shareTicket(android.graphics.Bitmap):0:0 -> u
-    21:23:int com.mval.ticketprinter.Product.getQuantity():0:0 -> v
-    21:23:void updateTotal():0 -> v
+    41:49:void continueBluetoothFlow(int):0:0 -> p
+    1:1:byte[] convertBitmapToEscPos(android.graphics.Bitmap):0:0 -> q
+    1:1:android.graphics.Bitmap createBitmapFromView(android.view.View):0:0 -> r
+    1:1:android.view.View generatePresentation():0:0 -> s
+    246:247:java.lang.String com.mval.ticketprinter.Product.getName():0:0 -> t
+    246:247:android.view.View generateTicketContent():0 -> t
       # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    24:29:double com.mval.ticketprinter.Product.getPrice():0:0 -> v
-    24:29:void updateTotal():0 -> v
-    30:97:void updateTotal():0:0 -> v
+    248:250:android.view.View generateTicketContent():0:0 -> t
+    251:252:int com.mval.ticketprinter.Product.getQuantity():0:0 -> t
+    251:252:android.view.View generateTicketContent():0 -> t
+    253:271:android.view.View generateTicketContent():0:0 -> t
+    272:273:double com.mval.ticketprinter.Product.getPrice():0:0 -> t
+    272:273:android.view.View generateTicketContent():0 -> t
+    274:326:android.view.View generateTicketContent():0:0 -> t
+    327:440:android.graphics.Bitmap generateQrCode(java.lang.String):0:0 -> t
+    327:440:android.view.View generateTicketContent():0 -> t
+    441:468:android.view.View generateTicketContent():0:0 -> t
+    1:1:void printTicket(int):0:0 -> u
+    1:1:void shareTicket(android.graphics.Bitmap):0:0 -> v
+    21:23:int com.mval.ticketprinter.Product.getQuantity():0:0 -> w
+    21:23:void updateTotal():0 -> w
+      # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
+    24:29:double com.mval.ticketprinter.Product.getPrice():0:0 -> w
+    24:29:void updateTotal():0 -> w
+    30:97:void updateTotal():0:0 -> w
 com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda0 -> y2.b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
@@ -54636,95 +54659,23 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda2 -> y2.d:
     1:8:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.<init>(com.mval.ticketprinter.MainActivity):0:0 -> <init>
     1:8:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    22:33:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
-    22:33:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    15:26:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
+    15:26:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
       # {"id":"com.android.tools.r8.synthesized"}
-    34:53:void com.mval.ticketprinter.MainActivity.generateAndShareTicket():0:0 -> onMenuItemClick
-    34:53:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    34:53:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    54:68:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrint():0:0 -> onMenuItemClick
-    54:68:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    54:68:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    69:72:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> onMenuItemClick
-    69:72:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrint():0 -> onMenuItemClick
-      # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    69:72:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    69:72:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    73:82:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrint():0:0 -> onMenuItemClick
-    73:82:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    73:82:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    83:84:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0:0 -> onMenuItemClick
-    85:96:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
-    85:96:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    97:114:void com.mval.ticketprinter.MainActivity.generateCard():0:0 -> onMenuItemClick
-    97:114:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    97:114:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    115:133:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0:0 -> onMenuItemClick
-    115:133:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    115:133:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    134:137:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> onMenuItemClick
-    134:137:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0 -> onMenuItemClick
-      # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    134:137:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    134:137:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    138:141:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0:0 -> onMenuItemClick
-    138:141:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    138:141:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    142:174:void com.mval.ticketprinter.MainActivity.continueBluetoothFlowCard():0:0 -> onMenuItemClick
-    142:174:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0 -> onMenuItemClick
-    142:174:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    142:174:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    175:180:void androidx.activity.result.ActivityResultLauncher.launch(java.lang.Object):0:0 -> onMenuItemClick
-    175:180:void com.mval.ticketprinter.MainActivity.continueBluetoothFlowCard():0 -> onMenuItemClick
-      # {"id":"com.android.tools.r8.rewriteFrame","conditions":["throws(Ljava/lang/NullPointerException;)"],"actions":["removeInnerFrames(1)"]}
-    175:180:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0 -> onMenuItemClick
-    175:180:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    175:180:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    181:184:void com.mval.ticketprinter.MainActivity.continueBluetoothFlowCard():0:0 -> onMenuItemClick
-    181:184:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0 -> onMenuItemClick
-    181:184:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    181:184:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
-    185:238:void com.mval.ticketprinter.MainActivity.printCard():0:0 -> onMenuItemClick
-    185:238:void com.mval.ticketprinter.MainActivity.continueBluetoothFlowCard():0 -> onMenuItemClick
-    185:238:void com.mval.ticketprinter.MainActivity.checkBluetoothAndPrintCard():0 -> onMenuItemClick
-    185:238:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
-    185:238:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    27:46:void com.mval.ticketprinter.MainActivity.generateAndShareTicket():0:0 -> onMenuItemClick
+    27:46:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
+    27:46:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    47:51:boolean com.mval.ticketprinter.MainActivity.showPrintShareMenu$lambda$11(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
+    47:51:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    52:53:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0:0 -> onMenuItemClick
+    54:65:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
+    54:65:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    66:82:void com.mval.ticketprinter.MainActivity.generateCard():0:0 -> onMenuItemClick
+    66:82:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0 -> onMenuItemClick
+    66:82:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
+    83:88:boolean com.mval.ticketprinter.MainActivity.showPrintShareCard$lambda$12(com.mval.ticketprinter.MainActivity,android.view.MenuItem):0:0 -> onMenuItemClick
+    83:88:boolean com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$124a0683a76b543408e8410a78c089ce7662c80aa851449d60a882913587c67c$0.onMenuItemClick$bridge(android.view.MenuItem):0 -> onMenuItemClick
 com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda3 -> y2.e:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.$r8$classId -> a
-    com.mval.ticketprinter.MainActivity com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.f$0 -> b
-    android.graphics.Bitmap com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.f$1 -> c
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.<init>(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> <init>
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap,int):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    25:96:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    25:96:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-      # {"id":"com.android.tools.r8.synthesized"}
-    97:99:byte[] com.mval.ticketprinter.MainActivity.centerAlignCommand():0:0 -> run
-    97:99:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
-    97:99:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    100:111:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    100:111:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    112:114:byte[] com.mval.ticketprinter.MainActivity.leftAlignCommand():0:0 -> run
-    112:114:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
-    112:114:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    115:186:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    115:186:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    187:188:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0:0 -> run
-    189:261:void com.mval.ticketprinter.MainActivity.printCard$lambda$26(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    189:261:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    262:264:byte[] com.mval.ticketprinter.MainActivity.centerAlignCommand():0:0 -> run
-    262:264:void com.mval.ticketprinter.MainActivity.printCard$lambda$26(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
-    262:264:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    265:276:void com.mval.ticketprinter.MainActivity.printCard$lambda$26(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    265:276:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    277:279:byte[] com.mval.ticketprinter.MainActivity.leftAlignCommand():0:0 -> run
-    277:279:void com.mval.ticketprinter.MainActivity.printCard$lambda$26(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0 -> run
-    277:279:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-    280:352:void com.mval.ticketprinter.MainActivity.printCard$lambda$26(com.mval.ticketprinter.MainActivity,android.graphics.Bitmap):0:0 -> run
-    280:352:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$2$38ebaa731256880adace7319b119f70942baed0638e7ef4a23402af0ef9558f5$0.run$bridge():0 -> run
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda4 -> y2.f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.mval.ticketprinter.MainActivity com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$0.f$0 -> a
@@ -54743,7 +54694,7 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda4 -> y2.f:
     28:30:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$0.onClick(android.content.DialogInterface,int):0 -> onClick
     31:54:void com.mval.ticketprinter.MainActivity.onDeleteClick$lambda$9(com.mval.ticketprinter.MainActivity,int,android.content.DialogInterface,int):0:0 -> onClick
     31:54:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$0.onClick(android.content.DialogInterface,int):0 -> onClick
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda5 -> y2.g:
+com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda4 -> y2.f:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$1.$r8$classId -> a
@@ -54756,7 +54707,7 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda5 -> y2.g:
     18:19:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$1.onClick$bridge(android.content.DialogInterface,int):0:0 -> onClick
     20:26:void com.mval.ticketprinter.MainActivity.onEditClick$lambda$8(android.content.DialogInterface,int):0:0 -> onClick
     20:26:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$1949426f95d9d2fdfda23da5f04759d0d4c6cb0d0a994485e5c14d8c4110831b$1.onClick$bridge(android.content.DialogInterface,int):0 -> onClick
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda6 -> y2.h:
+com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda5 -> y2.g:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.$r8$classId -> a
@@ -54764,61 +54715,19 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda6 -> y2.h:
     1:8:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.<init>(com.mval.ticketprinter.MainActivity):0:0 -> <init>
     1:8:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    23:33:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$22(com.mval.ticketprinter.MainActivity):0:0 -> run
-    23:33:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
+    15:27:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$15(com.mval.ticketprinter.MainActivity):0:0 -> run
+    15:27:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
       # {"id":"com.android.tools.r8.synthesized"}
-    34:35:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    36:46:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$21(com.mval.ticketprinter.MainActivity):0:0 -> run
-    36:46:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    47:48:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    49:59:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$20(com.mval.ticketprinter.MainActivity):0:0 -> run
-    49:59:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    60:61:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    62:72:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$16(com.mval.ticketprinter.MainActivity):0:0 -> run
-    62:72:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    73:74:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    75:85:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$15(com.mval.ticketprinter.MainActivity):0:0 -> run
-    75:85:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    86:87:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    88:98:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$14(com.mval.ticketprinter.MainActivity):0:0 -> run
-    88:98:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    99:100:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    101:111:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$13(com.mval.ticketprinter.MainActivity):0:0 -> run
-    101:111:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-    112:113:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
-    114:124:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$23(com.mval.ticketprinter.MainActivity):0:0 -> run
-    114:124:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda7 -> y2.i:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.$r8$classId -> a
-    com.mval.ticketprinter.MainActivity com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.f$0 -> b
-    java.io.IOException com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.f$1 -> c
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.<init>(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> <init>
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,java.io.IOException,int):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    18:49:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$17(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
-    18:49:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
-      # {"id":"com.android.tools.r8.synthesized"}
-    50:51:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0:0 -> run
-    52:84:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$24(com.mval.ticketprinter.MainActivity,java.io.IOException):0:0 -> run
-    52:84:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$4.run$bridge():0 -> run
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda8 -> y2.j:
-# {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
-# {"id":"com.android.tools.r8.synthesized"}
-    int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.$r8$classId -> a
-    com.mval.ticketprinter.MainActivity com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.f$0 -> b
-    java.lang.SecurityException com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.f$1 -> c
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.<init>(com.mval.ticketprinter.MainActivity,java.lang.SecurityException):0:0 -> <init>
-    1:10:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.$r8$init$synthetic(com.mval.ticketprinter.MainActivity,java.lang.SecurityException,int):0 -> <init>
-      # {"id":"com.android.tools.r8.synthesized"}
-    20:49:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$18(com.mval.ticketprinter.MainActivity,java.lang.SecurityException):0:0 -> run
-    20:49:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.run$bridge():0 -> run
-      # {"id":"com.android.tools.r8.synthesized"}
-    50:51:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.run$bridge():0:0 -> run
-    52:82:void com.mval.ticketprinter.MainActivity.printCard$lambda$26$lambda$25(com.mval.ticketprinter.MainActivity,java.lang.SecurityException):0:0 -> run
-    52:82:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$5.run$bridge():0 -> run
-com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda9 -> y2.k:
+    28:29:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
+    30:42:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$14(com.mval.ticketprinter.MainActivity):0:0 -> run
+    30:42:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
+    43:44:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
+    45:57:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$13(com.mval.ticketprinter.MainActivity):0:0 -> run
+    45:57:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
+    58:59:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0:0 -> run
+    60:72:void com.mval.ticketprinter.MainActivity.printTicket$lambda$19$lambda$16(com.mval.ticketprinter.MainActivity):0:0 -> run
+    60:72:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$b33fab0e3405ca14c79179e7592e875323a7f47ecbd29bb49f42b3c76d511e5d$0.run$bridge():0 -> run
+com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda6 -> y2.h:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     android.widget.EditText com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.f$0 -> a
@@ -54829,7 +54738,7 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda9 -> y2.k:
     int com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.f$5 -> f
     1:1:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.<init>(android.widget.EditText,android.widget.EditText,android.widget.EditText,com.mval.ticketprinter.Product,com.mval.ticketprinter.MainActivity,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/widget/EditText;Landroid/widget/EditText;Landroid/widget/EditText;Ly2/l;Lcom/mval/ticketprinter/MainActivity;I)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/widget/EditText;Landroid/widget/EditText;Landroid/widget/EditText;Ly2/i;Lcom/mval/ticketprinter/MainActivity;I)V"}
     5:119:void com.mval.ticketprinter.MainActivity.onEditClick$lambda$7(android.widget.EditText,android.widget.EditText,android.widget.EditText,com.mval.ticketprinter.Product,com.mval.ticketprinter.MainActivity,int,android.content.DialogInterface,int):0:0 -> onClick
     5:119:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.onClick(android.content.DialogInterface,int):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
@@ -54853,7 +54762,7 @@ com.mval.ticketprinter.MainActivity$$ExternalSyntheticLambda9 -> y2.k:
     132:134:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.onClick(android.content.DialogInterface,int):0 -> onClick
     135:170:void com.mval.ticketprinter.MainActivity.onEditClick$lambda$7(android.widget.EditText,android.widget.EditText,android.widget.EditText,com.mval.ticketprinter.Product,com.mval.ticketprinter.MainActivity,int,android.content.DialogInterface,int):0:0 -> onClick
     135:170:void com.mval.ticketprinter.MainActivity$$InternalSyntheticLambda$3$ca621ce67b8735c973199f1bfa85fa1cc034f94237b23a969762457ae0fe31b1$0.onClick(android.content.DialogInterface,int):0 -> onClick
-com.mval.ticketprinter.Product -> y2.l:
+com.mval.ticketprinter.Product -> y2.i:
     java.lang.String name -> a
     int quantity -> b
     double price -> c
@@ -54861,11 +54770,11 @@ com.mval.ticketprinter.Product -> y2.l:
     1:1:boolean equals(java.lang.Object):0:0 -> equals
     1:1:int hashCode():0:0 -> hashCode
     1:1:java.lang.String toString():0:0 -> toString
-com.mval.ticketprinter.ProductAdapter -> y2.p:
+com.mval.ticketprinter.ProductAdapter -> y2.m:
     java.util.List productList -> c
     com.mval.ticketprinter.ProductAdapter$OnItemClickListener listener -> d
     1:1:void <init>(java.util.List,com.mval.ticketprinter.ProductAdapter$OnItemClickListener):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/ArrayList;Ly2/m;)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ljava/util/ArrayList;Ly2/j;)V"}
     1:1:int getItemCount():0:0 -> a
     3:10:void com.mval.ticketprinter.ProductAdapter.onBindViewHolder(com.mval.ticketprinter.ProductAdapter$ProductViewHolder,int):0:0 -> c
     3:10:void onBindViewHolder(androidx.recyclerview.widget.RecyclerView$ViewHolder,int):0 -> c
@@ -54889,14 +54798,14 @@ com.mval.ticketprinter.ProductAdapter -> y2.p:
     3:30:com.mval.ticketprinter.ProductAdapter$ProductViewHolder com.mval.ticketprinter.ProductAdapter.onCreateViewHolder(android.view.ViewGroup,int):0:0 -> d
     3:30:androidx.recyclerview.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int):0 -> d
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/recyclerview/widget/RecyclerView;)Lt0/e1;"}
-com.mval.ticketprinter.ProductAdapter$OnItemClickListener -> y2.m:
-com.mval.ticketprinter.ProductAdapter$ProductViewHolder -> y2.o:
+com.mval.ticketprinter.ProductAdapter$OnItemClickListener -> y2.j:
+com.mval.ticketprinter.ProductAdapter$ProductViewHolder -> y2.l:
     android.widget.TextView textViewName -> t
     android.widget.TextView textViewQuantity -> u
     android.widget.TextView textViewPrice -> v
     1:1:void <init>(com.mval.ticketprinter.ProductAdapter,android.view.View):0:0 -> <init>
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ly2/p;Landroid/view/View;)V"}
-com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$ExternalSyntheticLambda0 -> y2.n:
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ly2/m;Landroid/view/View;)V"}
+com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$ExternalSyntheticLambda0 -> y2.k:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$InternalSyntheticLambda$2$6016fbec9f136332cee8cb8bff405cdd1abaf8381b6a93fde5625e8391fb3e14$0.$r8$classId -> a
@@ -54905,7 +54814,7 @@ com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$ExternalSyntheticLambda
     1:10:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$InternalSyntheticLambda$2$6016fbec9f136332cee8cb8bff405cdd1abaf8381b6a93fde5625e8391fb3e14$0.<init>(com.mval.ticketprinter.ProductAdapter$ProductViewHolder,com.mval.ticketprinter.ProductAdapter):0:0 -> <init>
     1:10:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$InternalSyntheticLambda$2$6016fbec9f136332cee8cb8bff405cdd1abaf8381b6a93fde5625e8391fb3e14$0.$r8$init$synthetic(com.mval.ticketprinter.ProductAdapter$ProductViewHolder,com.mval.ticketprinter.ProductAdapter,int):0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ly2/o;Ly2/p;I)V"}
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ly2/l;Ly2/m;I)V"}
     19:24:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder._init_$lambda$0(com.mval.ticketprinter.ProductAdapter$ProductViewHolder,com.mval.ticketprinter.ProductAdapter,android.view.View):0:0 -> onClick
     19:24:void com.mval.ticketprinter.ProductAdapter$ProductViewHolder$$InternalSyntheticLambda$2$6016fbec9f136332cee8cb8bff405cdd1abaf8381b6a93fde5625e8391fb3e14$0.onClick$bridge(android.view.View):0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
@@ -55023,7 +54932,7 @@ com.mval.ticketprinter.SettingsActivity -> com.mval.ticketprinter.SettingsActivi
     317:558:void loadSettings():0:0 -> onCreate
     317:558:void onCreate(android.os.Bundle):0 -> onCreate
     559:592:void onCreate(android.os.Bundle):0:0 -> onCreate
-com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda0 -> y2.q:
+com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda0 -> y2.n:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$0.$r8$classId -> a
@@ -55049,7 +54958,7 @@ com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda0 -> y2.q:
     149:152:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$0.onActivityResult$bridge(java.lang.Object):0 -> a
     153:266:void com.mval.ticketprinter.SettingsActivity.onCreate$lambda$7(com.mval.ticketprinter.SettingsActivity,androidx.activity.result.ActivityResult):0:0 -> a
     153:266:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$0.onActivityResult$bridge(java.lang.Object):0 -> a
-com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda1 -> y2.r:
+com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda1 -> y2.o:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     int com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.$r8$classId -> a
@@ -55084,7 +54993,7 @@ com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda1 -> y2.r:
     172:173:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0:0 -> onClick
     174:304:void com.mval.ticketprinter.SettingsActivity.onCreate$lambda$14(com.mval.ticketprinter.SettingsActivity,android.view.View):0:0 -> onClick
     174:304:void com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$2.onClick$bridge(android.view.View):0 -> onClick
-com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda2 -> y2.s:
+com.mval.ticketprinter.SettingsActivity$$ExternalSyntheticLambda2 -> y2.p:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
     com.mval.ticketprinter.SettingsActivity com.mval.ticketprinter.SettingsActivity$$InternalSyntheticLambda$1$4492fc709ad506a466507ac962231efbac49484e3a2ef19eebb738c30927f34e$7.f$0 -> a

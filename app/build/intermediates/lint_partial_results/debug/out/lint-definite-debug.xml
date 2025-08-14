@@ -1278,10 +1278,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="408"
             column="37"
-            startOffset="16814"
+            startOffset="16813"
             endLine="408"
             endColumn="67"
-            endOffset="16844"/>
+            endOffset="16843"/>
     </incident>
 
     <incident
@@ -1292,10 +1292,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="408"
             column="38"
-            startOffset="16815"
+            startOffset="16814"
             endLine="408"
             endColumn="45"
-            endOffset="16822"/>
+            endOffset="16821"/>
     </incident>
 
     <incident
@@ -1306,10 +1306,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="422"
             column="37"
-            startOffset="17506"
+            startOffset="17505"
             endLine="422"
             endColumn="59"
-            endOffset="17528"/>
+            endOffset="17527"/>
     </incident>
 
     <incident
@@ -1320,41 +1320,18 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="624"
             column="5"
-            startOffset="25946"
+            startOffset="25956"
             endLine="624"
             endColumn="6"
-            endOffset="25947"/>
+            endOffset="25957"/>
         <location
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="618"
             column="5"
-            startOffset="25680"
+            startOffset="25690"
             endLine="618"
             endColumn="6"
-            endOffset="25681"
-            message="Previous line indentation here"/>
-    </incident>
-
-    <incident
-        id="SuspiciousIndentation"
-        severity="warning"
-        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)">
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="729"
-            column="5"
-            startOffset="30803"
-            endLine="729"
-            endColumn="6"
-            endOffset="30804"/>
-        <location
-            file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
-            line="723"
-            column="5"
-            startOffset="30537"
-            endLine="723"
-            endColumn="6"
-            endOffset="30538"
+            endOffset="25691"
             message="Previous line indentation here"/>
     </incident>
 
@@ -1469,10 +1446,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="381"
             column="68"
-            startOffset="15413"
+            startOffset="15412"
             endLine="381"
             endColumn="72"
-            endOffset="15417"/>
+            endOffset="15416"/>
     </incident>
 
     <incident
@@ -1483,10 +1460,10 @@
             file="${:app*debug*sourceProvider*0*javaDir*0}/com/mval/ticketprinter/MainActivity.kt"
             line="532"
             column="68"
-            startOffset="22309"
+            startOffset="22308"
             endLine="532"
             endColumn="72"
-            endOffset="22313"/>
+            endOffset="22312"/>
     </incident>
 
     <incident

@@ -32,10 +32,6 @@
      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
     ~
     /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:618: Previous line indentation here
-/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:729: Warning: The indentation string here is different from on the previous line (" " vs \t) [SuspiciousIndentation]
-     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-    ~
-    /home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt:723: Previous line indentation here
 
    Explanation for issues of type "SuspiciousIndentation":
    This check looks for cases where the indentation suggests a grouping that
@@ -489,4 +485,4 @@
    If you have started adding RTL attributes, but have not yet finished the
    migration, you can set the attribute to false to satisfy this lint check.
 
-0 errors, 87 warnings
+0 errors, 86 warnings

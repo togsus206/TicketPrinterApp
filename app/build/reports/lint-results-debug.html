@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 87 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 86 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Aug 07 14:55:35 ART 2025 by AGP (8.1.1)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Thu Aug 07 21:27:04 ART 2025 by AGP (8.1.1)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -188,7 +188,7 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#overview"><i class="material-icons">dashboard</i>Overview</a>
       <a class="mdl-navigation__link" href="#NestedScrolling"><i class="material-icons warning-icon">warning</i>Nested scrolling widgets (1)</a>
       <a class="mdl-navigation__link" href="#OldTargetApi"><i class="material-icons warning-icon">warning</i>Target SDK attribute is not targeting latest version (1)</a>
-      <a class="mdl-navigation__link" href="#SuspiciousIndentation"><i class="material-icons warning-icon">warning</i>Suspicious indentation (2)</a>
+      <a class="mdl-navigation__link" href="#SuspiciousIndentation"><i class="material-icons warning-icon">warning</i>Suspicious indentation (1)</a>
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (2)</a>
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialCode"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
       <a class="mdl-navigation__link" href="#UseSwitchCompatOrMaterialXml"><i class="material-icons warning-icon">warning</i>Replace usage of <code>Switch</code> widget (1)</a>
@@ -225,7 +225,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#OldTargetApi">OldTargetApi</a>: Target SDK attribute is not targeting latest version</td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#SuspiciousIndentation">SuspiciousIndentation</a>: Suspicious indentation</td></tr>
 <tr>
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
@@ -354,8 +354,8 @@ Dismiss</button>            </div>
 <span class="lineno"> 15 </span>        applicationId = "com.mval.ticketprinter"
 <span class="lineno"> 16 </span>        minSdk = 21
 <span class="caretline"><span class="lineno"> 17 </span>        <span class="warning">targetSdk = 34</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 18 </span>        versionCode = 7
-<span class="lineno"> 19 </span>        versionName = "7"
+<span class="lineno"> 18 </span>        versionCode = 8
+<span class="lineno"> 19 </span>        versionName = "8"
 </pre>
 
 </div>
@@ -410,30 +410,12 @@ Dismiss</button>            </div>
 
 <ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:618</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
 <span class="lineno"> 615 </span>    <span class="comment">//FUNCION PRINCIPAL PARA IMPRIMIR EL TICKET (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)</span>
-<span class="lineno"> 616 </span>  private <span class="keyword">fun</span> printTicket() {
+<span class="lineno"> 616 </span>  private <span class="keyword">fun</span> printTicket(ticket: Int) {
 <span class="lineno"> 617 </span>      
 <span class="caretline"><span class="lineno"> 618 </span>  <span class="warning"> </span>   <span class="keyword">if</span> (bluetoothDeviceAddress == <span class="keyword">null</span>) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 <span class="lineno"> 619 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Primero conecta una impresora Bluetooth en 'BT'"</span>, Toast.LENGTH_LONG).show()
 <span class="lineno"> 620 </span>          <span class="keyword">return</span>
 <span class="lineno"> 621 </span>      }
-</pre>
-</ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:729</span>: <span class="message">The indentation string here is different from on the previous line (<code>" "</code> vs <code>\t</code>)</span><br /><pre class="errorlines">
-<span class="lineno"> 726 </span>  }
-<span class="lineno"> 727 </span>
-<span class="lineno"> 728 </span>  <span class="comment">// Solo verificar BLUETOOTH_CONNECT si estamos en Android 12 o superior</span>
-<span class="caretline"><span class="lineno"> 729 </span>    <span class="warning">    </span><span class="keyword">if</span> (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 730 </span>      <span class="keyword">if</span> (ContextCompat.checkSelfPermission(<span class="keyword">this</span>, android.Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
-<span class="lineno"> 731 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Permiso BLUETOOTH_CONNECT necesario para imprimir"</span>, Toast.LENGTH_SHORT).show()
-<span class="lineno"> 732 </span>          <span class="keyword">return</span></pre>
-
-<ul><span class="location"><a href="../../src/main/java/com/mval/ticketprinter/MainActivity.kt">../../src/main/java/com/mval/ticketprinter/MainActivity.kt</a>:723</span>: <span class="message">Previous line indentation here</span><br /><pre class="errorlines">
-<span class="lineno"> 720 </span>  
-<span class="lineno"> 721 </span>  <span class="comment">//FUNCION PRINCIPAL PARA IMPRIMIR LA TARJETA DE PRESENTACION (CONVIERTE AL FORMATO QUE ENTIENDE LA IMPRESORA)</span>
-<span class="lineno"> 722 </span>  private <span class="keyword">fun</span> printCard() {
-<span class="caretline"><span class="lineno"> 723 </span>  <span class="warning"> </span>   <span class="keyword">if</span> (bluetoothDeviceAddress == <span class="keyword">null</span>) {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 724 </span>          Toast.makeText(<span class="keyword">this</span>, <span class="string">"Primero conecta una impresora Bluetooth en 'BT'"</span>, Toast.LENGTH_LONG).show()
-<span class="lineno"> 725 </span>          <span class="keyword">return</span>
-<span class="lineno"> 726 </span>      }
 </pre>
 </ul></div>
 <div class="metadata"><div class="explanation" id="explanationSuspiciousIndentation" style="display: none;">

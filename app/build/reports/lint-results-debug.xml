@@ -57,27 +57,6 @@
     </issue>
 
     <issue
-        id="SuspiciousIndentation"
-        severity="Warning"
-        message="The indentation string here is different from on the previous line (`&quot; &quot;` vs `\t`)"
-        category="Correctness"
-        priority="6"
-        summary="Suspicious indentation"
-        explanation="This check looks for cases where the indentation suggests a grouping that isn&apos;t actually there in the code. A common example of this would be something like&#xA;```kotlin&#xA;if (column > width)&#xA;    line++&#xA;    column = 0&#xA;```&#xA;Here, the `column = 0` line will be executed every single time, not just if the condition is true."
-        errorLine1="     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {"
-        errorLine2="    ~">
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="729"
-            column="5"/>
-        <location
-            file="/home/mati0216/TicketPrinterApp/app/src/main/java/com/mval/ticketprinter/MainActivity.kt"
-            line="723"
-            column="5"
-            message="Previous line indentation here"/>
-    </issue>
-
-    <issue
         id="InflateParams"
         severity="Warning"
         message="Avoid passing `null` as the view root (needed to resolve layout parameters on the inflated layout&apos;s root element)"
