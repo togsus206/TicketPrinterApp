@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class ProductAdapter(
-    private val productList: MutableList<Product>, // Cambiar a MutableList para permitir modificaciones
+    private val productList: MutableList<Product>, 
     private val listener: OnItemClickListener // Interfaz para manejar clics
 ) : RecyclerView.Adapter<ProductAdapter.ProductViewHolder>() {
 

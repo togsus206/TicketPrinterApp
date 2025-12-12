@@ -14,9 +14,9 @@ android {
     defaultConfig {
         applicationId = "com.mval.ticketprinter"
         minSdk = 21
-        targetSdk = 34
-        versionCode = 8
-        versionName = "8"
+        targetSdk = 35
+        versionCode = 12
+        versionName = "10.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -83,4 +83,6 @@ dependencies {
     implementation("com.google.android.material:material:1.9.0")
     implementation("com.google.zxing:core:3.5.3")
     implementation("com.journeyapps:zxing-android-embedded:4.3.0") 
+    //------
+    implementation("androidx.activity:activity-ktx:1.9.3")
 }

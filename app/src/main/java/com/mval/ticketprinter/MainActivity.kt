@@ -46,6 +46,10 @@ import android.Manifest
 import android.bluetooth.BluetoothSocket 
 import java.io.IOException 
 import java.io.OutputStream 
+//-------------
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
 
@@ -60,6 +64,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private lateinit var buttonConexionBt: Button
     
     private lateinit var buttonShareCard: Button
+    private lateinit var buttonDeleteAll: Button
 
     private val productList = ArrayList<Product>()
     private lateinit var adapter: ProductAdapter
@@ -73,6 +78,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private var qrCodeText: String = "equicontrol.dev.ar"
     private var qrImageBitmap: Bitmap? = null
     private var ticketPaperWidth: Int = SettingsActivity.DEFAULT_PAPER_WIDTH
+    private var saveTicket: Boolean = true
     
     
     // Nuevo segmento para la impresion BT
@@ -96,7 +102,25 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        enableEdgeToEdge() //
         setContentView(R.layout.activity_main)
+        
+		val mainView = findViewById<View>(R.id.main)
+		
+		ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
+    		// Combinamos los insets de las barras del sistema y del teclado (IME)
+    		val barsAndIme = insets.getInsets(
+        		WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime()
+    		)
+		
+    		// Aplicamos el padding. 
+    		// Cuando sale el teclado, 'barsAndIme.bottom' aumentará automáticamente.
+    		v.setPadding(barsAndIme.left, barsAndIme.top, barsAndIme.right, barsAndIme.bottom)
+		
+    		// Retornamos insets (esto permite que el sistema sepa que ya manejamos el espacio)
+    		WindowInsetsCompat.CONSUMED
+		}
+		
 
         // Obtener referencias a los elementos de la UI
         editTextProductName = findViewById(R.id.editTextProductName)
@@ -109,6 +133,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         buttonSettings = findViewById(R.id.buttonSettings)
         buttonConexionBt = findViewById(R.id.buttonConexionBt)
         buttonShareCard = findViewById(R.id.buttonShareCard)
+        buttonDeleteAll = findViewById(R.id.buttonDeleteAll)
 
         // Configurar el RecyclerView
         recyclerViewItems.layoutManager = LinearLayoutManager(this)
@@ -128,7 +153,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }
         
-        // Inicializa el launcher aquí, dentro de onCreate()
+        // Inicializa el launcher
         enableBtLauncher = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
         ) { result ->
@@ -139,7 +164,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
         }
 
-        // Configurar el listener del botón "Agregar Producto"
+        // listener del botón "Agregar Producto"
         buttonAddProduct.setOnClickListener {
             val name = editTextProductName.text.toString().trim()
             val quantityStr = editTextQuantity.text.toString().trim()
@@ -177,7 +202,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             startActivityForResult(intent, REQUEST_SELECT_DEVICE) 
         }
 
-        // Cambiar el OnClickListener del botón Print para mostrar el menú
+        // OnClickListener del botón Print para mostrar el menú
         buttonPrint.setOnClickListener {
             if (productList.isEmpty()) {
                 Toast.makeText(this, "Agrega productos para generar el ticket.", Toast.LENGTH_SHORT).show()
@@ -192,6 +217,11 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         buttonShareCard.setOnClickListener {
              showPrintShareCard()
         }
+        
+        //Boton para eliminar todos los productos de la lista
+        buttonDeleteAll.setOnClickListener {
+             onDeleteAll()
+        }
 
     }
 
@@ -202,22 +232,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         val sharedPreferences = getSharedPreferences(SettingsActivity.PREFS_NAME, Context.MODE_PRIVATE)
         bluetoothDeviceAddress = sharedPreferences.getString("last_bluetooth_device_address", null)
     }
-
-    override fun onCreateOptionsMenu(menu: android.view.Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: android.view.MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> {
-                val intent = Intent(this, SettingsActivity::class.java)
-                startActivity(intent)
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+    
+    
 
     private fun updateTotal() {
         var total = 0.0
@@ -275,6 +291,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             .show()
     }
 
+	//Borra un el producto de la lista 
     override fun onDeleteClick(position: Int) {
         MaterialAlertDialogBuilder(this)
             .setTitle("Eliminar Producto")
@@ -282,6 +299,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             .setPositiveButton("Eliminar") { dialog: android.content.DialogInterface, _: Int ->
                 productList.removeAt(position)
                 adapter.notifyItemRemoved(position)
+                adapter.notifyItemRangeChanged(position, productList.size)
                 updateTotal()
                 Toast.makeText(this, "Producto eliminado", Toast.LENGTH_SHORT).show()
                 dialog.dismiss()
@@ -291,6 +309,29 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
             }
             .show()
     }
+    
+    
+    //Funcion para eliminar todos los productos de la lista
+    private fun onDeleteAll() {
+    MaterialAlertDialogBuilder(this)
+        .setTitle("Eliminar todos los Productos")
+        .setMessage("¿Estás seguro de que quieres eliminar todos los productos?")
+        .setPositiveButton("Eliminar") { dialog: android.content.DialogInterface, _: Int ->
+            
+            // Lógica corregida
+            val size = productList.size
+            productList.clear()
+            adapter.notifyItemRangeRemoved(0, size) // Notifica el rango borrado
+            
+            updateTotal()
+            Toast.makeText(this, "Productos eliminados", Toast.LENGTH_SHORT).show()
+            dialog.dismiss()
+        }
+        .setNegativeButton("Cancelar") { dialog: android.content.DialogInterface, _: Int ->
+            dialog.cancel()
+        }
+        .show()
+}
 
 	//Funcion para compartir o imprimir el ticket
     private fun showPrintShareMenu() {
@@ -370,6 +411,7 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         printDateTime = sharedPreferences.getBoolean(SettingsActivity.KEY_PRINT_DATE_TIME, false)
         enableQrCode = sharedPreferences.getBoolean(SettingsActivity.KEY_PRINT_QR, false)
         ticketPaperWidth = sharedPreferences.getInt(SettingsActivity.KEY_PAPER_WIDTH, SettingsActivity.DEFAULT_PAPER_WIDTH)
+        saveTicket = sharedPreferences.getBoolean(SettingsActivity.KEY_SAVE_TICKET, false)
     }
 
     private fun generateTicketContent(): View {
@@ -638,6 +680,16 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         	ticketBitmap = createBitmapFromView(ticketView)
         }
         	
+        	
+        //------------------------------------------------
+        if(saveTicket){
+        	val bytes = ByteArrayOutputStream()
+        	ticketBitmap.compress(Bitmap.CompressFormat.PNG, 100, bytes)
+        	val path = MediaStore.Images.Media.insertImage(contentResolver, ticketBitmap, "Ticket_${System.currentTimeMillis()}", null)
+        	//val imageUri = Uri.parse(path)
+		
+        }
+        //-----------------------
 
         Thread {
             try {

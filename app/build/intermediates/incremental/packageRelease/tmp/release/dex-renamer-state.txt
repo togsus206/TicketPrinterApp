@@ -1,4 +1,0 @@
-#Thu Aug 14 20:27:51 ART 2025
-base.0=/home/mati0216/TicketPrinterApp/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex

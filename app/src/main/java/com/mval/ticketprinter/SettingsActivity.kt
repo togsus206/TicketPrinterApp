@@ -17,7 +17,12 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import java.io.IOException
-import android.util.Log // Asegúrate de mantener esta importación
+import android.util.Log
+//-------------
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import android.view.View
 
 class SettingsActivity : AppCompatActivity() {
 
@@ -32,6 +37,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var buttonSaveSettings: Button
     private lateinit var buttonDeleteLogo: Button
     private lateinit var buttonDeleteQr: Button
+    private lateinit var saveTicket: Switch
 
     // [MODIFICACIÓN] Nuevos elementos para el ancho del papel
     private lateinit var radioGroupPaperWidth: RadioGroup
@@ -54,6 +60,7 @@ class SettingsActivity : AppCompatActivity() {
         const val KEY_PRINT_QR = "print_qr"
         const val KEY_PAPER_WIDTH = "paper_width" // Clave para el ancho del papel
         const val DEFAULT_PAPER_WIDTH = 58 // Ancho predeterminado en mm
+        const val KEY_SAVE_TICKET = "save_ticket"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -62,6 +69,27 @@ class SettingsActivity : AppCompatActivity() {
 
         // Inicializar SharedPreferences aquí, antes de usarla en `loadSettings`
         sharedPreferences = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        
+        
+        //------------------------------------------
+        enableEdgeToEdge() //
+        val mainView = findViewById<View>(R.id.main)
+        ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
+    		// Combinamos los insets de las barras del sistema y del teclado (IME)
+    		val barsAndIme = insets.getInsets(
+        		WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime()
+    		)
+		
+    		// Aplicamos el padding. 
+    		// Cuando sale el teclado, 'barsAndIme.bottom' aumentará automáticamente.
+    		v.setPadding(barsAndIme.left, barsAndIme.top, barsAndIme.right, barsAndIme.bottom)
+		
+    		// Retornamos insets (esto permite que el sistema sepa que ya manejamos el espacio)
+    		WindowInsetsCompat.CONSUMED
+		}
+        
+        
+        //---------------------------
 
         // Obtener referencias a los elementos de la UI
         imageViewLogo = findViewById(R.id.imageViewLogo)
@@ -75,6 +103,7 @@ class SettingsActivity : AppCompatActivity() {
         buttonDeleteLogo = findViewById(R.id.buttonDeleteLogo)
         buttonDeleteQr = findViewById(R.id.buttonDeleteQr)
         switchQR = findViewById(R.id.switchQR)
+        saveTicket = findViewById(R.id.saveTicket)
         
 
         // [MODIFICACIÓN] Referencias para los RadioButtons
@@ -171,6 +200,7 @@ class SettingsActivity : AppCompatActivity() {
             val printDateTime = switchDateTime.isChecked
             val footer = editTextFooter.text.toString()
             val printQR = switchQR.isChecked
+            val SaveTicket = saveTicket.isChecked
 
             val editor = sharedPreferences.edit() // Usar la sharedPreferences ya inicializada
 
@@ -178,6 +208,7 @@ class SettingsActivity : AppCompatActivity() {
             editor.putBoolean(KEY_PRINT_DATE_TIME, printDateTime) 
             editor.putString(KEY_FOOTER, footer) 
             editor.putBoolean(KEY_PRINT_QR, printQR)
+            editor.putBoolean(KEY_SAVE_TICKET, SaveTicket)
 
             // [MODIFICACIÓN] Guardar el ancho del papel seleccionado
             val selectedPaperWidth = when (radioGroupPaperWidth.checkedRadioButtonId) {
@@ -222,6 +253,7 @@ class SettingsActivity : AppCompatActivity() {
         switchDateTime.isChecked = sharedPreferences.getBoolean(KEY_PRINT_DATE_TIME, false)
         editTextFooter.setText(sharedPreferences.getString(KEY_FOOTER, ""))
         switchQR.isChecked = sharedPreferences.getBoolean(KEY_PRINT_QR, false)
+        saveTicket.isChecked = sharedPreferences.getBoolean(KEY_SAVE_TICKET, true)
 
         val qrPath = sharedPreferences.getString(KEY_QR_PATH, null)
         qrPath?.let { path ->

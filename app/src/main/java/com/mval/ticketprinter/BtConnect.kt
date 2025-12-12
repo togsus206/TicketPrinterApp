@@ -35,6 +35,10 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.io.ByteArrayOutputStream
 import java.util.*
 import android.bluetooth.BluetoothClass
+//-------------
+import androidx.activity.enableEdgeToEdge
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 
 
 class BtConnect : AppCompatActivity() {
@@ -63,6 +67,27 @@ class BtConnect : AppCompatActivity() {
         // Referencias a elementos Bluetooth
         buttonScan = findViewById(R.id.buttonScan)
         listViewDevices = findViewById(R.id.listViewDevices)
+        
+        
+        //------------------------------------------
+        enableEdgeToEdge() //
+        val mainView = findViewById<View>(R.id.main)
+        ViewCompat.setOnApplyWindowInsetsListener(mainView) { v, insets ->
+    		// Combinamos los insets de las barras del sistema y del teclado (IME)
+    		val barsAndIme = insets.getInsets(
+        		WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.ime()
+    		)
+		
+    		// Aplicamos el padding. 
+    		// Cuando sale el teclado, 'barsAndIme.bottom' aumentará automáticamente.
+    		v.setPadding(barsAndIme.left, barsAndIme.top, barsAndIme.right, barsAndIme.bottom)
+		
+    		// Retornamos insets (esto permite que el sistema sepa que ya manejamos el espacio)
+    		WindowInsetsCompat.CONSUMED
+		}
+        
+        
+        //---------------------------
 
 
         // Configuración de Bluetooth
