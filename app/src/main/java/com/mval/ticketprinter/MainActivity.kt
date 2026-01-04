@@ -99,6 +99,17 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     private lateinit var bluetoothPermissionLauncher: ActivityResultLauncher<String>
     
     // Fin segmento implementacion BT
+    
+    // Variables para el historial
+	private lateinit var tabTicket: TextView
+	private lateinit var tabHistory: TextView
+	private lateinit var layoutTicketCreation: LinearLayout
+	private lateinit var layoutHistory: LinearLayout
+	private lateinit var recyclerViewHistory: RecyclerView
+	private lateinit var adapterHistory: HistoryAdapter
+	// Gson para guardar/cargar objetos
+	private val gson = com.google.gson.Gson()
+	private lateinit var buttonClearHistory: Button
         
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -221,6 +232,44 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         //Boton para eliminar todos los productos de la lista
         buttonDeleteAll.setOnClickListener {
              onDeleteAll()
+        }
+        
+        
+        // Nuevos inicializadores para el historial ---
+    	tabTicket = findViewById(R.id.tabTicket)
+    	tabHistory = findViewById(R.id.tabHistory)
+    	layoutTicketCreation = findViewById(R.id.layoutTicketCreation)
+    	layoutHistory = findViewById(R.id.layoutHistory)
+    	recyclerViewHistory = findViewById(R.id.recyclerViewHistory)
+    	recyclerViewHistory.layoutManager = LinearLayoutManager(this)
+	
+    	// Listener para Tab Ticket
+    	tabTicket.setOnClickListener {
+        	showTab(true)
+    	}
+	
+    	// Listener para Tab History
+    	tabHistory.setOnClickListener {
+        	showTab(false)
+        	loadHistory() // Cargar lista al entrar
+    	}
+    	
+    	
+    	buttonClearHistory = findViewById(R.id.buttonClearHistory)
+
+        buttonClearHistory.setOnClickListener {
+            // Confirmamos antes de borrar
+            MaterialAlertDialogBuilder(this)
+                .setTitle("Borrar Historial")
+                .setMessage("¿Estás seguro de que deseas eliminar TODOS los tickets guardados? Esta acción no se puede deshacer.")
+                .setPositiveButton("Eliminar") { dialog, _ ->
+                    deleteHistory() // Llamamos a la función de borrado
+                    dialog.dismiss()
+                }
+                .setNegativeButton("Cancelar") { dialog, _ ->
+                    dialog.dismiss()
+                }
+                .show()
         }
 
     }
@@ -380,7 +429,12 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         updateTotal()
         val ticketView = generateTicketContent()
         val ticketBitmap = createBitmapFromView(ticketView)
+        
+        //Guarda el ticket impreso en el historial
+        saveTicketToHistory()
+        
         shareTicket(ticketBitmap)
+
     }
 
     private fun loadTicketSettings() {
@@ -720,6 +774,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                     outputStream.write("\n\n\n".toByteArray()) // Asegurarse de que 'outputStream' es no nulo
                     outputStream.flush()
                     runOnUiThread { Toast.makeText(this, "Ticket enviado a la impresora.", Toast.LENGTH_SHORT).show() }
+                    //Guarda el ticket impreso en el historial
+                    saveTicketToHistory()
                 } else {
                     runOnUiThread { Toast.makeText(this, "Error al obtener OutputStream de la impresora.", Toast.LENGTH_LONG).show() }
                 }
@@ -834,6 +890,110 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         } catch (e: IOException) {
             e.printStackTrace()
         }
+    }
+    
+    // Función auxiliar para cambiar colores y visibilidad
+    private fun showTab(isTicket: Boolean) {
+        // Definimos el color azul manualmente para evitar errores de recursos
+        val activeColor = android.graphics.Color.parseColor("#2196F3")
+        val inactiveColor = android.graphics.Color.GRAY
+
+        if (isTicket) {
+            layoutTicketCreation.visibility = View.VISIBLE
+            layoutHistory.visibility = View.GONE
+
+            // Estilo visual "Activo" para Ticket
+            tabTicket.setTextColor(activeColor) // <--- CAMBIO AQUÍ
+            tabTicket.setTypeface(null, android.graphics.Typeface.BOLD)
+
+            // Estilo visual "Inactivo" para History
+            tabHistory.setTextColor(inactiveColor)
+            tabHistory.setTypeface(null, android.graphics.Typeface.NORMAL)
+            
+            // Opcional: Cambiar el fondo del tab activo/inactivo si lo deseas
+             tabTicket.setBackgroundResource(R.drawable.tab_indicator_active)
+             tabHistory.background = null
+
+        } else {
+            layoutTicketCreation.visibility = View.GONE
+            layoutHistory.visibility = View.VISIBLE
+
+            // Estilo visual "Activo" para History
+            tabHistory.setTextColor(activeColor) // <--- CAMBIO AQUÍ
+            tabHistory.setTypeface(null, android.graphics.Typeface.BOLD)
+
+            // Estilo visual "Inactivo" para Ticket
+            tabTicket.setTextColor(inactiveColor)
+            tabTicket.setTypeface(null, android.graphics.Typeface.NORMAL)
+            
+            // Opcional: Cambiar el fondo del tab activo/inactivo
+            tabHistory.setBackgroundResource(R.drawable.tab_indicator_active)
+            tabTicket.background = null
+        }
+    }
+	
+	//Funcion para guardar el ticket en el historial
+	private fun saveTicketToHistory() {
+    	if (productList.isEmpty()) return
+	
+    	// 1. Construir el detalle completo
+    	val descriptionBuilder = StringBuilder()
+    	
+    	for (p in productList) {
+        	// Calculamos el total de esa línea (Precio unitario * Cantidad)
+        	val lineTotal = p.price * p.quantity
+        	
+        	descriptionBuilder.append("• ${p.name} x${p.quantity}: $${String.format("%.2f", lineTotal)}\n")
+    	}
+    	
+    	// 2. Calcular total final del ticket
+    	var total = 0.0
+    	for (p in productList) { total += p.quantity * p.price }
+	
+    	// 3. Crear el objeto
+    	val newItem = TicketHistoryItem(
+        	id = System.currentTimeMillis(),
+        	date = System.currentTimeMillis(),
+        	total = total,
+        	productCount = productList.size,
+        	// .trim() elimina el último salto de línea sobrante
+        	description = descriptionBuilder.toString().trim() 
+    	)
+	
+    	// 4. Guardar en SharedPreferences (Igual que antes)
+    	val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
+    	val jsonList = prefs.getString("history_list", "[]")
+    	// Nota: Como ya arreglamos Proguard, esto funcionará perfecto
+    	val type = object : com.google.gson.reflect.TypeToken<ArrayList<TicketHistoryItem>>() {}.type
+    	val currentHistory: ArrayList<TicketHistoryItem> = gson.fromJson(jsonList, type) ?: ArrayList()
+    	
+    	currentHistory.add(0, newItem) 
+    	
+    	prefs.edit().putString("history_list", gson.toJson(currentHistory)).apply()
+	}
+	
+	//Funcion para cargar el historial
+	private fun loadHistory() {
+    	val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
+    	val jsonList = prefs.getString("history_list", "[]")
+    	val type = object : com.google.gson.reflect.TypeToken<ArrayList<TicketHistoryItem>>() {}.type
+    	val historyList: ArrayList<TicketHistoryItem> = gson.fromJson(jsonList, type) ?: ArrayList()
+	
+    	adapterHistory = HistoryAdapter(historyList) // Declara adapterHistory arriba como propiedad
+    	recyclerViewHistory.adapter = adapterHistory
+	}
+	
+	
+	//Funcion para eliminar el historial
+	private fun deleteHistory() {
+        // 1. Borrar de la memoria (SharedPreferences)
+        val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
+        prefs.edit().remove("history_list").apply()
+
+        // 2. Limpiar la lista visual actual recargándola (ahora estará vacía)
+        loadHistory() 
+
+        Toast.makeText(this, "Historial eliminado correctamente", Toast.LENGTH_SHORT).show()
     }
 }
 

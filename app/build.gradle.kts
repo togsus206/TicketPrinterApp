@@ -15,8 +15,8 @@ android {
         applicationId = "com.mval.ticketprinter"
         minSdk = 21
         targetSdk = 35
-        versionCode = 12
-        versionName = "10.5"
+        versionCode = 13
+        versionName = "11"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -55,6 +55,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true // Habilita ProGuard/R8 para optimización
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -85,4 +86,5 @@ dependencies {
     implementation("com.journeyapps:zxing-android-embedded:4.3.0") 
     //------
     implementation("androidx.activity:activity-ktx:1.9.3")
+    implementation("com.google.code.gson:gson:2.10.1")
 }
