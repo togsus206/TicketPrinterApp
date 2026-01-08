@@ -271,6 +271,8 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
                 }
                 .show()
         }
+        
+        setupSwipeToDelete()
 
     }
 
@@ -1014,6 +1016,86 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
         loadHistory() 
 
         Toast.makeText(this, "Historial eliminado correctamente", Toast.LENGTH_SHORT).show()
+    }
+    
+    // Función para configurar el deslizamiento (Swipe)
+    private fun setupSwipeToDelete() {
+        val swipeHandler = object : androidx.recyclerview.widget.ItemTouchHelper.SimpleCallback(
+            0, // No movemos arriba/abajo
+            androidx.recyclerview.widget.ItemTouchHelper.LEFT // Solo deslizar a la IZQUIERDA
+        ) {
+            
+            // Dibujar el fondo rojo al deslizar
+            override fun onChildDraw(
+                c: Canvas, recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder,
+                dX: Float, dY: Float, actionState: Int, isCurrentlyActive: Boolean
+            ) {
+                // Solo dibujar si es un Ticket (no en los encabezados)
+                if (viewHolder is HistoryAdapter.TicketViewHolder) {
+                    val itemView = viewHolder.itemView
+                    val paint = android.graphics.Paint()
+                    paint.color = android.graphics.Color.parseColor("#D32F2F") // Rojo
+
+                    // Dibujar rectángulo rojo
+                    if (dX < 0) { // Deslizando a la izquierda
+                        c.drawRect(
+                            itemView.right.toFloat() + dX, itemView.top.toFloat(),
+                            itemView.right.toFloat(), itemView.bottom.toFloat(), paint
+                        )
+                    }
+                }
+                super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+            }
+
+            override fun onMove(r: RecyclerView, v: RecyclerView.ViewHolder, t: RecyclerView.ViewHolder) = false
+
+            // Bloquear el swipe si es un Encabezado
+            override fun getSwipeDirs(recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder): Int {
+                if (viewHolder is HistoryAdapter.HeaderViewHolder) return 0 // No permitir deslizar fecha
+                return super.getSwipeDirs(recyclerView, viewHolder)
+            }
+
+            // Qué pasa cuando se completa el deslizamiento
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                val position = viewHolder.adapterPosition
+                // Obtenemos el ítem que se quiere borrar
+                val itemToDelete = adapterHistory.items[position]
+
+                if (itemToDelete is TicketHistoryItem) {
+                    deleteSingleItem(itemToDelete)
+                }
+            }
+        }
+
+        val itemTouchHelper = androidx.recyclerview.widget.ItemTouchHelper(swipeHandler)
+        itemTouchHelper.attachToRecyclerView(recyclerViewHistory)
+    }
+
+    // Lógica para borrar un solo ticket de la memoria y recargar
+    private fun deleteSingleItem(itemToDelete: TicketHistoryItem) {
+        // 1. Cargar lista actual de memoria
+        val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
+        val jsonList = prefs.getString("history_list", "[]")
+        val type = object : com.google.gson.reflect.TypeToken<ArrayList<TicketHistoryItem>>() {}.type
+        val currentHistory: ArrayList<TicketHistoryItem> = gson.fromJson(jsonList, type) ?: ArrayList()
+
+        // 2. Buscar y eliminar el ticket específico (por ID)
+        val iterator = currentHistory.iterator()
+        while (iterator.hasNext()) {
+            val item = iterator.next()
+            if (item.id == itemToDelete.id) {
+                iterator.remove()
+                break
+            }
+        }
+
+        // 3. Guardar la lista actualizada
+        prefs.edit().putString("history_list", gson.toJson(currentHistory)).apply()
+
+        // 4. Recargar la pantalla (Esto es importante para que se actualicen los encabezados de fecha si quedan vacíos)
+        loadHistory()
+        
+        Toast.makeText(this, "Ticket eliminado", Toast.LENGTH_SHORT).show()
     }
 }
 

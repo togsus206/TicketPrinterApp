@@ -9,7 +9,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 // Notar que ahora recibimos List<Any> (puede ser String o TicketHistoryItem)
-class HistoryAdapter(private val items: List<Any>) : 
+class HistoryAdapter(val items: List<Any>) : 
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     // Constantes para identificar el tipo de vista
