@@ -3397,6 +3397,7 @@ id textCount
 id textDate
 id textDescription
 id textEnd
+id textHeaderDate
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3606,6 +3607,7 @@ layout design_text_input_start_icon
 layout dialog_edit_product
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_history_header
 layout item_history_ticket
 layout item_product
 layout m3_alert_dialog

@@ -916,6 +916,10 @@
         "source": "com.mval.ticketprinter.app-material-1.9.0-19:/layout/material_time_input.xml"
     },
     {
+        "merged": "com.mval.ticketprinter.app-merged_res-37:/layout_item_history_header.xml.flat",
+        "source": "com.mval.ticketprinter.app-main-38:/layout/item_history_header.xml"
+    },
+    {
         "merged": "com.mval.ticketprinter.app-merged_res-37:/drawable_mtrl_bottomsheet_drag_handle.xml.flat",
         "source": "com.mval.ticketprinter.app-material-1.9.0-19:/drawable/mtrl_bottomsheet_drag_handle.xml"
     },

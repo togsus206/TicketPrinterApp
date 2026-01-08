@@ -3,8 +3,8 @@
 # min_api: 21
 # common_typos_disable
 # {"id":"com.android.tools.r8.mapping","version":"2.2"}
-# pg_map_id: a6d5466
-# pg_map_hash: SHA-256 a6d5466c62738d6b5683a1b32139b0862623ad9747599a239e593d0f7ce51955
+# pg_map_id: 4ca8af9
+# pg_map_hash: SHA-256 4ca8af9c4adc779ba4a4090e9b3d9bbeb73ad9f0e40207eda7f46f3fd931c26d
 android.support.v4.app.RemoteActionCompatParcelizer -> android.support.v4.app.RemoteActionCompatParcelizer:
     1:1:androidx.core.app.RemoteActionCompat read(androidx.versionedparcelable.VersionedParcel):0:0 -> read
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Le1/a;)Landroidx/core/app/RemoteActionCompat;"}
@@ -59848,25 +59848,21 @@ com.mval.ticketprinter.BtConnect$Companion -> com.mval.ticketprinter.BtConnect$C
     1:1:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):0:0 -> <init>
       # {"id":"com.android.tools.r8.residualsignature","signature":"(Ll3/d;)V"}
 com.mval.ticketprinter.HistoryAdapter -> com.mval.ticketprinter.HistoryAdapter:
-    1:1:void $r8$lambda$JnyPXr1hNPNzWb9JbGDhCREBObw(com.mval.ticketprinter.TicketHistoryItem,com.mval.ticketprinter.HistoryAdapter$HistoryViewHolder,com.mval.ticketprinter.HistoryAdapter,int,android.view.View):0:0 -> a
+    1:1:void $r8$lambda$Vp0BFZwlvKHd8RESwjJEn9ZzuQU(com.mval.ticketprinter.TicketHistoryItem,com.mval.ticketprinter.HistoryAdapter,int,android.view.View):0:0 -> a
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void onBindViewHolder(androidx.recyclerview.widget.RecyclerView$ViewHolder,int):0:0 -> onBindViewHolder
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroidx/recyclerview/widget/f1;I)V"}
-    2:2:void onBindViewHolder(com.mval.ticketprinter.HistoryAdapter$HistoryViewHolder,int):0:0 -> onBindViewHolder
-    1:1:androidx.recyclerview.widget.RecyclerView$ViewHolder onCreateViewHolder(android.view.ViewGroup,int):0:0 -> onCreateViewHolder
-      # {"id":"com.android.tools.r8.residualsignature","signature":"(Landroid/view/ViewGroup;I)Landroidx/recyclerview/widget/f1;"}
-    2:2:com.mval.ticketprinter.HistoryAdapter$HistoryViewHolder onCreateViewHolder(android.view.ViewGroup,int):0:0 -> onCreateViewHolder
 com.mval.ticketprinter.HistoryAdapter$$ExternalSyntheticLambda0 -> com.mval.ticketprinter.b:
 # {"id":"sourceFile","fileName":"R8$$SyntheticClass"}
 # {"id":"com.android.tools.r8.synthesized"}
-    com.mval.ticketprinter.TicketHistoryItem com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.f$0 -> a
-    com.mval.ticketprinter.HistoryAdapter$HistoryViewHolder com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.f$1 -> b
-    com.mval.ticketprinter.HistoryAdapter com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.f$2 -> c
-    int com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.f$3 -> d
-    1:1:void com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.<init>(com.mval.ticketprinter.TicketHistoryItem,com.mval.ticketprinter.HistoryAdapter$HistoryViewHolder,com.mval.ticketprinter.HistoryAdapter,int):0:0 -> <init>
+    com.mval.ticketprinter.TicketHistoryItem com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$013b29d25e4359ccad7a3580d5d53db789b2a906eaefcabfe03492d9b59d14cb$0.f$0 -> a
+    com.mval.ticketprinter.HistoryAdapter com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$013b29d25e4359ccad7a3580d5d53db789b2a906eaefcabfe03492d9b59d14cb$0.f$1 -> b
+    int com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$013b29d25e4359ccad7a3580d5d53db789b2a906eaefcabfe03492d9b59d14cb$0.f$2 -> c
+    1:1:void com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$013b29d25e4359ccad7a3580d5d53db789b2a906eaefcabfe03492d9b59d14cb$0.<init>(com.mval.ticketprinter.TicketHistoryItem,com.mval.ticketprinter.HistoryAdapter,int):0:0 -> <init>
       # {"id":"com.android.tools.r8.synthesized"}
-    1:1:void com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$227a517f157ba77789be5f9b0f9c6e9f75da3ce1f9b71736e04d3c0bb8a3dce8$0.onClick(android.view.View):0:0 -> onClick
+    1:1:void com.mval.ticketprinter.HistoryAdapter$$InternalSyntheticLambda$1$013b29d25e4359ccad7a3580d5d53db789b2a906eaefcabfe03492d9b59d14cb$0.onClick(android.view.View):0:0 -> onClick
       # {"id":"com.android.tools.r8.synthesized"}
+com.mval.ticketprinter.HistoryAdapter$Companion -> com.mval.ticketprinter.HistoryAdapter$Companion:
+    1:1:void <init>(kotlin.jvm.internal.DefaultConstructorMarker):0:0 -> <init>
+      # {"id":"com.android.tools.r8.residualsignature","signature":"(Ll3/d;)V"}
 com.mval.ticketprinter.MainActivity -> com.mval.ticketprinter.MainActivity:
     1:1:void $r8$lambda$jRqyIxwxZNSJSj66PW8RAZbb1NU(com.mval.ticketprinter.MainActivity):0:0 -> A
       # {"id":"com.android.tools.r8.synthesized"}

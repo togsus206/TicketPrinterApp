@@ -972,16 +972,36 @@ class MainActivity : AppCompatActivity(), ProductAdapter.OnItemClickListener {
     	prefs.edit().putString("history_list", gson.toJson(currentHistory)).apply()
 	}
 	
-	//Funcion para cargar el historial
 	private fun loadHistory() {
-    	val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
-    	val jsonList = prefs.getString("history_list", "[]")
-    	val type = object : com.google.gson.reflect.TypeToken<ArrayList<TicketHistoryItem>>() {}.type
-    	val historyList: ArrayList<TicketHistoryItem> = gson.fromJson(jsonList, type) ?: ArrayList()
-	
-    	adapterHistory = HistoryAdapter(historyList) // Declara adapterHistory arriba como propiedad
-    	recyclerViewHistory.adapter = adapterHistory
-	}
+        val prefs = getSharedPreferences("TicketAppHistory", Context.MODE_PRIVATE)
+        val jsonList = prefs.getString("history_list", "[]")
+        
+        // 1. Obtener la lista cruda de tickets
+        val type = object : com.google.gson.reflect.TypeToken<ArrayList<TicketHistoryItem>>() {}.type
+        val rawList: ArrayList<TicketHistoryItem> = gson.fromJson(jsonList, type) ?: ArrayList()
+
+        // 2. Crear la lista mixta (con encabezados)
+        val displayList = ArrayList<Any>()
+        val dateFormat = SimpleDateFormat("EEEE, d 'de' MMMM", Locale("es", "ES")) // Ej: "Lunes, 12 de Enero"
+        
+        var lastHeaderDate = ""
+
+        for (ticket in rawList) {
+            val ticketDateString = dateFormat.format(Date(ticket.date)).replaceFirstChar { it.uppercase() }
+
+            // Si la fecha de este ticket es diferente a la última que pusimos, agregamos un encabezado
+            if (ticketDateString != lastHeaderDate) {
+                displayList.add(ticketDateString) // Agregamos el String (Encabezado)
+                lastHeaderDate = ticketDateString
+            }
+            
+            displayList.add(ticket) // Agregamos el Ticket
+        }
+
+        // 3. Pasar la lista mixta al adaptador
+        adapterHistory = HistoryAdapter(displayList)
+        recyclerViewHistory.adapter = adapterHistory
+    }
 	
 	
 	//Funcion para eliminar el historial

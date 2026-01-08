@@ -1,8 +1,8 @@
 {
   "version": 3,
   "artifactType": {
-    "type": "APK",
-    "kind": "Directory"
+    "type": "BUNDLE",
+    "kind": "RegularFile"
   },
   "applicationId": "com.mval.ticketprinter",
   "variantName": "release",
@@ -11,9 +11,7 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 13,
-      "versionName": "11",
-      "outputFile": "app-release.apk"
+      "outputFile": "../../../outputs/bundle/release/app-release.aab"
     }
   ],
   "elementType": "File"

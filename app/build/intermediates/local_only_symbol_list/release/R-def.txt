@@ -54,6 +54,7 @@ id tabTicket
 id textCount
 id textDate
 id textDescription
+id textHeaderDate
 id textTotal
 id textViewPrice
 id textViewProductName
@@ -73,6 +74,7 @@ layout activity_main
 layout activity_settings
 layout connect_bt
 layout dialog_edit_product
+layout item_history_header
 layout item_history_ticket
 layout item_product
 layout ticket_item_layout
