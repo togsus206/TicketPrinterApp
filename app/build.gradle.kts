@@ -15,8 +15,8 @@ android {
         applicationId = "com.mval.ticketprinter"
         minSdk = 21
         targetSdk = 35
-        versionCode = 16
-        versionName = "11.2.1"
+        versionCode = 17
+        versionName = "11.2.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
